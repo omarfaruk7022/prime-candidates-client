@@ -1,7 +1,9 @@
 const Features = () => {
   return (
     <div>
+        
       <section className="p-4 lg:p-8 dark:bg-base-200 dark:text-gray-100">
+      <h1 className="text-center text-5xl underline mb-28 text-black">Features</h1>
         <div className="container mx-auto space-y-12 container max-w-[1080px] mx-auto">
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
             <img
