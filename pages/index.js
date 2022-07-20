@@ -1,12 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
+import Banner from "../components/Banner";
+import Navber from "../components/Navber";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
-      <h1>hello world</h1>
-      <h1>Harifur Rashid</h1>
+      <Navber>
+        <Banner></Banner>
+      </Navber>
     </>
   );
 }
