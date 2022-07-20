@@ -8,7 +8,7 @@ const Navber = ({ children }) => {
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="w-full navbar bg-[url('../images/bg.png')]">
+        <div className="navbar max-w-[1200px] mx-auto">
           <div className="flex-1">
             <Image src={Logo} width={150} height={100} alt="" />
           </div>
@@ -132,7 +132,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/blog">
+            <Link href="/">
               <a>Blog</a>
             </Link>
           </li>
