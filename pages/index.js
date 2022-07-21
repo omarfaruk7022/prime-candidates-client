@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Features from "../components/Features";
+import JobCategory from "../components/JobCategory";
 import Navber from "../components/Navber";
 import Reviews from "../components/Reviews";
 
@@ -10,6 +11,7 @@ export default function Home({ comments }) {
         <Banner></Banner>
       </Navber>
       <Features />
+      <JobCategory></JobCategory>
       <Reviews comments={comments}></Reviews>
     </>
   );
