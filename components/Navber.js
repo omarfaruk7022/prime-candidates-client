@@ -35,12 +35,12 @@ const Navber = ({ children }) => {
               <ul className="menu menu-horizontal">
                 <li>
                   <Link href="/">
-                    <a>Home</a>
+                    <a className="rounded">Home</a>
                   </Link>
                 </li>
                 <li tabIndex="0">
                   <Link href="/">
-                    <a>
+                    <a className="rounded">
                       Find Job
                       <svg
                         className="fill-current"
@@ -55,32 +55,33 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a>Full-Time</a>
+                      <a className="rounded">Full-Time</a>
                     </li>
                     <li>
-                      <a>Part-Time</a>
+                      <a className="rounded">Part-Time</a>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Candidates</a>
+                    <a className="rounded">Candidates</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Pages</a>
+                    <a className="rounded">Pages</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Blog</a>
+                    <a className="rounded">Blog</a>
                   </Link>
                 </li>
               </ul>
               <div className="flex gap-3">
-                <button className="btn-sm btn-primary">Login/Register</button>
-                <button className="btn-sm btn-secondary">Job Post</button>
+              <button className="btn btn-outline btn-primary e">Login/Register</button>
+              <button className="btn btn-outline btn-secondary">Job post</button>
+              
               </div>
             </div>
           </div>
@@ -138,10 +139,8 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              <button className="btn-sm btn-primary w-full">
-                Login/Register
-              </button>
-              <button className="btn-sm btn-secondary w-full">Job Post</button>
+            <button className="btn btn-outline btn-primary">Login/Register</button>
+            <button className="btn btn-outline btn-secondary">Job post</button>
             </div>
           </li>
         </ul>

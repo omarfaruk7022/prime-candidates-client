@@ -6,7 +6,7 @@ import { BsArrowDownShort } from "react-icons/bs";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="lg:my-12">
       <div className="container max-w-[1080px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col justify-center p-5">
@@ -66,7 +66,7 @@ const Banner = () => {
             </p>
           </div>
 
-          <div className="flex justify-center hidden md:block">
+          <div className="flex lg:ml-28 justify-center hidden md:block">
             <Image src={man} width={400} height={400} alt="" />
           </div>
         </div>
