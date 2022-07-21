@@ -19,7 +19,7 @@ const Banner = () => {
             <p className="text-sm md:text-xl text-center md:text-left font-thin my-3">
               Find jobs, hire employer & career opportunities
             </p>
-            <div className="navber bg-base-100 rounded-lg shadow-lg p-5">
+            <div className="navber bg-base-100 rounded-lg shadow-lg p-3">
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
