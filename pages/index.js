@@ -9,7 +9,7 @@ import Navber from "../components/Navber";
 import styles from "../styles/Home.module.css";
 
 import Reviews from "../components/Reviews";
-
+import Card from "../components/Card";
 
 export default function Home({ comments }) {
   return (
@@ -18,7 +18,8 @@ export default function Home({ comments }) {
         <Banner></Banner>
         <Features />
         <JobCategory></JobCategory>
-         <Reviews comments={comments}></Reviews>
+        <Reviews comments={comments}></Reviews>
+        <Card />
         <Footer></Footer>
       </Navber>
     </>
@@ -26,12 +27,12 @@ export default function Home({ comments }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/comments')
+  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
   const comments = await res.json();
 
   return {
     props: {
-      comments
-    }
-  }
-}
+      comments,
+    },
+  };
+};
