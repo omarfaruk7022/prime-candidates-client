@@ -1,18 +1,26 @@
+import Head from "next/head";
+import Image from "next/image";
 import Banner from "../components/Banner";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 import JobCategory from "../components/JobCategory";
 import Navber from "../components/Navber";
+
+import styles from "../styles/Home.module.css";
+
 import Reviews from "../components/Reviews";
+
 
 export default function Home({ comments }) {
   return (
     <>
       <Navber>
         <Banner></Banner>
+        <Features />
+        <JobCategory></JobCategory>
+         <Reviews comments={comments}></Reviews>
+        <Footer></Footer>
       </Navber>
-      <Features />
-      <JobCategory></JobCategory>
-      <Reviews comments={comments}></Reviews>
     </>
   );
 }
