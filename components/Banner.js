@@ -23,9 +23,9 @@ const Banner = () => {
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
-                    <div className="flex items-center">
+                    <div className="flex items-center text-xs lg:text-sm">
                       Categories
-                      <BsArrowDownShort />
+                      <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
@@ -38,9 +38,9 @@ const Banner = () => {
                     </ul>
                   </li>
                   <li>
-                    <div className="flex items-center">
+                    <div className="flex items-center text-xs lg:text-sm">
                       Job-type
-                      <BsArrowDownShort />
+                      <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
@@ -52,11 +52,10 @@ const Banner = () => {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <button className="btn btn-primary rounded-lg text-base-100">
-                      Find Job
-                    </button>
-                  </li>
+
+                  <button className="btn btn-primary rounded-lg text-base-100 text-xs lg:text-sm">
+                    Find Job
+                  </button>
                 </ul>
               </div>
             </div>
