@@ -15,7 +15,6 @@ module.exports = {
           "base-100": "#FFFFFF",
         },
       },
-
     ],
   },
 
