@@ -12,6 +12,7 @@ import Reviews from "../components/Reviews";
 import About from "../components/About";
 
 
+import Card from "../components/Card";
 
 export default function Home({ comments }) {
   return (
@@ -22,6 +23,7 @@ export default function Home({ comments }) {
         <JobCategory></JobCategory>
         <Reviews comments={comments}></Reviews>
         <About></About>
+        <Card />
         <Footer></Footer>
       </Navber>
     </>
@@ -29,12 +31,12 @@ export default function Home({ comments }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/comments')
+  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
   const comments = await res.json();
 
   return {
     props: {
-      comments
-    }
-  }
-}
+      comments,
+    },
+  };
+};
