@@ -10,7 +10,9 @@ const Navber = ({ children }) => {
       <div className="drawer-content flex flex-col">
         <div className="navbar max-w-[1200px] mx-auto">
           <div className="flex-1">
+            <a href="#">
             <Image src={Logo} width={150} height={100} alt="" />
+            </a>
           </div>
           <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
@@ -35,7 +37,7 @@ const Navber = ({ children }) => {
               <ul className="menu menu-horizontal">
                 <li>
                   <Link href="/">
-                    <a className="rounded">Home</a>
+                    <a className="rounded-xl">Home</a>
                   </Link>
                 </li>
                 <li tabIndex="0">
@@ -55,31 +57,31 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a className="rounded">Full-Time</a>
+                      <a className="rounded-xl">Full-Time</a>
                     </li>
                     <li>
-                      <a className="rounded">Part-Time</a>
+                      <a className="rounded-xl">Part-Time</a>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <Link href="/">
-                    <a className="rounded">Candidates</a>
+                    <a className="rounded-xl">Candidates</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a className="rounded">Pages</a>
+                    <a className="rounded-xl">Pages</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a className="rounded">Blog</a>
+                    <a className="rounded-xl">Blog</a>
                   </Link>
                 </li>
               </ul>
               <div className="flex gap-3">
-                <button className="btn btn-outline btn-primary ">
+                <button className="btn btn-outline btn-primary text-white">
                   Login/Register
                 </button>
                 <button className="btn btn-outline btn-secondary">
@@ -98,7 +100,7 @@ const Navber = ({ children }) => {
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
           <li>
             <Link href="/">
-              <a>Home</a>
+              <a className="rounded-xl">Home</a>
             </Link>
           </li>
           <li tabIndex="0">
@@ -118,26 +120,26 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <a>Full-Time</a>
+                <a className="rounded-xl">Full-Time</a>
               </li>
               <li>
-                <a>Part-Time</a>
+                <a className="rounded-xl">Part-Time</a>
               </li>
             </ul>
           </li>
           <li>
             <Link href="/">
-              <a>Candidates</a>
+              <a className="rounded-xl">Candidates</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>Pages</a>
+              <a className="rounded-xl">Pages</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>Blog</a>
+              <a className="rounded-xl">Blog</a>
             </Link>
           </li>
           <li>
