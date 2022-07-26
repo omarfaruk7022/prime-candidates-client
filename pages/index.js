@@ -13,6 +13,7 @@ import About from "../components/About";
 
 
 import Card from "../components/Card";
+import Subscribe from "../components/Subscribe";
 
 export default function Home({ comments }) {
   return (
@@ -24,6 +25,7 @@ export default function Home({ comments }) {
         <Reviews comments={comments}></Reviews>
         <About></About>
         <Card />
+        <Subscribe></Subscribe>
         <Footer></Footer>
       </Navber>
     </>
