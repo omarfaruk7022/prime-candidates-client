@@ -9,19 +9,25 @@ import Navber from "../components/Navber";
 import styles from "../styles/Home.module.css";
 
 import Reviews from "../components/Reviews";
+import About from "../components/About";
+
+
 import Card from "../components/Card";
+import Subscribe from "../components/Subscribe";
 
 export default function Home({ comments }) {
   return (
     <>
       <Navber>
         <Banner></Banner>
-        <Features />
-        <JobCategory></JobCategory>
-        <Reviews comments={comments}></Reviews>
-        <Card />
-        <Footer></Footer>
+       
       </Navber>
+      <Features />
+      <JobCategory></JobCategory>
+      <Reviews comments={comments}></Reviews>
+      <Card />
+      <Subscribe></Subscribe>
+      <Footer></Footer>
     </>
   );
 }
