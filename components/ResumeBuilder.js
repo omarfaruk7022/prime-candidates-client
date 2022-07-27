@@ -7,7 +7,7 @@ const ResumeBuilder = () => {
     return (
         <div className='container max-w-[1080px] mx-auto my-28'>
             <h1 className='uppercase text-3xl text-center text-primary font-bold mb-10'>Resume</h1>
-            <div className='border-2 border-base-200 px-28 py-24'>
+            <div className='border-2 border-base-200 px-5 md:px-28 py-24'>
                 <div className='flex justify-between items-center'>
                     <div>
                         <div className='flex items-center gap-2'>
@@ -132,6 +132,33 @@ const ResumeBuilder = () => {
 
                 <div className='border border-base-200 my-10 bg-base-200'></div>
 
+                {/* TRAINING/COURSES part starts here */}
+                <div>
+                    <h3 className='uppercase font-semibold mb-6'>TRAINING/COURSES</h3>
+                    <div className='flex justify-between'>
+                        <div className='flex'>
+                            <div className='text-lg mr-3'>
+                                <TiPointOfInterest></TiPointOfInterest>
+                            </div>
+                            <div>
+                                <h3>MERN-stack Development</h3>
+                                <br />
+                                <p>Programming Hero, Online</p>
+                                <br />
+                                <p>May 2022 - May 2022</p>
+                            </div>
+                        </div>
+                        <div className='flex gap-4'>
+                            <FiEdit className='cursor-pointer text-secondary'></FiEdit>
+                            <MdDelete className='cursor-pointer text-red-500'></MdDelete>
+                        </div>
+                    </div>
+                    <div className='flex items-center gap-2 text-secondary mt-7 cursor-pointer'>
+                        <FiPlus></FiPlus>
+                        <p>Add training/course</p>
+                    </div>
+                </div>
+                {/* TRAINING/COURSES part ends here */}
             </div>
         </div>
     );
