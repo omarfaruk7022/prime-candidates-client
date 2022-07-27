@@ -10,6 +10,7 @@ import styles from "../styles/Home.module.css";
 
 import Reviews from "../components/Reviews";
 import Card from "../components/Card";
+import From from "../components/From";
 
 export default function Home({ comments }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ comments }) {
         <JobCategory></JobCategory>
         <Reviews comments={comments}></Reviews>
         <Card />
+        <From />
         <Footer></Footer>
       </Navber>
     </>
