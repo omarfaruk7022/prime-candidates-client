@@ -23,39 +23,38 @@ const Banner = () => {
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
-                    <div className="flex items-center">
+                    <div className="flex items-center rounded-xl">
                       Categories
                       <BsArrowDownShort />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a>Full-Time</a>
+                        <a className="rounded-xl">Full-Time</a>
                       </li>
 
                       <li>
-                        <a>Part-Time</a>
+                        <a className="rounded-xl">Part-Time</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <div className="flex items-center">
+                    <div className="flex items-center rounded-xl">
                       Job-type
                       <BsArrowDownShort />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a>Full-Time</a>
+                        <a className="rounded-xl">Full-Time</a>
                       </li>
 
                       <li>
-                        <a>Part-Time</a>
+                        <a className="rounded-xl">Part-Time</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <button className="btn btn-primary rounded-lg text-base-100">
-                      Find Job
-                    </button>
+                 
+                  <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">Find job</button>
                   </li>
                 </ul>
               </div>
