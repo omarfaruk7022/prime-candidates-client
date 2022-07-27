@@ -11,7 +11,7 @@ const Navber = ({ children }) => {
         <div className="navbar max-w-[1200px] mx-auto">
           <div className="flex-1">
             <a href="#">
-            <Image src={Logo} width={150} height={100} alt="" />
+              <Image src={Logo} width={150} height={100} alt="" />
             </a>
           </div>
           <div className="flex-none lg:hidden">
@@ -81,14 +81,16 @@ const Navber = ({ children }) => {
                 </li>
               </ul>
               <div className="flex gap-3">
-              <Link href="/login">
-              <button className="btn btn-outline btn-primary ">
-                Login/Register
-              </button>
+                <Link href="/login">
+                  <button className="btn btn-outline btn-primary ">
+                    Login/Register
+                  </button>
                 </Link>
-                <button className="btn btn-outline btn-secondary">
-                  Job post
-                </button>
+                <Link href="/postJobs">
+                  <button className="btn btn-outline btn-secondary">
+                    Job post
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -147,13 +149,15 @@ const Navber = ({ children }) => {
           <li>
             <div className="flex flex-col gap-3">
               <Link href="/login">
-              <button className="btn btn-outline btn-primary w-full">
-                Login/Register
-              </button>
-                </Link>
-              <button className="btn btn-outline btn-secondary w-full">
-                Job post
-              </button>
+                <button className="btn btn-outline btn-primary w-full">
+                  Login/Register
+                </button>
+              </Link>
+              <Link href="/postJobs">
+                <button className="btn btn-outline btn-secondary">
+                  Job post
+                </button>
+              </Link>
             </div>
           </li>
         </ul>
