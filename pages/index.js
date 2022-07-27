@@ -20,14 +20,14 @@ export default function Home({ comments }) {
     <>
       <Navber>
         <Banner></Banner>
-        <Features />
-        <JobCategory></JobCategory>
-        <Reviews comments={comments}></Reviews>
-        <About></About>
-        <Card />
-        <Subscribe></Subscribe>
-        <Footer></Footer>
+       
       </Navber>
+      <Features />
+      <JobCategory></JobCategory>
+      <Reviews comments={comments}></Reviews>
+      <Card />
+      <Subscribe></Subscribe>
+      <Footer></Footer>
     </>
   );
 }
