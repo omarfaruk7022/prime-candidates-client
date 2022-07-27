@@ -65,8 +65,8 @@ const Login = () => {
   };
   return (
     <div>
-      {/* <Navber/> */}
-      <div className="flex justify-center items-center h-screen">
+      <Navber>
+      <div className="flex justify-center items-center h-screen my-28">
       
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
@@ -165,7 +165,8 @@ const Login = () => {
       </div>
      
     </div>
-    {/* <Footer/> */}
+    <Footer/>
+    </Navber>
     </div>
   );
 };
