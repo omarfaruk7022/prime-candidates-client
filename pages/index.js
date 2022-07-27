@@ -16,12 +16,12 @@ export default function Home({ comments }) {
     <>
       <Navber>
         <Banner></Banner>
-        <Features />
-        <JobCategory></JobCategory>
-        <Reviews comments={comments}></Reviews>
-        <Card />
-        <Footer></Footer>
       </Navber>
+      <Features />
+      <JobCategory></JobCategory>
+      <Reviews comments={comments}></Reviews>
+      <Card />
+      <Footer></Footer>
     </>
   );
 }

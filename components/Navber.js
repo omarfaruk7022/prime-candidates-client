@@ -81,9 +81,11 @@ const Navber = ({ children }) => {
                 </li>
               </ul>
               <div className="flex gap-3">
-                <button className="btn btn-outline btn-primary text-white">
-                  Login/Register
-                </button>
+              <Link href="/login">
+              <button className="btn btn-outline btn-primary ">
+                Login/Register
+              </button>
+                </Link>
                 <button className="btn btn-outline btn-secondary">
                   Job post
                 </button>
@@ -144,9 +146,11 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
+              <Link href="/login">
               <button className="btn btn-outline btn-primary w-full">
                 Login/Register
               </button>
+                </Link>
               <button className="btn btn-outline btn-secondary w-full">
                 Job post
               </button>
