@@ -1,17 +1,17 @@
 import React from "react";
 import { FiCamera } from "react-icons/fi";
 
-const From = () => {
+const PostJobs = () => {
   return (
-    <div>
-      <h1 className="text-blue-400 text-bold text-xl ml-44 mb-[-120px]">
+    <div className="container max-w-[1080px] mx-auto my-28">
+      <h1 className="text-blue-400 text-bold text-xl ml-40 mb-[-120px]">
         Back
       </h1>
-      <div className="px-40 py-32 container mx-auto">
+      <div className="lg:px-40 sm:px-5 lg:py-32 container mx-auto">
         <h1 className="text-blue-400 uppercase text-center mb-5 text-3xl font-bold">
           Job post
         </h1>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div>
             <label className="label">
               <span className="label-text">Job Title</span>
@@ -136,7 +136,7 @@ const From = () => {
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs"
             />
-            <FiCamera className=" mt-[-33px] ml-[280px] text-xl bg-gray-400" />
+            <FiCamera className=" mt-[-33px] ml-[280px] text-xl bg-gray-400 cursor-pointer" />
           </div>
         </div>
       </div>
@@ -144,4 +144,4 @@ const From = () => {
   );
 };
 
-export default From;
+export default PostJobs;

@@ -82,9 +82,11 @@ const Navber = ({ children }) => {
                 <button className="btn btn-outline btn-primary ">
                   Login/Register
                 </button>
-                <button className="btn btn-outline btn-secondary">
-                  Job post
-                </button>
+                <Link href="/postJobs">
+                  <button className="btn btn-outline btn-secondary">
+                    Job post
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -145,9 +147,11 @@ const Navber = ({ children }) => {
               <button className="btn btn-outline btn-primary w-full">
                 Login/Register
               </button>
-              <button className="btn btn-outline btn-secondary w-full">
-                Job post
-              </button>
+              <Link href="/postJobs">
+                <button className="btn btn-outline btn-secondary">
+                  Job post
+                </button>
+              </Link>
             </div>
           </li>
         </ul>
