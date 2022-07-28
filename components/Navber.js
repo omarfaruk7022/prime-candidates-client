@@ -75,8 +75,13 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/resume">
                     <a className="rounded-xl">Blog</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/dashboard/general">
+                    <a className="rounded-xl">Dashboard</a>
                   </Link>
                 </li>
               </ul>
@@ -144,6 +149,11 @@ const Navber = ({ children }) => {
           <li>
             <Link href="/">
               <a className="rounded-xl">Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/dashboard/general">
+              <a className="rounded-xl">Dashboard</a>
             </Link>
           </li>
           <li>
