@@ -53,8 +53,8 @@ const Banner = () => {
                     </ul>
                   </li>
                   <li>
-                 
-                  <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">Find job</button>
+
+                    <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">Find job</button>
                   </li>
                 </ul>
               </div>
@@ -65,7 +65,7 @@ const Banner = () => {
             </p>
           </div>
 
-          <div className="flex lg:ml-28 justify-center hidden md:block">
+          <div className="flex justify-center md:justify-end">
             <Image src={man} width={400} height={400} alt="" />
           </div>
         </div>
