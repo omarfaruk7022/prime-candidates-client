@@ -6,7 +6,7 @@ import { BsArrowDownShort } from "react-icons/bs";
 
 const Banner = () => {
   return (
-    <div className="lg:my-12">
+    <div className="lg:my-12 ">
       <div className="container max-w-[1080px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col justify-center p-5">
@@ -23,39 +23,40 @@ const Banner = () => {
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
-                    <div className="flex items-center text-xs lg:text-sm">
+                    <div className="flex items-center rounded-xl">
                       Categories
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a>Full-Time</a>
+                        <a className="rounded-xl">Full-Time</a>
                       </li>
 
                       <li>
-                        <a>Part-Time</a>
+                        <a className="rounded-xl">Part-Time</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <div className="flex items-center text-xs lg:text-sm">
+                    <div className="flex items-center rounded-xl">
                       Job-type
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a>Full-Time</a>
+                        <a className="rounded-xl">Full-Time</a>
                       </li>
 
                       <li>
-                        <a>Part-Time</a>
+                        <a className="rounded-xl">Part-Time</a>
                       </li>
                     </ul>
                   </li>
-
-                  <button className="btn btn-primary rounded-lg text-base-100 text-xs lg:text-sm">
-                    Find Job
-                  </button>
+                  <li>
+                    <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">
+                      Find job
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -65,7 +66,7 @@ const Banner = () => {
             </p>
           </div>
 
-          <div className="flex lg:ml-28 justify-center hidden md:block">
+          <div className="flex justify-center md:justify-end">
             <Image src={man} width={400} height={400} alt="" />
           </div>
         </div>

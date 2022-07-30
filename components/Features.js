@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 const Features = () => {
   return (
     <div>
         
       <section className="p-4 lg:p-8  dark:text-gray-100">
-      <h1 className="text-center text-5xl underline mb-28 text-black">Features</h1>
+      <h1 className="text-center text-4xl  mb-12 text-black">Features</h1>
         <div className="container mx-auto space-y-12 max-w-[1080px]">
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
             <img
@@ -22,7 +24,7 @@ const Features = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 aliquam possimus quas, error esse quos.
               </p>
-              <button className="btn btn-outline btn-secondary">Button</button>
+              <button className="btn btn-outline text-white hover:bg-secondary">Learn more</button>
             </div>
           </div>
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
@@ -42,7 +44,7 @@ const Features = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 aliquam possimus quas, error esse quos.
               </p>
-              <button className="btn btn-outline btn-secondary">Button</button>
+              <button className="btn btn-outline text-white hover:bg-secondary ">Learn more</button>
             </div>
           </div>
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
@@ -62,10 +64,11 @@ const Features = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 aliquam possimus quas, error esse quos.
               </p>
-              <button className="btn btn-outline btn-secondary">Button</button>
+              <button className="btn text-white btn-outline hover:bg-secondary ">Learn more</button>
             </div>
           </div>
         </div>
+      
       </section>
     </div>
   );
