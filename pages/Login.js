@@ -143,7 +143,7 @@ const Login = () => {
               <div className="flex">
                 <a onClick={() => signInWithGoogle()}>
                   <div className="h-[40px] w-[60px] cursor-pointer">
-                    <Image src={icon} />
+                    <Image src={icon} alt='' />
                   </div>
                 </a>
               </div>
