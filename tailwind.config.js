@@ -12,12 +12,19 @@ module.exports = {
           secondary: "#54AFE6",
           accent: "#37cdbe",
           neutral: "#3d4451",
-          "base-100": "#FFFFFF",
+          "base-100": "#F6F6F6",
+          "base-200": "#FFFFFF",
+          info: "#60B7DC",
+
+          success: "#35D4BC",
+
+          warning: "#EEA64F",
+
+          error: "#E66577",
         },
       },
     ],
   },
 
   plugins: [require("daisyui")],
-
 };
