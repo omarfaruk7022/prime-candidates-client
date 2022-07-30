@@ -1,7 +1,7 @@
 import swal from "sweetalert";
 import vector from "../images//Group 31.png"
 import icon from "..//images//Google_Icons-09-512.webp"
-import auth from "../firebase.init"
+
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
@@ -12,6 +12,7 @@ import Link from "next/link";
 import Navber from "../components/Navber";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import auth from "./firebase.init";
 
 const Signup= () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =

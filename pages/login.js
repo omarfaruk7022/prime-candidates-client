@@ -1,7 +1,7 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
 import icon from "..//images//Google_Icons-09-512.webp"
-import auth from "../firebase.init"
+
 
 
 import {
@@ -14,6 +14,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import Image from "next/image";
+import auth from "./firebase.init";
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
