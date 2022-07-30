@@ -4,7 +4,6 @@ import { BsArrowRightCircle } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 
 const JobCategory = () => {
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-4 my-12 px-4 md:px-0 container max-w-[1080px] mx-auto">
       <div className="flex items-center justify-around p-12 border-2 rounded-lg text-xl md:text-2xl hover:bg-primary hover:text-white hover:border-secondary hover:scale-105 transition-all  duration-300 h-5 w-full md:w-[480px]">

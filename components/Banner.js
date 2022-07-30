@@ -6,7 +6,7 @@ import { BsArrowDownShort } from "react-icons/bs";
 
 const Banner = () => {
   return (
-    <div className="lg:my-12">
+    <div className="lg:my-12 ">
       <div className="container max-w-[1080px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col justify-center p-5">
@@ -25,7 +25,7 @@ const Banner = () => {
                   <li>
                     <div className="flex items-center rounded-xl">
                       Categories
-                      <BsArrowDownShort />
+                      <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
@@ -40,7 +40,7 @@ const Banner = () => {
                   <li>
                     <div className="flex items-center rounded-xl">
                       Job-type
-                      <BsArrowDownShort />
+                      <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
@@ -53,8 +53,9 @@ const Banner = () => {
                     </ul>
                   </li>
                   <li>
-
-                    <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">Find job</button>
+                    <button className="btn btn-active btn-primary text-white hover:text-secondary rounded-xl">
+                      Find job
+                    </button>
                   </li>
                 </ul>
               </div>
