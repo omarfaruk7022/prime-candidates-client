@@ -10,9 +10,9 @@ const Navber = ({ children }) => {
       <div className="drawer-content flex flex-col">
         <div className="navbar max-w-[1200px] mx-auto">
           <div className="flex-1">
-            <a href="#">
-              <Image src={Logo} width={150} height={100} alt="" />
-            </a>
+            <Link href="/">
+              <Image className="cursor-pointer" src={Logo} width={150} height={100} alt="" />
+            </Link>
           </div>
           <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
@@ -70,8 +70,8 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
-                    <a className="rounded-xl">Pages</a>
+                  <Link href="/resume">
+                    <a className="rounded-xl">Resume</a>
                   </Link>
                 </li>
                 <li>
@@ -142,8 +142,8 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a className="rounded-xl">Pages</a>
+            <Link href="/resume">
+              <a className="rounded-xl">Resume</a>
             </Link>
           </li>
           <li>
@@ -164,7 +164,7 @@ const Navber = ({ children }) => {
                 </button>
               </Link>
               <Link href="/postJobs">
-                <button className="btn btn-outline btn-secondary">
+                <button className="btn btn-outline btn-secondary w-full">
                   Job post
                 </button>
               </Link>
