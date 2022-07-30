@@ -1,6 +1,7 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
 import icon from "..//images//Google_Icons-09-512.webp"
+import auth from "../firebase.init"
 
 
 import {
@@ -8,7 +9,7 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import auth from "./firebase.init";
+
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navber from "../components/Navber";

@@ -1,15 +1,14 @@
 import swal from "sweetalert";
 import vector from "../images//Group 31.png"
 import icon from "..//images//Google_Icons-09-512.webp"
+import auth from "../firebase.init"
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-
 import Link from "next/link";
-import auth from "./firebase.init";
 import Navber from "../components/Navber";
 import Footer from "../components/Footer";
 import Image from "next/image";
