@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "daisyui": "^2.19.0",
     "firebase": "^9.9.1",
     "flowbite": "^1.5.1",

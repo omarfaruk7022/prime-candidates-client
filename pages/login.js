@@ -3,16 +3,18 @@ import vector from "..//images//Group 31.png";
 import icon from "..//images//Google_Icons-09-512.webp"
 
 
+
 import {
   useSignInWithGoogle,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import auth from "./firebase.init";
+
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import Image from "next/image";
+import auth from "./firebase.init";
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -132,7 +134,7 @@ const Login = () => {
                 {" "}
                 <small>
                   Do you have not an account !{" "}
-                  <Link className="text-primary link" href="/signUp">
+                  <Link className="text-primary link" href="/signup">
                     <span className="underline cursor-pointer text-blue-500">
                       Create an account
                     </span>
@@ -143,7 +145,7 @@ const Login = () => {
               <div className="flex">
                 <a onClick={() => signInWithGoogle()}>
                   <div className="h-[40px] w-[60px] cursor-pointer">
-                    <Image src={icon} />
+                    <Image src={icon} alt="" />
                   </div>
                 </a>
               </div>

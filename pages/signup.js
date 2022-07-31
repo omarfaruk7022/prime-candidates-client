@@ -1,20 +1,20 @@
 import swal from "sweetalert";
 import vector from "../images//Group 31.png"
 import icon from "..//images//Google_Icons-09-512.webp"
+
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-
 import Link from "next/link";
-import auth from "./firebase.init";
 import Navber from "../components/Navber";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import auth from "./firebase.init";
 
-const SignUp = () => {
+const Signup= () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -163,7 +163,7 @@ const SignUp = () => {
               onClick={() => signInWithGoogle()}
               
             >
-              <div className="h-[40px] w-[60px] cursor-pointer"><Image src={icon}/></div>
+              <div className="h-[40px] w-[60px] cursor-pointer"><Image src={icon} alt=""/></div>
               
             </a>
             
@@ -177,4 +177,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;
