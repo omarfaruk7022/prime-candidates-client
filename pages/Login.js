@@ -132,7 +132,7 @@ const Login = () => {
                 {" "}
                 <small>
                   Do you have not an account !{" "}
-                  <Link className="text-primary link" href="/signup">
+                  <Link className="text-primary link" href="/SignUp">
                     <span className="underline cursor-pointer text-blue-500">
                       Create an account
                     </span>
