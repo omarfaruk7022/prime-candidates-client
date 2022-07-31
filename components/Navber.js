@@ -47,7 +47,7 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li tabIndex="0">
-                  <Link href="/">
+                  <Link href="/fulltime">
                     <a className="rounded">
                       Find Job
                       <svg
@@ -63,15 +63,19 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a className="rounded-[5px]">Full-Time</a>
+                      <Link href={'/fulltime'}>
+                        <a className="rounded-[5px]">Full-Time</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="rounded-[5px]">Part-Time</a>
+                    <Link href={'/parttime'}>
+                        <a className="rounded-[5px]">Part-Time</a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/candidate">
                     <a className="rounded-[5px]">Candidates</a>
                   </Link>
                 </li>
@@ -81,7 +85,7 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resume">
+                  <Link href="/blog">
                     <a className="rounded-[5px]">Blog</a>
                   </Link>
                 </li>
@@ -124,7 +128,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li tabIndex="0">
-            <Link href="/">
+            <Link href="/fulltime">
               <a>
                 Find Job
                 <svg
@@ -140,15 +144,19 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <a className="rounded-[5px]">Full-Time</a>
+              <Link href={'/fulltime'}>
+                        <a className="rounded-xl">Full-Time</a>
+                      </Link>
               </li>
               <li>
-                <a className="rounded-[5px]">Part-Time</a>
+              <Link href={'/parttime'}>
+                        <a className="rounded-xl">Part-Time</a>
+                      </Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/candidate">
               <a className="rounded-[5px]">Candidates</a>
             </Link>
           </li>
@@ -158,7 +166,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/blog">
               <a className="rounded-[5px]">Blog</a>
             </Link>
           </li>
@@ -174,7 +182,7 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              <Link href="/login">
+              <Link href="/Login">
                 <button className="btn btn-outline btn-primary w-full">
                   Login/Register
                 </button>
