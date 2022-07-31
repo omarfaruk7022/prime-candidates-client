@@ -5,7 +5,7 @@ import { MdDelete } from 'react-icons/md'
 
 const ResumeBuilder = () => {
     return (
-        <div className='container max-w-[1080px] mx-auto my-28'>
+        <div className='container max-w-[1080px] mx-auto my-16'>
             <h1 className='uppercase text-3xl text-center text-primary font-bold mb-10'>Resume</h1>
             <div className='border-2 border-base-200 px-5 md:px-28 py-24'>
                 <div className='flex justify-between items-center'>
@@ -20,7 +20,7 @@ const ResumeBuilder = () => {
                     </div>
                     <div className='flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer'>
                         <FiDownload></FiDownload>
-                        <h3 className=''>Download</h3>
+                        <h3>Download</h3>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@ const ResumeBuilder = () => {
                 {/* SKILLS part start */}
                 <div>
                     <h3 className='uppercase font-semibold'>SKILLS</h3>
-
+                    
                     <div className='grid grid-cols-4'>
                         <div className='flex items-center gap-2 mt-5'>
                             <TiPointOfInterest></TiPointOfInterest>
