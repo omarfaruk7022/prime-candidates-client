@@ -10,9 +10,15 @@ const Navber = ({ children }) => {
       <div className="drawer-content flex flex-col">
         <div className="navbar max-w-[1200px] mx-auto">
           <div className="flex-1">
-            <a href="#">
-              <Image src={Logo} width={150} height={100} alt="" />
-            </a>
+            <Link href="/">
+              <Image
+                className="cursor-pointer"
+                src={Logo}
+                width={150}
+                height={100}
+                alt=""
+              />
+            </Link>
           </div>
           <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
@@ -37,11 +43,11 @@ const Navber = ({ children }) => {
               <ul className="menu menu-horizontal">
                 <li>
                   <Link href="/">
-                    <a className="rounded-xl">Home</a>
+                    <a className="rounded-[5px]">Home</a>
                   </Link>
                 </li>
                 <li tabIndex="0">
-                  <Link href="/">
+                  <Link href="/fulltime">
                     <a className="rounded">
                       Find Job
                       <svg
@@ -57,26 +63,40 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <a className="rounded-xl">Full-Time</a>
+                      <Link href={'/fulltime'}>
+                        <a className="rounded-[5px]">Full-Time</a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="rounded-xl">Part-Time</a>
+                    <Link href={'/parttime'}>
+                        <a className="rounded-[5px]">Part-Time</a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link href="/">
-                    <a className="rounded-xl">Candidates</a>
+                  <Link href="/candidate">
+                    <a className="rounded-[5px]">Candidates</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
-                    <a className="rounded-xl">Pages</a>
+                  <Link href="/resume">
+                    <a className="rounded-[5px]">Resume</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
-                    <a className="rounded-xl">Blog</a>
+                  <Link href="/blog">
+                    <a className="rounded-[5px]">Blog</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contactus">
+                    <a className="rounded-[5px]">Contact Us</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/dashboard/general">
+                    <a className="rounded-[5px]">Dashboard</a>
                   </Link>
                 </li>
               </ul>
@@ -104,11 +124,11 @@ const Navber = ({ children }) => {
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
           <li>
             <Link href="/">
-              <a className="rounded-xl">Home</a>
+              <a className="rounded-[5px]">Home</a>
             </Link>
           </li>
           <li tabIndex="0">
-            <Link href="/">
+            <Link href="/fulltime">
               <a>
                 Find Job
                 <svg
@@ -124,37 +144,51 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <a className="rounded-xl">Full-Time</a>
+              <Link href={'/fulltime'}>
+                        <a className="rounded-xl">Full-Time</a>
+                      </Link>
               </li>
               <li>
-                <a className="rounded-xl">Part-Time</a>
+              <Link href={'/parttime'}>
+                        <a className="rounded-xl">Part-Time</a>
+                      </Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link href="/">
-              <a className="rounded-xl">Candidates</a>
+            <Link href="/candidate">
+              <a className="rounded-[5px]">Candidates</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a className="rounded-xl">Pages</a>
+            <Link href="/resume">
+              <a className="rounded-[5px]">Resume</a>
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a className="rounded-xl">Blog</a>
+            <Link href="/blog">
+              <a className="rounded-[5px]">Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contactus">
+              <a className="rounded-[5px]">Contact Us</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/dashboard/general">
+              <a className="rounded-[5px]">Dashboard</a>
             </Link>
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              <Link href="/login">
+              <Link href="/Login">
                 <button className="btn btn-outline btn-primary w-full">
                   Login/Register
                 </button>
               </Link>
               <Link href="/postJobs">
-                <button className="btn btn-outline btn-secondary">
+                <button className="btn btn-outline btn-secondary w-full">
                   Job post
                 </button>
               </Link>
