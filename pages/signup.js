@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import auth from "./firebase.init";
 
-const Signup= () => {
+const SignUp = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -177,4 +177,4 @@ const Signup= () => {
   );
 };
 
-export default Signup;
+export default SignUp;
