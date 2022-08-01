@@ -1,4 +1,5 @@
 import React from "react";
+import Massege from "./Massege";
 
 const Footer = () => {
   return (
@@ -45,6 +46,9 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <div>
+        <Massege />
+      </div>
       <div>
         <p className="text-sm py-5 text-base-100">
           Copyright © 2022 - All right reserved by Prime Candidates
