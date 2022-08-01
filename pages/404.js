@@ -5,12 +5,12 @@ const NotFound = () => {
     return (
         <section className="bg-white px-2 min-h-screen w-full flex items-center justify-center">
             <div className="text-center">
-                    <div className="bg-[url('../images/404.gif')] bg-center h-[400px] bg-no-repeat bg-cover">
-                        <h1 className="text-center text-3xl md:text-6xl">Oops!</h1>
+                    <div className="bg-[url('../images/404.gif')] bg-center h-[300px] bg-no-repeat bg-cover">
+                        <h1 className="text-center text-3xl md:text-5xl">Oops!</h1>
                     </div>
 
                     <div>
-                        <h3 className="text-3xl md:text-6xl">
+                        <h3 className="text-3xl md:text-5xl">
                             It looks like you are lost
                         </h3>
 
