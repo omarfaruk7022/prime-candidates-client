@@ -102,12 +102,12 @@ const Navber = ({ children }) => {
               </ul>
               <div className="flex gap-3">
                 <Link href="/login">
-                  <button className="btn btn-outline btn-primary ">
+                  <button className="btn btn-outline btn-primary  ">
                     Login/Register
                   </button>
                 </Link>
                 <Link href="/postJobs">
-                  <button className="btn btn-outline btn-secondary">
+                  <button className="btn btn-outline btn-secondary ">
                     Job post
                   </button>
                 </Link>
@@ -145,12 +145,12 @@ const Navber = ({ children }) => {
             <ul className="p-2 bg-base-100">
               <li>
               <Link href={'/fulltime'}>
-                        <a className="rounded-xl">Full-Time</a>
+                        <a className="rounded-[5px]">Full-Time</a>
                       </Link>
               </li>
               <li>
               <Link href={'/parttime'}>
-                        <a className="rounded-xl">Part-Time</a>
+                        <a className="rounded-[5px]">Part-Time</a>
                       </Link>
               </li>
             </ul>

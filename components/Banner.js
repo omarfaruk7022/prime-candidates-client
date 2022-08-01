@@ -23,32 +23,32 @@ const Banner = () => {
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
-                    <div className="flex items-center rounded-xl">
+                    <div className="flex items-center rounded-[5px]">
                       Categories
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a className="rounded-xl">Full-Time</a>
+                        <a className="rounded-[5px]">Full-Time</a>
                       </li>
 
                       <li>
-                        <a className="rounded-xl">Part-Time</a>
+                        <a className="rounded-[5px]">Part-Time</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <div className="flex items-center rounded-xl">
+                    <div className="flex items-center rounded-[5px]">
                       Job-type
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-                        <a className="rounded-xl">Full-Time</a>
+                        <a className="rounded-[5px]">Full-Time</a>
                       </li>
 
                       <li>
-                        <a className="rounded-xl">Part-Time</a>
+                        <a className="rounded-[5px]">Part-Time</a>
                       </li>
                     </ul>
                   </li>
