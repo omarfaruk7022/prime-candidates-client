@@ -107,7 +107,7 @@ const Navber = ({ children }) => {
                   </button>
                 </Link>
                 <Link href="/postJobs">
-                  <button className="btn btn-outline btn-secondary ">
+                  <button className="btn btn-outline btn-secondary  ">
                     Job post
                   </button>
                 </Link>
