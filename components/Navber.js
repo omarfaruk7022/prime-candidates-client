@@ -68,9 +68,7 @@ const Navber = ({ children }) => {
                       </Link>
                     </li>
                     <li>
-
                       <Link href={"/parttime"}>
-
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
                     </li>
@@ -104,9 +102,8 @@ const Navber = ({ children }) => {
               </ul>
               <div className="flex gap-3">
                 <Link href="/login">
-                  
                   <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
-                  Login/Register
+                    Login/Register
                   </button>
                 </Link>
                 <Link href="/postJobs">
@@ -150,16 +147,12 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-
                 <Link href={"/fulltime"}>
-
                   <a className="rounded-xl">Full-Time</a>
                 </Link>
               </li>
               <li>
-
                 <Link href={"/parttime"}>
-
                   <a className="rounded-xl">Part-Time</a>
                 </Link>
               </li>
@@ -240,15 +233,12 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              <Link href="/Login">
-              <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
+              <Link href="/login">
+                <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
                   Login/Register
-                  </button>
+                </button>
               </Link>
               <Link href="/postJobs">
-                {/* <button className="btn btn-outline btn-secondary w-full">
-                  Job post
-                </button> */}
                 <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
                   Post Jobs
                 </button>
