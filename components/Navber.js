@@ -63,12 +63,12 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <Link href={'/fulltime'}>
+                      <Link href={"/fulltime"}>
                         <a className="rounded-[5px]">Full-Time</a>
                       </Link>
                     </li>
                     <li>
-                    <Link href={'/parttime'}>
+                      <Link href={"/parttime"}>
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
                     </li>
@@ -89,6 +89,7 @@ const Navber = ({ children }) => {
                     <a className="rounded-[5px]">Blog</a>
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/contactus">
                     <a className="rounded-[5px]">Contact Us</a>
@@ -144,14 +145,14 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-              <Link href={'/fulltime'}>
-                        <a className="rounded-xl">Full-Time</a>
-                      </Link>
+                <Link href={"/fulltime"}>
+                  <a className="rounded-xl">Full-Time</a>
+                </Link>
               </li>
               <li>
-              <Link href={'/parttime'}>
-                        <a className="rounded-xl">Part-Time</a>
-                      </Link>
+                <Link href={"/parttime"}>
+                  <a className="rounded-xl">Part-Time</a>
+                </Link>
               </li>
             </ul>
           </li>

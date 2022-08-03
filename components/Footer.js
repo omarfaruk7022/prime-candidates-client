@@ -1,5 +1,5 @@
 import React from "react";
-import Massege from "./Massege";
+import Message from "./Message";
 
 const Footer = () => {
   return (
@@ -27,10 +27,10 @@ const Footer = () => {
         </div>
       </footer>
       <div>
-        <Massege />
+        <Message />
       </div>
       <div>
-        <p className="text-sm py-5 text-base-100">
+        <p className="text-sm py-5 text-base-500 dark:text-white">
           Copyright © 2022 - All right reserved by Prime Candidates
         </p>
       </div>
