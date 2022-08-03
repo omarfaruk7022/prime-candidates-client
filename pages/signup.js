@@ -11,7 +11,8 @@ import Link from "next/link";
 import Navber from "../components/Navber";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import auth from "./firebase.init";
+import auth from "../components/firebase.init";
+
 
 const SignUp = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
