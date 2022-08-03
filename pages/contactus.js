@@ -5,6 +5,9 @@ import Navber from "../components/Navber";
 
 const Contact = () => {
   const form = useRef();
+  const handleBack = () => {
+    window.history.back();
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,6 +33,9 @@ const Contact = () => {
     <div>
       <Navber>
         <div className="my-[150px] md:px-12">
+        <button onClick={handleBack} className="text-blue-400 text-bold text-xl ml-40 ">
+        Back
+      </button>
           <h2 className=" text-3xl text-primary text-center md:mb-[50px]">
             Contact us
           </h2>
