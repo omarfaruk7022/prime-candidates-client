@@ -4,6 +4,10 @@ import swal from 'sweetalert';
 
 const PostJobs = () => {
 
+  const handleBack = () => {
+    window.history.back();
+  }
+
   const handlePostJob = (e) => {
 
     e.preventDefault();
@@ -39,9 +43,9 @@ const PostJobs = () => {
 
   return (
     <form onSubmit={handlePostJob} className="container max-w-[1080px] mx-auto my-28">
-      <h1 className="text-blue-400 text-bold text-xl ml-40 mb-[-120px]">
+      <button onClick={handleBack} className="text-blue-400 text-bold text-xl ml-40 ">
         Back
-      </h1>
+      </button>
       <div className="lg:px-40 sm:px-5 lg:py-32 container mx-auto">
         <h1 className="text-blue-400 uppercase text-center mb-5 text-3xl font-bold">
           Job post
