@@ -63,12 +63,12 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <Link href={'/fulltime'}>
+                      <Link href={"/fulltime"}>
                         <a className="rounded-[5px]">Full-Time</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href={'/parttime'}>
+                      <Link href={"/parttime"}>
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
                     </li>
@@ -102,13 +102,17 @@ const Navber = ({ children }) => {
               </ul>
               <div className="flex gap-3">
                 <Link href="/login">
-                  <button className="btn btn-outline btn-primary  ">
-                    Login/Register
+                  
+                  <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
+                  Login/Register
                   </button>
                 </Link>
                 <Link href="/postJobs">
-                  <button className="btn btn-outline btn-secondary  ">
+                  {/* <button className="btn btn-outline btn-secondary  ">
                     Job post
+                  </button> */}
+                  <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
+                    Post Jobs
                   </button>
                 </Link>
               </div>
@@ -144,25 +148,22 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-<<<<<<< HEAD
-              <Link href={'/fulltime'}>
-                        <a className="rounded-[5px]">Full-Time</a>
-                      </Link>
+                <Link href={"/fulltime"}>
+                  <a className="rounded-[5px]">Full-Time</a>
+                </Link>
               </li>
               <li>
-              <Link href={'/parttime'}>
-                        <a className="rounded-[5px]">Part-Time</a>
-                      </Link>
-=======
-                <Link href={'/fulltime'}>
+                <Link href={"/parttime"}>
+                  <a className="rounded-[5px]">Part-Time</a>
+                </Link>
+                <Link href={"/fulltime"}>
                   <a className="rounded-xl">Full-Time</a>
                 </Link>
               </li>
               <li>
-                <Link href={'/parttime'}>
+                <Link href={"/parttime"}>
                   <a className="rounded-xl">Part-Time</a>
                 </Link>
->>>>>>> bd3c832763cd3b98c4e8073518f810c3c63ca680
               </li>
             </ul>
           </li>
@@ -184,7 +185,9 @@ const Navber = ({ children }) => {
 
           <div className="dropdown my-4">
             <div className="flex items-center">
-              <label tabIndex="0" className="rounded-[5px] ml-4">Dashboard</label>
+              <label tabIndex="0" className="rounded-[5px] ml-4">
+                Dashboard
+              </label>
               <svg
                 className="fill-current ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +198,10 @@ const Navber = ({ children }) => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </div>
-            <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <ul
+              tabIndex="0"
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
               <li>
                 <Link href="/dashboard/general">
                   <a className="rounded-[5px]">General</a>
@@ -237,13 +243,16 @@ const Navber = ({ children }) => {
           <li>
             <div className="flex flex-col gap-3">
               <Link href="/Login">
-                <button className="btn btn-outline btn-primary w-full">
+              <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
                   Login/Register
-                </button>
+                  </button>
               </Link>
               <Link href="/postJobs">
-                <button className="btn btn-outline btn-secondary w-full">
+                {/* <button className="btn btn-outline btn-secondary w-full">
                   Job post
+                </button> */}
+                <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
+                  Post Jobs
                 </button>
               </Link>
             </div>
