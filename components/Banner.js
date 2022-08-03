@@ -23,58 +23,32 @@ const Banner = () => {
               <div className="">
                 <ul className="menu menu-horizontal flex justify-between items-center">
                   <li>
-<<<<<<< HEAD
-                    <div className="flex items-center rounded-[5px]">
-                      Categories
-=======
                     <div className="flex items-center rounded-md">
                       <h1 className="text-xs md:text-sm">Categories</h1>
->>>>>>> 44ca2cbfb0eda8a8244dd609185c0268adf3aaf8
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-<<<<<<< HEAD
-                        <a className="rounded-[5px]">Full-Time</a>
-                      </li>
-
-                      <li>
-                        <a className="rounded-[5px]">Part-Time</a>
-=======
                         <a className="rounded-md">Full-Time</a>
                       </li>
 
                       <li>
                         <a className="rounded-md">Part-Time</a>
->>>>>>> 44ca2cbfb0eda8a8244dd609185c0268adf3aaf8
                       </li>
                     </ul>
                   </li>
                   <li>
-<<<<<<< HEAD
-                    <div className="flex items-center rounded-[5px]">
-                      Job-type
-=======
                     <div className="flex items-center rounded-md">
                       <h1 className="text-xs md:text-sm">Job-type</h1>
->>>>>>> 44ca2cbfb0eda8a8244dd609185c0268adf3aaf8
                       <BsArrowDownShort className="hidden md:block" />
                     </div>
                     <ul className="p-2 bg-base-100">
                       <li>
-<<<<<<< HEAD
-                        <a className="rounded-[5px]">Full-Time</a>
-                      </li>
-
-                      <li>
-                        <a className="rounded-[5px]">Part-Time</a>
-=======
                         <a className="rounded-md">Full-Time</a>
                       </li>
 
                       <li>
                         <a className="rounded-md">Part-Time</a>
->>>>>>> 44ca2cbfb0eda8a8244dd609185c0268adf3aaf8
                       </li>
                     </ul>
                   </li>
