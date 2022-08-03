@@ -209,13 +209,8 @@ const Navber = ({ children }) => {
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard/languages">
-                  <a className="rounded-[5px]">Languages</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/dashboard/experience">
-                  <a className="rounded-[5px]">Experience</a>
+                <Link href="/dashboard/skillset">
+                  <a className="rounded-[5px]">Skill Set</a>
                 </Link>
               </li>
               <li>
