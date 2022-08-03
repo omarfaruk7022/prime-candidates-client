@@ -68,7 +68,7 @@ const Navber = ({ children }) => {
                       </Link>
                     </li>
                     <li>
-                    <Link href={'/parttime'}>
+                      <Link href={'/parttime'}>
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
                     </li>
@@ -144,6 +144,7 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
+<<<<<<< HEAD
               <Link href={'/fulltime'}>
                         <a className="rounded-[5px]">Full-Time</a>
                       </Link>
@@ -152,6 +153,16 @@ const Navber = ({ children }) => {
               <Link href={'/parttime'}>
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
+=======
+                <Link href={'/fulltime'}>
+                  <a className="rounded-xl">Full-Time</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={'/parttime'}>
+                  <a className="rounded-xl">Part-Time</a>
+                </Link>
+>>>>>>> bd3c832763cd3b98c4e8073518f810c3c63ca680
               </li>
             </ul>
           </li>
@@ -170,14 +181,57 @@ const Navber = ({ children }) => {
               <a className="rounded-[5px]">Blog</a>
             </Link>
           </li>
+
+          <div className="dropdown my-4">
+            <div className="flex items-center">
+              <label tabIndex="0" className="rounded-[5px] ml-4">Dashboard</label>
+              <svg
+                className="fill-current ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </div>
+            <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <Link href="/dashboard/general">
+                  <a className="rounded-[5px]">General</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard/professional-overview">
+                  <a className="rounded-[5px]">Professional Overview</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard/social-profile">
+                  <a className="rounded-[5px]">Social Profile</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard/languages">
+                  <a className="rounded-[5px]">Languages</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard/experience">
+                  <a className="rounded-[5px]">Experience</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard/education">
+                  <a className="rounded-[5px]">Education</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           <li>
             <Link href="/contactus">
               <a className="rounded-[5px]">Contact Us</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/dashboard/general">
-              <a className="rounded-[5px]">Dashboard</a>
             </Link>
           </li>
           <li>
