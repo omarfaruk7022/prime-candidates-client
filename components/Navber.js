@@ -39,7 +39,7 @@ const Navber = ({ children }) => {
           </div>
 
           <div className="flex-none hidden lg:block">
-            <div className="flex gap-5 lg:gap-36 items-center">
+            <div className="flex gap-5  items-center">
               <ul className="menu menu-horizontal">
                 <li>
                   <Link href="/">
@@ -63,12 +63,14 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <Link href={'/fulltime'}>
+                      <Link href={"/fulltime"}>
                         <a className="rounded-[5px]">Full-Time</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href={'/parttime'}>
+
+                      <Link href={"/parttime"}>
+
                         <a className="rounded-[5px]">Part-Time</a>
                       </Link>
                     </li>
@@ -144,12 +146,16 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <Link href={'/fulltime'}>
+
+                <Link href={"/fulltime"}>
+
                   <a className="rounded-xl">Full-Time</a>
                 </Link>
               </li>
               <li>
-                <Link href={'/parttime'}>
+
+                <Link href={"/parttime"}>
+
                   <a className="rounded-xl">Part-Time</a>
                 </Link>
               </li>
