@@ -19,45 +19,32 @@ const Banner = () => {
             <p className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
               Find jobs, hire employer & career opportunities
             </p>
-            <div className="navber bg-base-100 rounded-lg shadow-lg p-2">
+            <div className="navber bg-white rounded-lg shadow-lg shadow-blue-50 p-2">
               <div className="">
-                <ul className="menu menu-horizontal flex justify-between items-center">
-                  <li>
-                    <div className="flex items-center rounded-md">
-                      <h1 className="text-xs md:text-sm">Categories</h1>
-                      <BsArrowDownShort className="hidden md:block" />
-                    </div>
-                    <ul className="p-2 bg-base-100">
-                      <li>
-                        <a className="rounded-md">Full-Time</a>
-                      </li>
+                <div className=" flex justify-between items-center">
+                  <select className="select select-primary bg-transparent  focus:outline-none h-6 border-none rounded-none text-[8px] font-light md:text-xs">
+                    <option className="text-xs md:text-sm" selected>
+                      Full-Time
+                    </option>
+                    <option className="text-xs md:text-sm">Part-Time</option>
+                    <option className="text-xs md:text-sm">Contact</option>
+                    <option className="text-xs md:text-sm">Hourly</option>
+                  </select>
+                  <select className="select select-primary bg-transparent  focus:outline-none h-8 border-none rounded-none text-[8px] font-light md:text-xs">
+                    <option className="text-xs md:text-sm" selected>
+                      Dhaka
+                    </option>
+                    <option className="text-xs md:text-sm">Chottogram</option>
+                    <option className="text-xs md:text-sm">Khulna</option>
+                    <option className="text-xs md:text-sm">Cumilla</option>
+                  </select>
 
-                      <li>
-                        <a className="rounded-md">Part-Time</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <div className="flex items-center rounded-md">
-                      <h1 className="text-xs md:text-sm">Job-type</h1>
-                      <BsArrowDownShort className="hidden md:block" />
-                    </div>
-                    <ul className="p-2 bg-base-100">
-                      <li>
-                        <a className="rounded-md">Full-Time</a>
-                      </li>
-
-                      <li>
-                        <a className="rounded-md">Part-Time</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
+                  <div>
                     <button className="btn-sm btn-active btn-primary text-xs md:text-sm text-white hover:text-secondary rounded-md">
                       Find job
                     </button>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <p className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
