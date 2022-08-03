@@ -5,7 +5,7 @@ const NotFound = () => {
     return (
         <section className="bg-white px-2 min-h-screen w-full flex items-center justify-center">
             <div className="text-center">
-                <div className="bg-[url('https://i.postimg.cc/7Lm4SqQS/404.gif')] bg-center h-[300px] bg-no-repeat bg-cover">
+                <div className="bg-[url('../images/404.gif')] bg-center h-[300px] bg-no-repeat bg-cover">
                     <h1 className="text-center text-3xl md:text-5xl">Oops!</h1>
                 </div>
 
