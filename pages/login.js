@@ -1,20 +1,17 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
 import icon from "..//images//Google_Icons-09-512.webp"
-
-
-
 import {
   useSignInWithGoogle,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-
 import Link from "next/link";
 import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import Image from "next/image";
-import auth from "./firebase.init";
+import auth from "../components/firebase.init";
+
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -49,11 +46,10 @@ const Login = () => {
     <div>
       <Navber>
         <div className="flex justify-center items-center h-screen my-28">
-          <div className="mr-28">
+          <div className="mr-28 hidden lg:block">
             <Image src={vector} alt="" />
           </div>
-
-          <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card w-96 bg-base-100 shadow-xl mx-3 lg:mx-0">
             <div className="card-body">
               <h2 className="text-center text-2xl font-bold text-secondary">Login</h2>
               <form onSubmit={handleSubmit(onSubmit)}>
