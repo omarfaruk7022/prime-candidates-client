@@ -1,4 +1,5 @@
 import React from "react";
+import Message from "./Message";
 import Chat from "./Chat";
 
 const Footer = () => {
@@ -27,14 +28,19 @@ const Footer = () => {
             <a className="link link-hover">Cookie policy</a>
           </div>
         </footer>
-        <div>
-          <p className="text-sm py-5 dark:bg-white">
-            Copyright © 2022 - All right reserved by Prime Candidates
-          </p>
-        </div>
+        
+      <div>
+        <Message />
+      </div>
+      <div>
+        <p className="text-sm py-5 text-base-500 dark:text-white">
+          Copyright © 2022 - All right reserved by Prime Candidates
+        </p>
       </div>
       <Chat />
     </div>
+    </div>
+    
   );
 };
 

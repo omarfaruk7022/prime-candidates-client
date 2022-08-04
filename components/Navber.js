@@ -89,6 +89,7 @@ const Navber = ({ children }) => {
                     <a className="rounded-[5px]">Blog</a>
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/contactus">
                     <a className="rounded-[5px]">Contact Us</a>
