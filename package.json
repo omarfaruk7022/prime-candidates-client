@@ -22,10 +22,7 @@
     "react-hook-form": "^7.33.1",
     "react-icons": "^4.4.0",
     "react-messenger-customer-chat": "^0.8.0",
-<<<<<<< HEAD
-=======
     "react-redux": "^8.0.2",
->>>>>>> 49cfd91e776b81acb18b14382cf4b83f785a267a
     "react-router-dom": "^6.3.0",
     "sweetalert": "^2.1.2",
     "swiper": "^8.3.1"
