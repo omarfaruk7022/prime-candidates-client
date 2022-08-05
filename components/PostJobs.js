@@ -1,15 +1,13 @@
 import React from "react";
 import { FiCamera } from "react-icons/fi";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 const PostJobs = () => {
-
   const handleBack = () => {
     window.history.back();
-  }
+  };
 
   const handlePostJob = (e) => {
-
     e.preventDefault();
     const jobTitle = e.target.title.value;
     const salaryRange = e.target.salaryRange.value;
@@ -20,30 +18,44 @@ const PostJobs = () => {
     const companyPicture = e.target.companyPicture.value;
     const jobDescription = e.target.jobDescription.value;
 
-
-    const job = { jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription };
+    const job = {
+      jobTitle,
+      salaryRange,
+      jobLocation,
+      salaryType,
+      jobCategory,
+      jobType,
+      companyPicture,
+      jobDescription,
+    };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
-    fetch('http://localhost:5000/jobs', {
-      method: 'POST',
+    fetch("http://localhost:5000/jobs", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(job)
+      body: JSON.stringify(job),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.acknowledged) {
           swal("Yayy", "Job added successfully!", "success");
         }
-      })
+      });
 
     e.target.reset();
-  }
+  };
 
   return (
-    <form onSubmit={handlePostJob} className="container max-w-[1080px] mx-auto my-28">
-      <button onClick={handleBack} className="text-blue-400 text-bold text-xl ml-40 ">
+    <form
+      onSubmit={handlePostJob}
+      className="container max-w-[1080px] mx-auto my-28"
+    >
+      <button
+        onClick={handleBack}
+        className="text-blue-400 text-bold text-xl ml-40 "
+      >
         Back
       </button>
       <div className="lg:px-40 sm:px-5 lg:py-32 container mx-auto">
@@ -60,7 +72,6 @@ const PostJobs = () => {
               name="title"
               placeholder="Job Title"
               className="input input-bordered w-full"
-
             />
           </div>
           <div>
@@ -152,12 +163,20 @@ const PostJobs = () => {
             <label className="label">
               <span className="label-text">Company Picture</span>
             </label>
-            <input name="companyPicture"
-              type="text"
-              placeholder="Put image URL here..."
-              className="input input-bordered w-full"
-            />
-            <FiCamera className=" mt-[-33px] ml-[280px] text-xl bg-gray-400 cursor-pointer" />
+            <fieldset className="w-full space-y-1 dark:text-gray-100">
+              <label htmlFor="files" className="block text-sm font-medium">
+                Attachments
+              </label>
+              <div className="flex">
+                <input
+                  type="file"
+                  name="files"
+                  id="files"
+                  className="px-8 py-3 border-2 border-dashed rounded-md  "
+                />
+              </div>
+            </fieldset>
+            
           </div>
         </div>
         <div className="mt-4 px-3 md:px-0">
@@ -187,12 +206,18 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Job Description</span>
               </label>
-              <textarea name="jobDescription" className="border-2 border-gray-300 rounded-lg py-1 px-2 outline-none" rows={5}></textarea>
+              <textarea
+                name="jobDescription"
+                className="border-2 border-gray-300 rounded-lg py-1 px-2 outline-none"
+                rows={5}
+              ></textarea>
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-10">
-          <button type="submit" className="w-1/5 btn btn-outline btn-primary">Post</button>
+          <button type="submit" className="w-1/5 btn btn-outline btn-primary">
+            Post
+          </button>
         </div>
       </div>
     </form>
