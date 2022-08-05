@@ -1,83 +1,116 @@
-import DashboardLayout from '../../components/DashboardLayout'
+import DashboardLayout from "../../components/DashboardLayout";
 
+const handleBack = () => {
+    window.history.back();
+};
 const Index = () => (
     <DashboardLayout>
-        <div className='bg-[#F6F6F6] mx-8 lg:mx-0'>
+        <div className="bg-[#F6F6F6] mx-8 lg:mx-0">
             <div className="sm:pt-8">
-                <div >
-                    <div className='flex items-center ml-12'>
-                        <div className="avatar">
-                            <div className="w-16 rounded-xl">
-                                <img src="https://placeimg.com/192/192/people" />
+                <div>
+                    <div className="lg:flex items-center lg:ml-12 justify-between ">
+                        <div className="flex items-center ml-12 justify-between ">
+                            <div className="avatar">
+                                <div className="w-16 rounded-xl">
+                                    <img src="https://placeimg.com/192/192/people" alt=""/>
+                                </div>
+                            </div>
+                            <div className="ml-4">
+                                <h2 className="text-xl">User Name</h2>
+                                <h4>user.abc@gmail.com</h4>
                             </div>
                         </div>
-                        <div className='ml-4'>
-                            <h2 className='text-xl'>User Name</h2>
-                            <h4>user.abc@gmail.com</h4>
+                        <div>
+                            <button
+                                onClick={handleBack}
+                                className="hidden lg:block text-blue-400 text-bold text-xl mr-2  lg:mr-20 "
+                            >
+                                Back
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white lg:w-2/3 lg:rounded-l-lg mx-6 lg:mt-8 lg:mx-auto px-6 lg:px-0 lg:mx-0 lg:px-20">
+                <div className="bg-white lg:w-2/3 lg:rounded-l-lg mx-6 lg:mt-8 lg:mx-auto px-6 lg:px-20">
                     <div className="text-3xl text-gray-700 py-6">Edit Info</div>
                     <hr className="-mx-20" />
                     <div className="py-8">
                         <div className="flex mb-4">
-                            <span
-                                className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">1</span>
-                            <span className="font-bold text-gray-800">Personal Information</span>
+                            <span className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
+                                1
+                            </span>
+                            <span className="font-bold text-gray-800">
+                                Personal Information
+                            </span>
                         </div>
                         <div className="lg:flex mb-2 -mx-1">
                             <div className="lg:w-1/2 mb-3 lg:mb-2 mx-1">
                                 <div className="px-1">
                                     <label className="text-gray-600 font-light">First Name</label>
-                                    <input type='text'
-                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                    <input
+                                        type="text"
+                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                    />
                                 </div>
                             </div>
                             <div className="lg:w-1/2  mb-3 lg:mb-2 mx-1">
                                 <div className="px-1">
                                     <label className="text-gray-600 font-light">Last Name</label>
-                                    <input type='text'
-                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                    <input
+                                        type="text"
+                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="lg:w-2/3">
                             <div className="px-1">
                                 <label className="text-gray-600 font-light">Email</label>
-                                <input type='email'
-                                    className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                <input
+                                    type="email"
+                                    className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                />
                             </div>
                         </div>
                     </div>
 
                     <div className="py-8">
                         <div className="flex mb-4">
-                            <span
-                                className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">2</span>
-                            <span className="font-bold text-gray-800">Address Information</span>
+                            <span className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
+                                2
+                            </span>
+                            <span className="font-bold text-gray-800">
+                                Address Information
+                            </span>
                         </div>
                         <div className="lg:flex mb-2 -mx-1">
                             <div className="lg:w-1/2 mb-3 lg:mb-2 mx-1">
                                 <div className="px-1">
                                     <label className="text-gray-600 font-light">Country</label>
-                                    <input type='text'
-                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                    <input
+                                        type="text"
+                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                    />
                                 </div>
                             </div>
                             <div className="lg:w-1/2 mb-3 lg:mb-2 mx-1">
                                 <div className="px-1">
-                                    <label className="text-gray-600 font-light">Street Address</label>
-                                    <input type='text'
-                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                    <label className="text-gray-600 font-light">
+                                        Street Address
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="lg:w-2/3">
                             <div className="px-1">
                                 <label className="text-gray-600 font-light">State</label>
-                                <input type='email'
-                                    className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+                                <input
+                                    type="email"
+                                    className="w-full mt-1 px-2 py-1 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                                />
                             </div>
                         </div>
                     </div>
@@ -100,6 +133,6 @@ const Index = () => (
             </div>
         </div>
     </DashboardLayout>
-)
+);
 
-export default Index
+export default Index;

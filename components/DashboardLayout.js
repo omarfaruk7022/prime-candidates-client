@@ -34,6 +34,13 @@ const DashboardLayout = ({ children }) => {
                         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                             {/* <!-- Sidebar content here --> */}
                             <li>
+                                <div className="avatar mx-auto mb-8">
+                                    <div className="w-16 rounded-xl">
+                                        <img src="https://placeimg.com/192/192/people" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
                                 <ActiveLink href="/dashboard/general" className="ml-10">
                                     General
                                 </ActiveLink>
@@ -49,13 +56,8 @@ const DashboardLayout = ({ children }) => {
                                 </ActiveLink>
                             </li>
                             <li>
-                                <ActiveLink href="/dashboard/languages" className="ml-10">
-                                    Languages
-                                </ActiveLink>
-                            </li>
-                            <li>
-                                <ActiveLink href="/dashboard/experience" className="ml-10">
-                                    Experience
+                                <ActiveLink href="/dashboard/skillset" className="ml-10">
+                                    Skill Set
                                 </ActiveLink>
                             </li>
                             <li>
