@@ -2,8 +2,15 @@ import React from "react";
 import { FiEdit, FiDownload, FiPlus } from "react-icons/fi";
 import { TiPointOfInterest } from "react-icons/ti";
 import { MdDelete } from "react-icons/md";
+import { saveAs } from "file-saver";
 
 const ResumeBuilder = () => {
+  const saveFile = () => {
+    saveAs(
+      "https://drive.google.com/uc?export=download&id=1Dcmlg0DWZcgsvy5iTulJCMLWs-G-lveA",
+      "example.pdf"
+    );
+  };
   return (
     <div className="container max-w-[1080px] mx-auto my-16">
       <h1 className="uppercase text-3xl text-center text-primary font-bold mb-10">
@@ -90,7 +97,7 @@ const ResumeBuilder = () => {
           </div>
           <div className="flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer">
             <FiDownload></FiDownload>
-            <h3>Download</h3>
+           <button onClick={saveFile}>Download</button>
           </div>
         </div>
 

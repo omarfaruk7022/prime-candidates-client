@@ -5,6 +5,9 @@ import Navber from "../components/Navber";
 
 const Contact = () => {
   const form = useRef();
+  const handleBack = () => {
+    window.history.back();
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,13 +33,16 @@ const Contact = () => {
     <div>
       <Navber>
         <div className="my-[150px] md:px-12">
+        <button onClick={handleBack} className="text-blue-400 text-bold text-xl ml-40 ">
+        Back
+      </button>
           <h2 className=" text-3xl text-primary text-center md:mb-[50px]">
             Contact us
           </h2>
           <section className="py-6 relative md:mt-12">
             <div className="grid max-w-6xl grid-cols-1 px-4 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
               <div className="py-6 md:py-0 md:px-6 md:mt-16">
-                <h1 className="text-4xl font-bold">Get in touch</h1>
+                <h1 className="text-4xl font-bold">Our Contact</h1>
                 <p className="pt-2 pb-4">
                   Fill in the form to start a conversation
                 </p>
@@ -90,14 +96,14 @@ const Contact = () => {
                   <span className="mb-1 text-secondary">Your Full name</span>
                   <input
                     name="name"
-                    className="block w-full h-10 rounded-md shadow-sm  "
+                    className="block bg-gray-200 w-full h-10 rounded-md shadow-sm  "
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1 text-secondary">Your Email address</span>
+                  <span className="mb-1 text-secondary ">Your Email address</span>
                   <input
                     name="email"
-                    className="block w-full h-10 rounded-md shadow-sm  "
+                    className="bg-gray-200 block w-full h-10 rounded-md shadow-sm  "
                   />
                 </label>
                 <label className="block">
@@ -105,7 +111,7 @@ const Contact = () => {
                   <textarea
                     rows="3"
                     name="message"
-                    className="block w-full rounded-md "
+                    className=" bg-gray-200 block w-full rounded-md "
                     spellCheck="false"
                   ></textarea>
                 </label>

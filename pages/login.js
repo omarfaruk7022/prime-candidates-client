@@ -10,7 +10,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import Image from "next/image";
-import auth from "./firebase.init";
+import auth from "../components/firebase.init";
+
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -31,7 +32,7 @@ const Login = () => {
   // }
 
   if (user || googleUser) {
-    navigate(from);
+
     swal("Yayy", "Login Successfully Completed", "success");
   }
   if (error || googleError) {
