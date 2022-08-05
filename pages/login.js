@@ -32,7 +32,7 @@ const Login = () => {
   // }
 
   if (user || googleUser) {
-    navigate(from);
+
     swal("Yayy", "Login Successfully Completed", "success");
   }
   if (error || googleError) {
