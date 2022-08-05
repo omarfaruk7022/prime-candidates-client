@@ -1,9 +1,13 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
-import icon from "..//images//Google_Icons-09-512.webp"
+import googleIcon from "..//images//Google_Icons-09-512.webp"
+import githubIcon from "../images/black-github-icon.png"
+import facebookIcon from "../images/fb_icon.png"
 import {
   useSignInWithGoogle,
   useSignInWithEmailAndPassword,
+  useSignInWithGithub,
+  useSignInWithFacebook,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
@@ -14,10 +18,10 @@ import auth from "../components/firebase.init";
 
 
 const Login = () => {
-  const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
+  const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
 
   let signInError;
 
@@ -31,11 +35,11 @@ const Login = () => {
   //   navigate(from, { replace: true });
   // }
 
-  if (user || googleUser) {
+  if (user || googleUser || gitUser || fbUser) {
     navigate(from);
     swal("Yayy", "Login Successfully Completed", "success");
   }
-  if (error || googleError) {
+  if (error || googleError || gitError || fbError) {
     swal("Something Wrong", "Login Failed", "error");
   }
 
@@ -139,11 +143,23 @@ const Login = () => {
               </p>
               <div className="divider">OR</div>
               <div className="flex">
-                <a onClick={() => signInWithGoogle()}>
-                  <div className="h-[40px] w-[60px] cursor-pointer">
-                    <Image src={icon} alt="" />
-                  </div>
-                </a>
+                <div className="mx-auto flex gap-2">
+                  <a onClick={() => signInWithGoogle()}>
+                    <div className="h-[60px] w-[60px] cursor-pointer">
+                      <Image src={googleIcon} alt="" />
+                    </div>
+                  </a>
+                  <a onClick={() => signInWithGithub()}>
+                    <div className="h-[60px] w-[60px] cursor-pointer">
+                      <Image src={githubIcon} alt="" />
+                    </div>
+                  </a>
+                  <a onClick={() => signInWithFacebook()}>
+                    <div className="h-[60px] w-[60px] cursor-pointer">
+                      <Image src={facebookIcon} alt="" />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
