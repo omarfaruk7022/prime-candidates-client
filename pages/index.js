@@ -26,7 +26,7 @@ export default function Home({ comments }) {
         <JobCategory></JobCategory>
         <Reviews comments={comments}></Reviews>
         <Card />
-        {/* <Courses /> */}
+        <Courses />
         <Subscribe></Subscribe>
         <Footer></Footer>
       </Navber>
