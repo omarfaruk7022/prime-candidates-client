@@ -1,17 +1,33 @@
 import React from 'react';
 import Footer from '../../components/Footer';
+import Job from '../../components/Job';
 import Navber from '../../components/Navber';
 
-const FullTimeJobs = () => {
-    // page for full time jobs option on navbar
+export default function FullTimeJobs({ jobs }) {
     return (
-        <Navber>
-            <div className='flex justify-center items-center min-h-screen'>
+        <>
+            <Navber>
+                {/* <div className='flex justify-center items-center min-h-screen'>
                 <h2 className='text-4xl text-secondary tracking-widest'>Full-Time job Updating soon....</h2>
-            </div>
-            <Footer></Footer>
-        </Navber>
+            </div> */}
+                <div>
+                    {
+                        jobs.map(job => <Job key={job._id} job={job}></Job>)
+                    }
+                </div>
+                <Footer></Footer>
+            </Navber>
+        </>
     );
-};
+}
 
-export default FullTimeJobs;
+export const getStaticProps = async () => {
+    const res = await fetch("http://localhost:5000/jobs");
+    const jobs = await res.json();
+
+    return {
+        props: {
+            jobs,
+        },
+    };
+};
