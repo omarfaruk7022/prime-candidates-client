@@ -12,7 +12,7 @@ const Index = () => (
                         <div className="flex items-center ml-12 justify-between ">
                             <div className="avatar">
                                 <div className="w-16 rounded-xl">
-                                    <img src="https://placeimg.com/192/192/people" />
+                                    <img src="https://placeimg.com/192/192/people" alt=""/>
                                 </div>
                             </div>
                             <div className="ml-4">
