@@ -14,8 +14,12 @@ import About from "../components/About";
 import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
 import FeaturedJob from "../components/FeaturedJob";
+
+import Courses from "../components/Courses";
+
 import Service from "../components/Service";
 import Quiz from "../components/Quiz";
+
 
 export default function Home({ comments }) {
   return (
@@ -28,6 +32,7 @@ export default function Home({ comments }) {
         <Reviews comments={comments}></Reviews>
         <Service />
         <Card />
+        {/* <Courses /> */}
         <Subscribe></Subscribe>
         <Quiz />
         <Footer></Footer>
