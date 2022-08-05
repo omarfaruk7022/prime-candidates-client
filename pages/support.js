@@ -1,49 +1,66 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import swal from "sweetalert";
-import SupportsData from "../components/SupportsData"
-
+import Footer from "../components/Footer";
+import Navber from "../components/Navber";
+import SupportsData from "../components/SupportsData";
+import Link from "next/link";
 
 const support = () => {
-  const [reasons, setReasons] = useState([]);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const text = e.target.bio.value;
-    const reason = {
-      text,
-    };
+  // const [reasons, setReasons] = useState([]);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const text = e.target.bio.value;
+  //   const reason = {
+  //     text,
+  //   };
 
-    fetch("http://localhost:5000/support", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(reason),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.acknowledged) {
-          swal("Yayy", "Job added successfully!", "success");
-        }
-      });
+  //   fetch("http://localhost:5000/support", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(reason),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.acknowledged) {
+  //         swal("Yayy", "Job added successfully!", "success");
+  //       }
+  //     });
 
-    e.target.reset();
-  };
+  //   e.target.reset();
+  // };
 
-  
-  useEffect(() => {
-    fetch("http://localhost:5000/support")
-      .then((res) => res.json())
-      .then((data) => {
-        setReasons(data);
-      });
-  }, []);
-  
-  
-    
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/support")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setReasons(data);
+  //     });
+  // }, []);
 
   return (
     <div>
-      <label htmlFor="my-modal" className="btn modal-button">
+      <Navber>
+        <div className="m-auto">
+          <h1 className=" text-5xl text-secondary">
+            Please join our support session
+          </h1>
+
+          <Link
+           
+            href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3"
+           
+          
+          >
+        
+            <button className="btn ml-[260px] btn-outline w-20 btn-secondary">
+              Join
+            </button>
+          </Link>
+        </div>
+
+        {/* <label htmlFor="my-modal" className="btn modal-button">
         open modal
       </label>
 
@@ -85,10 +102,10 @@ const support = () => {
         
       })
     }
-     </div>
-      
+     </div> */}
+      </Navber>
+      <Footer />
     </div>
-
   );
 };
 
