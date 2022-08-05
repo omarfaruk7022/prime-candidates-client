@@ -15,7 +15,7 @@ const PostJobs = () => {
     const salaryType = e.target.salaryType.value;
     const jobCategory = e.target.jobCategory.value;
     const jobType = e.target.jobType.value;
-    const companyPicture = e.target.companyPicture.value;
+    // const companyPicture = e.target.companyPicture.value;
     const jobDescription = e.target.jobDescription.value;
 
     const job = {
@@ -25,7 +25,7 @@ const PostJobs = () => {
       salaryType,
       jobCategory,
       jobType,
-      companyPicture,
+      // companyPicture,
       jobDescription,
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
