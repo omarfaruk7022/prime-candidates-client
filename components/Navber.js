@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../images/prime-logo.png";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Logo from "../images/prime-logo.png";
 import auth from '../components/firebase.init'
 import { signOut } from "firebase/auth";
 
@@ -115,6 +115,16 @@ const Navber = ({ children }) => {
                 <li>
                   <Link href="/dashboard/general">
                     <a className="rounded-[5px]">Dashboard</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/quizzes">
+                    <a className="rounded-[5px]">Quiz</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/support">
+                    <a className="rounded-[5px]">Support </a>
                   </Link>
                 </li>
               </ul>
@@ -246,6 +256,16 @@ const Navber = ({ children }) => {
           <li>
             <Link href="/contactus">
               <a className="rounded-[5px]">Contact Us</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/quizzes">
+              <a className="rounded-[5px]">Quiz</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/support">
+              <a className="rounded-[5px]">Support </a>
             </Link>
           </li>
           <li>

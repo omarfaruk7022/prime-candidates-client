@@ -36,7 +36,6 @@ const Login = () => {
   // if (user||googleUser) {
   //   navigate(from, { replace: true });
   // }
-
   if (googleLoading || loading || gitLoading || fbLoading) {
     return <Loader></Loader>
   }
