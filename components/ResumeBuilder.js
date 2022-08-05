@@ -32,7 +32,7 @@ const ResumeBuilder = () => {
                         type="text"
                         name="name"
                         placeholder="Type your full name"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
                       />
                     </div>
                     <div className="form-control">
@@ -43,7 +43,7 @@ const ResumeBuilder = () => {
                         type="text"
                         name="email"
                         placeholder="Type your email address"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
                       />
                     </div>
                     <div className="form-control">
@@ -54,7 +54,7 @@ const ResumeBuilder = () => {
                         type="number"
                         name="number"
                         placeholder="(Ex) +880-1888295295"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
                       />
                     </div>
                     <div className="form-control">
@@ -65,7 +65,7 @@ const ResumeBuilder = () => {
                         type="text"
                         name="address"
                         placeholder="Type you address"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
                       />
                     </div>
                   </form>
@@ -118,7 +118,7 @@ const ResumeBuilder = () => {
                     <textarea
                       type="text"
                       name="description"
-                      className="input input-bordered w-full h-24"
+                      className="input input-bordered w-full h-24 focus:outline-none rounded-none"
                     />
                   </div>
                 </form>
@@ -218,7 +218,7 @@ const ResumeBuilder = () => {
                     type="text"
                     name="skill"
                     placeholder="Add skill"
-                    className="input input-bordered w-full"
+                    className="input input-bordered w-full focus:outline-none rounded-none"
                   />
                 </div>
               </form>
@@ -265,13 +265,177 @@ const ResumeBuilder = () => {
               </p>
             </div>
             <div className="flex gap-4">
-              <FiEdit className="cursor-pointer text-secondary"></FiEdit>
+              <label
+                htmlFor="my-modal-9"
+                className="btn modal-button border-0 bg-transparent hover:bg-transparent"
+              >
+                <FiEdit className="cursor-pointer text-secondary"></FiEdit>
+              </label>
+              <input type="checkbox" id="my-modal-9" className="modal-toggle" />
+              <div className="modal modal-middle">
+                <div className="modal-box">
+                  <h1 className="text-center">Edit Project</h1>
+                  <form action="">
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Project Title</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type your project name"
+                        name="description"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
+                      />
+                    </div>
+                    <div className="flex gap-5 ">
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Start Date</span>
+                        </label>
+                        <input
+                          type="date"
+                          placeholder="Type your project name"
+                          name="description"
+                          className="input input-bordered  focus:outline-none rounded-none"
+                        />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">End Date</span>
+                        </label>
+                        <input
+                          type="date"
+                          placeholder="Type your project name"
+                          name="description"
+                          className="input input-bordered  w-auto focus:outline-none rounded-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Project Url</span>
+                      </label>
+                      <input
+                        type="url"
+                        placeholder="Type your project link"
+                        name="description"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
+                      />
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Description</span>
+                      </label>
+                      <textarea
+                        type="text"
+                        placeholder="Project description"
+                        name="description"
+                        className="input input-bordered w-full h-24 focus:outline-none rounded-none"
+                      />
+                    </div>
+                  </form>
+                  <div className="modal-action">
+                    <label htmlFor="my-modal-9" className="btn btn-error">
+                      Cancel
+                    </label>
+                    <label
+                      type="submit"
+                      htmlFor="my-modal-9"
+                      className="btn btn-success"
+                    >
+                      Done
+                    </label>
+                  </div>
+                </div>
+              </div>
               <MdDelete className="cursor-pointer text-red-500"></MdDelete>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-secondary mt-7 cursor-pointer">
-            <FiPlus></FiPlus>
-            <p>Personal Project</p>
+          <label
+            htmlFor="my-modal-10"
+            className="btn modal-button border-0 bg-transparent hover:bg-transparent"
+          >
+            <div className="flex items-center gap-2 text-secondary mt-7 cursor-pointer">
+              <FiPlus></FiPlus>
+              <p>Personal Project</p>
+            </div>
+          </label>
+          <input type="checkbox" id="my-modal-10" className="modal-toggle" />
+          <div className="modal modal-middle">
+            <div className="modal-box">
+              <h1 className="text-center">Add Project</h1>
+              <form action="">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Project Title</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Type your project name"
+                    name="description"
+                    className="input input-bordered w-full focus:outline-none rounded-none"
+                  />
+                </div>
+                <div className="flex gap-5 ">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Start Date</span>
+                    </label>
+                    <input
+                      type="date"
+                      placeholder="Type your project name"
+                      name="description"
+                      className="input input-bordered  focus:outline-none rounded-none"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">End Date</span>
+                    </label>
+                    <input
+                      type="date"
+                      placeholder="Type your project name"
+                      name="description"
+                      className="input input-bordered  w-auto focus:outline-none rounded-none"
+                    />
+                  </div>
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Project Url</span>
+                  </label>
+                  <input
+                    type="url"
+                    placeholder="Type your project link"
+                    name="description"
+                    className="input input-bordered w-full focus:outline-none rounded-none"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Description</span>
+                  </label>
+                  <textarea
+                    type="text"
+                    placeholder="Project description"
+                    name="description"
+                    className="input input-bordered w-full h-24 focus:outline-none rounded-none"
+                  />
+                </div>
+              </form>
+              <div className="modal-action">
+                <label htmlFor="my-modal-10" className="btn btn-error">
+                  Cancel
+                </label>
+                <label
+                  type="submit"
+                  htmlFor="my-modal-10"
+                  className="btn btn-success"
+                >
+                  Done
+                </label>
+              </div>
+            </div>
           </div>
         </div>
         {/* PERSONAL PROJECTS part ends here */}
@@ -295,13 +459,159 @@ const ResumeBuilder = () => {
               </div>
             </div>
             <div className="flex gap-4">
-              <FiEdit className="cursor-pointer text-secondary"></FiEdit>
+              <label
+                htmlFor="my-modal-11"
+                className="btn modal-button border-0 bg-transparent hover:bg-transparent"
+              >
+                <FiEdit className="cursor-pointer text-secondary"></FiEdit>
+              </label>
+              <input
+                type="checkbox"
+                id="my-modal-11"
+                className="modal-toggle"
+              />
+              <div className="modal modal-middle">
+                <div className="modal-box">
+                  <h1 className="text-center">Edit Course</h1>
+                  <form action="">
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Course Name</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type your course name"
+                        name="description"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
+                      />
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Institude Name</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type your institude name"
+                        name="description"
+                        className="input input-bordered w-full focus:outline-none rounded-none"
+                      />
+                    </div>
+                    <div className="flex gap-5 ">
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Start Date</span>
+                        </label>
+                        <input
+                          type="date"
+                          placeholder="Type your project name"
+                          name="description"
+                          className="input input-bordered  focus:outline-none rounded-none"
+                        />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">End Date</span>
+                        </label>
+                        <input
+                          type="date"
+                          placeholder="Type your project name"
+                          name="description"
+                          className="input input-bordered  w-auto focus:outline-none rounded-none"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                  <div className="modal-action">
+                    <label htmlFor="my-modal-11" className="btn btn-error">
+                      Cancel
+                    </label>
+                    <label
+                      type="submit"
+                      htmlFor="my-modal-11"
+                      className="btn btn-success"
+                    >
+                      Done
+                    </label>
+                  </div>
+                </div>
+              </div>
               <MdDelete className="cursor-pointer text-red-500"></MdDelete>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-secondary mt-7 cursor-pointer">
-            <FiPlus></FiPlus>
-            <p>Add training/course</p>
+          <label
+            htmlFor="my-modal-12"
+            className="btn modal-button border-0 bg-transparent hover:bg-transparent"
+          >
+            <div className="flex items-center gap-2 text-secondary mt-7 cursor-pointer">
+              <FiPlus></FiPlus>
+              <p>Add training/course</p>
+            </div>
+          </label>
+          <input type="checkbox" id="my-modal-12" className="modal-toggle" />
+          <div className="modal modal-middle">
+            <div className="modal-box">
+              <h1 className="text-center">Add Course</h1>
+              <form action="">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Course Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Type your course name"
+                    name="description"
+                    className="input input-bordered w-full focus:outline-none rounded-none"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Institude Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Type your institude name"
+                    name="description"
+                    className="input input-bordered w-full focus:outline-none rounded-none"
+                  />
+                </div>
+                <div className="flex gap-5 ">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Start Date</span>
+                    </label>
+                    <input
+                      type="date"
+                      placeholder="Type your project name"
+                      name="description"
+                      className="input input-bordered  focus:outline-none rounded-none"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">End Date</span>
+                    </label>
+                    <input
+                      type="date"
+                      placeholder="Type your project name"
+                      name="description"
+                      className="input input-bordered  w-auto focus:outline-none rounded-none"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div className="modal-action">
+                <label htmlFor="my-modal-12" className="btn btn-error">
+                  Cancel
+                </label>
+                <label
+                  type="submit"
+                  htmlFor="my-modal-12"
+                  className="btn btn-success"
+                >
+                  Done
+                </label>
+              </div>
+            </div>
           </div>
         </div>
         {/* TRAINING/COURSES part ends here */}

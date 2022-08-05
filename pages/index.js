@@ -14,6 +14,7 @@ import About from "../components/About";
 import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
 import FeaturedJob from "../components/FeaturedJob";
+import Courses from "../components/Courses";
 
 export default function Home({ comments }) {
   return (
@@ -25,6 +26,7 @@ export default function Home({ comments }) {
         <JobCategory></JobCategory>
         <Reviews comments={comments}></Reviews>
         <Card />
+        {/* <Courses /> */}
         <Subscribe></Subscribe>
         <Footer></Footer>
       </Navber>
