@@ -15,6 +15,8 @@ import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import Image from "next/image";
 import auth from "../components/firebase.init";
+import Router from "next/router";
+import Loader from "../components/Loader";
 
 
 const Login = () => {
@@ -35,8 +37,13 @@ const Login = () => {
   //   navigate(from, { replace: true });
   // }
 
+  if (googleLoading || loading || gitLoading || fbLoading) {
+    return <Loader></Loader>
+  }
+
   if (user || googleUser || gitUser || fbUser) {
-    navigate(from);
+    // Router.push('/');
+    window.history.back();
     swal("Yayy", "Login Successfully Completed", "success");
   }
   if (error || googleError || gitError || fbError) {

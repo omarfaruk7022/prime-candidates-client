@@ -2,8 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "../images/prime-logo.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from '../components/firebase.init'
+import { signOut } from "firebase/auth";
 
 const Navber = ({ children }) => {
+
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  }
+
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -80,6 +90,13 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li>
+                  {/* {
+                    user &&
+                    <Link href="/resume">
+                      <a className="rounded-[5px]">Resume</a>
+                    </Link>
+                  } */}
+
                   <Link href="/resume">
                     <a className="rounded-[5px]">Resume</a>
                   </Link>
@@ -102,11 +119,15 @@ const Navber = ({ children }) => {
                 </li>
               </ul>
               <div className="flex gap-3">
-                <Link href="/login">
-                  <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
-                    Login/Register
-                  </button>
-                </Link>
+                {
+                  user ? <button onClick={handleSignOut} className="btn btn-outline self-center hover:bg-primary hover:border-primary">Logout</button>
+                    :
+                    <Link href="/login">
+                      <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
+                        Login/Register
+                      </button>
+                    </Link>
+                }
                 <Link href="/postJobs">
                   {/* <button className="btn btn-outline btn-secondary  ">
                     Job post
@@ -229,11 +250,15 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              <Link href="/login">
-                <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
-                  Login/Register
-                </button>
-              </Link>
+              {
+                user ? <button onClick={handleSignOut} className="btn btn-outline self-center hover:bg-primary hover:border-primary">Logout</button>
+                  :
+                  <Link href="/login">
+                    <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
+                      Login/Register
+                    </button>
+                  </Link>
+              }
               <Link href="/postJobs">
                 <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
                   Post Jobs
