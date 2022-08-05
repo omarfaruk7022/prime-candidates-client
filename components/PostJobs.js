@@ -60,6 +60,7 @@ const PostJobs = () => {
               name="title"
               placeholder="Job Title"
               className="input input-bordered w-full"
+              required
 
             />
           </div>
@@ -68,7 +69,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Salary Range</span>
               </label>
-              <select name="salaryRange" className="select select-bordered">
+              <select name="salaryRange" className="select select-bordered" required>
                 <option disabled selected>
                   Select Salary
                 </option>
@@ -86,7 +87,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Salary Type</span>
               </label>
-              <select name="salaryType" className="select select-bordered">
+              <select name="salaryType" className="select select-bordered" required>
                 <option disabled selected>
                   Select salary type
                 </option>
@@ -102,7 +103,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Job Catagory</span>
               </label>
-              <select name="jobCategory" className="select select-bordered">
+              <select name="jobCategory" className="select select-bordered" required>
                 <option disabled selected>
                   Select Catagory
                 </option>
@@ -118,7 +119,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Location</span>
               </label>
-              <select name="location" className="select select-bordered">
+              <select name="location" className="select select-bordered" required>
                 <option disabled selected>
                   Select location
                 </option>
@@ -138,7 +139,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Job Type</span>
               </label>
-              <select name="jobType" className="select select-bordered">
+              <select name="jobType" className="select select-bordered" required>
                 <option disabled selected>
                   Select Type
                 </option>
@@ -156,6 +157,7 @@ const PostJobs = () => {
               type="text"
               placeholder="Put image URL here..."
               className="input input-bordered w-full"
+              required
             />
             <FiCamera className=" mt-[-33px] ml-[280px] text-xl bg-gray-400 cursor-pointer" />
           </div>
@@ -187,7 +189,7 @@ const PostJobs = () => {
               <label className="label">
                 <span className="label-text">Job Description</span>
               </label>
-              <textarea name="jobDescription" className="border-2 border-gray-300 rounded-lg py-1 px-2 outline-none" rows={5}></textarea>
+              <textarea name="jobDescription" className="border-2 border-gray-300 rounded-lg py-1 px-2 outline-none" rows={5} required></textarea>
             </div>
           </div>
         </div>
