@@ -47,13 +47,7 @@ const support = () => {
             Please join our support session
           </h1>
 
-          <Link
-           
-            href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3"
-           
-          
-          >
-        
+          <Link href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3" target="_blank" >
             <button className="btn ml-[260px] btn-outline w-20 btn-secondary">
               Join
             </button>
