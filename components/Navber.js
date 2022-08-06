@@ -3,16 +3,16 @@ import Link from "next/link";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
-import auth from '../components/firebase.init'
+import auth from "../components/firebase.init";
 import { signOut } from "firebase/auth";
 
 const Navber = ({ children }) => {
-
   const [user] = useAuthState(auth);
+  console.log(user?.photoURL);
 
   const handleSignOut = () => {
     signOut(auth);
-  }
+  };
 
   return (
     <div className="drawer">
@@ -129,15 +129,20 @@ const Navber = ({ children }) => {
                 </li>
               </ul>
               <div className="flex gap-3">
-                {
-                  user ? <button onClick={handleSignOut} className="btn btn-outline self-center hover:bg-primary hover:border-primary">Logout</button>
-                    :
-                    <Link href="/login">
-                      <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
-                        Login/Register
-                      </button>
-                    </Link>
-                }
+                {user ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-outline self-center hover:bg-primary hover:border-primary"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link href="/login">
+                    <button className="btn btn-outline  self-center hover:bg-primary hover:border-primary">
+                      Login/Register
+                    </button>
+                  </Link>
+                )}
                 <Link href="/postJobs">
                   {/* <button className="btn btn-outline btn-secondary  ">
                     Job post
@@ -146,6 +151,15 @@ const Navber = ({ children }) => {
                     Post Jobs
                   </button>
                 </Link>
+              </div>
+              <div>
+                {user && (
+                  <div className="avatar online">
+                    <div className="w-12  rounded-full">
+                      <img src={user?.photoURL} />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -270,15 +284,20 @@ const Navber = ({ children }) => {
           </li>
           <li>
             <div className="flex flex-col gap-3">
-              {
-                user ? <button onClick={handleSignOut} className="btn btn-outline self-center hover:bg-primary hover:border-primary">Logout</button>
-                  :
-                  <Link href="/login">
-                    <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
-                      Login/Register
-                    </button>
-                  </Link>
-              }
+              {user ? (
+                <button
+                  onClick={handleSignOut}
+                  className="btn btn-outline self-center hover:bg-primary hover:border-primary"
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link href="/login">
+                  <button className="btn btn-outline self-center hover:bg-primary hover:border-primary">
+                    Login/Register
+                  </button>
+                </Link>
+              )}
               <Link href="/postJobs">
                 <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
                   Post Jobs
