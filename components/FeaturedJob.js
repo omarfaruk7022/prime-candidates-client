@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import manIcon from "../images/Img-icon.png";
 import { FaToolbox } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
+import Router from 'next/router';
 
 const FeaturedJob = () => {
   const [fJob, setFJob] = useState([]);
@@ -15,6 +17,10 @@ const FeaturedJob = () => {
         setFJob(data);
       });
   }, []);
+
+  const handleBrowseJob = (id) => {
+    Router.push(`/fulltime/${id}`)
+  }
 
   return (
     <div className="pt-6 pb-12">
@@ -75,7 +81,7 @@ const FeaturedJob = () => {
                         </p>
                       </div>
                       <div className="flex gap-2 items-center">
-                        <FaToolbox className="text-[8px] lg:text-[10px]" />
+                        <HiLocationMarker className="text-[8px] lg:text-[10px]" />
                         <p className="text-[8px] lg:text-[10px]">
                           {job.jobLocation}
                         </p>
@@ -93,7 +99,7 @@ const FeaturedJob = () => {
                           {job.jobType}
                         </h1>
                       </div>
-                      <button className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal">
+                      <button onClick={() => handleBrowseJob(job._id)} className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-transparent hover:text-secondary hover:border-secondary">
                         Browse Job
                       </button>
                     </div>
