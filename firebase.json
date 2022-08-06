@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site":"prime-candidates-1",
     "public": "build",
     "ignore": [
       "firebase.json",
