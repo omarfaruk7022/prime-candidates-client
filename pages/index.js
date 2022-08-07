@@ -20,6 +20,7 @@ export default function Home({ comments }) {
         <Reviews comments={comments}></Reviews>
         <Service />
         <Card />
+        
         {/* <Courses /> */}
         <Subscribe></Subscribe>
 
