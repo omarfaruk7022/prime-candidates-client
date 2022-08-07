@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Navber from "./Navber";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from '../components/firebase.init';
 
 const ActiveLink = ({ children, href, className }) => {
     const router = useRouter();
@@ -20,6 +22,9 @@ const ActiveLink = ({ children, href, className }) => {
 
 const DashboardLayout = ({ children }) => {
 
+    const [user] = useAuthState(auth);
+    console.log(user)
+
     return (
         <div>
             <Navber>
@@ -34,9 +39,12 @@ const DashboardLayout = ({ children }) => {
                         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                             {/* <!-- Sidebar content here --> */}
                             <li>
-                                <div className="avatar mx-auto mb-8">
+                                <div className="avatar mx-auto flex flex-col">
                                     <div className="w-16 rounded-xl">
-                                        <img src="https://placeimg.com/192/192/people" />
+                                        <img src={user?.photoURL} alt=" " />
+                                    </div>
+                                    <div>
+                                        <h3>{user?.displayName}</h3>
                                     </div>
                                 </div>
                             </li>
