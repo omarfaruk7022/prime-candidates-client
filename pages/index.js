@@ -8,6 +8,7 @@ import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
 import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
+import Asking from "../components/Asking";
 
 export default function Home({ comments }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ comments }) {
         <Features />
         <JobCategory></JobCategory>
         <Reviews comments={comments}></Reviews>
+        <Asking/>
         <Service />
         <Card />
         
