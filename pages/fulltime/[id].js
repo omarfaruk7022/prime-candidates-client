@@ -8,7 +8,7 @@ const JobDetails = () => {
     const { id } = router.query;
     const [jobDetails, setJobDetails] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/jobdetails/${id}`)
+        fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`)
             .then(res => res.json())
             .then(data => setJobDetails(data))
     }, [])
