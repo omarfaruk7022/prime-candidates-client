@@ -14,7 +14,7 @@ const support = () => {
   //     text,
   //   };
 
-  //   fetch("http://localhost:5000/support", {
+  //   fetch("https://stormy-beach-33232.herokuapp.com/support", {
   //     method: "POST",
   //     headers: {
   //       "content-type": "application/json",
@@ -32,7 +32,7 @@ const support = () => {
   // };
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/support")
+  //   fetch("https://stormy-beach-33232.herokuapp.com/support")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setReasons(data);
