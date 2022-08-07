@@ -3,23 +3,24 @@ import DashboardLayout from "../../components/DashboardLayout";
 const handleBack = () => {
     window.history.back();
 };
+
 const Index = () => (
     <DashboardLayout>
         <div className="bg-[#F6F6F6] mx-8 lg:mx-0">
             <div className="sm:pt-8">
                 <div>
                     <div className="lg:flex items-center lg:ml-12 justify-between ">
-                        <div className="flex items-center ml-12 justify-between ">
-                            <div className="avatar">
-                                <div className="w-16 rounded-xl">
-                                    <img src="https://placeimg.com/192/192/people" alt=""/>
-                                </div>
-                            </div>
-                            <div className="ml-4">
-                                <h2 className="text-xl">User Name</h2>
-                                <h4>user.abc@gmail.com</h4>
+                        {/* <div className="flex items-center ml-12 justify-between ">
+                        <div className="avatar">
+                            <div className="w-16 rounded-xl">
+                                <img src="https://placeimg.com/192/192/people" alt="" />
                             </div>
                         </div>
+                        <div className="ml-4">
+                            <h2 className="text-xl">{user.displayName}</h2>
+                            <h4>user.abc@gmail.com</h4>
+                        </div>
+                    </div> */}
                         <div>
                             <button
                                 onClick={handleBack}
@@ -35,7 +36,7 @@ const Index = () => (
                     <hr className="-mx-20" />
                     <div className="py-8">
                         <div className="flex mb-4">
-                            <span className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
+                            <span className="flex items-center justify-center  rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
                                 1
                             </span>
                             <span className="font-bold text-gray-800">
@@ -75,7 +76,7 @@ const Index = () => (
 
                     <div className="py-8">
                         <div className="flex mb-4">
-                            <span className="flex items-center justify-center block rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
+                            <span className="flex items-center justify-center  rounded-full border border-blue-500 h-6 w-6 text-xs font-bold text-blue-500 mr-3">
                                 2
                             </span>
                             <span className="font-bold text-gray-800">
