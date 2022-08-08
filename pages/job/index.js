@@ -3,13 +3,10 @@ import Footer from '../../components/Footer';
 import Job from '../../components/Job';
 import Navber from '../../components/Navber';
 
-export default function FullTimeJobs({ jobs }) {
+export default function ShowJob({ jobs }) {
     return (
         <>
             <Navber>
-                {/* <div className='flex justify-center items-center min-h-screen'>
-                <h2 className='text-4xl text-secondary tracking-widest'>Full-Time job Updating soon....</h2>
-            </div> */}
                 <div>
                     {
                         jobs.map(job => <Job key={job._id} job={job}></Job>)
