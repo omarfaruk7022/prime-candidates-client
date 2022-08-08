@@ -270,6 +270,7 @@ const Banner = () => {
   //   });
   // });
   return (
+
     // <div className="lg:mt-12">
     //   <div className="container max-w-[1080px] mx-auto">
     //     <div className="grid grid-cols-1 sm:grid-cols-2">
@@ -348,6 +349,7 @@ const Banner = () => {
             <h1 className="text-2xl lg:text-4xl text-center sm:text-left text-primary uppercase font-extrabold md:mb-3">
               <span className="text-secondary">Job</span> Match
             </h1>
+
           </div>
           <p className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
             Find jobs, hire employer & career opportunities
