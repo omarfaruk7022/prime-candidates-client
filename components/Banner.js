@@ -334,7 +334,7 @@ const Banner = () => {
     <section className="relative bg-white">
       <img
         className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-        src="https://i.ibb.co/6wmqcCr/prime-2.jpg"
+        src="https://images.unsplash.com/photo-1601758003122-53c40e686a19"
         alt="Couple on a bed with a dog"
       />
 
