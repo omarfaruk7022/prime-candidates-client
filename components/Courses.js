@@ -12,7 +12,13 @@ const Courses = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mx-5">
         <div className=" rounded-lg  bg-white shadow-lg  shadow-blue-50">
           <div>
-            <Image className="w-full" width={600} src={course1} alt="" />
+            <Image
+              className="w-full"
+              width={600}
+              height={400}
+              src={course1}
+              alt=""
+            />
           </div>
           <div className="p-3">
             <h1>Effective Lessening</h1>
@@ -41,7 +47,13 @@ const Courses = () => {
         </div>
         <div className=" rounded-lg  bg-white shadow-lg  shadow-blue-50">
           <div>
-            <Image className="w-full" width={600} src={course1} alt="" />
+            <Image
+              className="w-full"
+              width={600}
+              height={400}
+              src={course1}
+              alt=""
+            />
           </div>
           <div className="p-3">
             <h1>Effective Lessening</h1>
@@ -70,7 +82,13 @@ const Courses = () => {
         </div>
         <div className=" rounded-lg  bg-white shadow-lg  shadow-blue-50">
           <div>
-            <Image className="w-full" width={600} src={course1} alt="" />
+            <Image
+              className="w-full"
+              width={600}
+              height={400}
+              src={course1}
+              alt=""
+            />
           </div>
           <div className="p-3">
             <h1>Effective Lessening</h1>

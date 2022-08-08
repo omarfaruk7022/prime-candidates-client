@@ -3,8 +3,6 @@ import Navber from "./Navber";
 import Image from "next/image";
 import jobHiring from "../images/job-hiring.svg";
 import { BsArrowDownShort } from "react-icons/bs";
-import { TweenMax, power3 } from "gsap";
-import { ease, easeOut } from "gsap";
 
 const Banner = () => {
   // let textItem = useRef(null);
@@ -26,7 +24,7 @@ const Banner = () => {
       <div className="container max-w-[1080px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="flex flex-col justify-center p-5">
-            <div >
+            <div>
               <h1 className="text-2xl lg:text-4xl text-center sm:text-left uppercase font-extrabold text-primary md:mb-3 mt-16 md:mt-0">
                 Find Your <span className="text-secondary">Perfect</span>
               </h1>
@@ -34,10 +32,10 @@ const Banner = () => {
                 <span className="text-secondary">Job</span> Match
               </h1>
             </div>
-            <div >
-            <p  className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
-              Find jobs, hire employer & career opportunities
-            </p>
+            <div>
+              <p className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
+                Find jobs, hire employer & career opportunities
+              </p>
             </div>
             <div className="navber bg-white rounded-lg shadow-lg shadow-blue-50 p-2">
               <div className="">
