@@ -7,7 +7,7 @@ const Job = ({ job }) => {
     const { _id, jobTitle, jobLocation, jobCategory, salaryRange, jobType } = job;
 
     const handleJobDetails = (id) => {
-        Router.push(`/fulltime/${id}`)
+        Router.push(`/job/${id}`)
     }
     return (
         <div className="card w-2/4 mx-auto my-5 bg-base-100 shadow-xl">
