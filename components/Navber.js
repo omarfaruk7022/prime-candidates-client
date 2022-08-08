@@ -57,7 +57,7 @@ const Navber = ({ children }) => {
                   </Link>
                 </li>
                 <li tabIndex="0">
-                  <Link href="/fulltime">
+                  <Link href="/job">
                     <a className="rounded">
                       Find Job
                       <svg
@@ -73,7 +73,7 @@ const Navber = ({ children }) => {
                   </Link>
                   <ul className="p-2 bg-base-100">
                     <li>
-                      <Link href={"/fulltime"}>
+                      <Link href={"/job"}>
                         <a className="rounded-[5px]">Full-Time</a>
                       </Link>
                     </li>
@@ -179,7 +179,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li tabIndex="0">
-            <Link href="/fulltime">
+            <Link href="/job">
               <a>
                 Find Job
                 <svg
@@ -195,7 +195,7 @@ const Navber = ({ children }) => {
             </Link>
             <ul className="p-2 bg-base-100">
               <li>
-                <Link href={"/fulltime"}>
+                <Link href={"/job"}>
                   <a className="rounded-xl">Full-Time</a>
                 </Link>
               </li>

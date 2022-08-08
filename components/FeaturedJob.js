@@ -19,7 +19,7 @@ const FeaturedJob = () => {
   }, []);
 
   const handleBrowseJob = (id) => {
-    Router.push(`/fulltime/${id}`)
+    Router.push(`/job/${id}`)
   }
 
   return (
