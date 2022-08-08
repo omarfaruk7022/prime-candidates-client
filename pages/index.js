@@ -22,8 +22,12 @@ export default function Home({ comments }) {
         <Asking/>
         <Service />
         <Card />
+
+        <Courses />
+
         
-        {/* <Courses /> */}
+   
+
         <Subscribe></Subscribe>
 
         <Footer></Footer>
