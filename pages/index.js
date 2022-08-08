@@ -10,6 +10,7 @@ import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
 import Asking from "../components/Asking";
 
+
 export default function Home({ comments }) {
   return (
     <>
@@ -23,11 +24,7 @@ export default function Home({ comments }) {
         <Service />
         <Card />
 
-        <Courses />
-
-        
-   
-
+        {/* <Courses /> */}
         <Subscribe></Subscribe>
 
         <Footer></Footer>
