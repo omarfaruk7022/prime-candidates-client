@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-<<<<<<< HEAD
-import Navber from "../../components/Navber";
+
 import Footer from "../../components/Footer";
-=======
+
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
 import Navber from "../../components/Navber";
-import Footer from "../../components/Footer";
+
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
->>>>>>> 1dacd76adf833871380d5ae8a960f28b88003bd8
 
 const JobDetails = () => {
   const router = useRouter();
@@ -18,49 +16,16 @@ const JobDetails = () => {
   const [jobDetails, setJobDetails] = useState({});
   useEffect(() => {
     if (router.isReady) {
-<<<<<<< HEAD
-      fetch(`http://localhost:5000/jobdetails/${id}`)
-=======
+      fetch(`http://localhost:5000/jobdetails/${id}`);
+
       fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`)
->>>>>>> 1dacd76adf833871380d5ae8a960f28b88003bd8
         .then((res) => res.json())
         .then((data) => setJobDetails(data));
     }
   }, [id, router.isReady]);
   return (
     <Navber>
-<<<<<<< HEAD
-      <div className="border border-base-200 w-2/3 mx-auto p-5 rounded leading-7 my-8">
-        <h1 className="text-xl">
-          <span className="text-primary font-semibold">Title :</span>{" "}
-          {jobDetails.jobTitle}
-        </h1>
-        <p>
-          <span className="text-primary font-semibold">Job Location :</span>{" "}
-          {jobDetails.jobLocation}
-        </p>
-        <p>
-          <span className="text-primary font-semibold">Job Category :</span>{" "}
-          {jobDetails.jobCategory}
-        </p>
-        <p>
-          <span className="text-primary font-semibold">Job Type :</span>{" "}
-          {jobDetails.jobType}
-        </p>
-        <p>
-          <span className="text-primary font-semibold">Salary Type :</span>{" "}
-          {jobDetails.salaryType}
-        </p>
-        <p>
-          <span className="text-primary font-semibold">Salary Range :</span>{" "}
-          {jobDetails.salaryRange}
-        </p>
-        <p>
-          <span className="text-primary font-semibold">Job Description :</span>{" "}
-          {jobDetails.jobDescription}
-        </p>
-      </div>
-=======
+   
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>
@@ -76,7 +41,6 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-
       <div className="my-5 container max-w-[1080px] mx-auto">
         <div className="flex flex-col md:flex-row gap-5 justify-center mx-5">
           <div className="flex flex-col gap-5">
@@ -271,8 +235,6 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-
->>>>>>> 1dacd76adf833871380d5ae8a960f28b88003bd8
       <Footer></Footer>
     </Navber>
   );
