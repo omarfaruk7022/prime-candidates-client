@@ -38,16 +38,18 @@ const DashboardLayout = ({ children }) => {
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                             {/* <!-- Sidebar content here --> */}
-                            <li>
-                                <div className="avatar mx-auto flex flex-col">
-                                    <div className="w-16 rounded-xl">
-                                        <img src={user?.photoURL} alt=" " />
+                            {
+                                user?.photoURL && <li>
+                                    <div className="avatar mx-auto flex flex-col">
+                                        <div className="w-16 rounded-xl">
+                                            <img src={user?.photoURL} alt=" " />
+                                        </div>
+                                        <div>
+                                            <h3>{user?.displayName}</h3>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3>{user?.displayName}</h3>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            }
                             <li>
                                 <ActiveLink href="/dashboard/general" className="ml-10">
                                     General
