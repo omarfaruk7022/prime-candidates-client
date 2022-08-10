@@ -334,8 +334,8 @@ const Banner = () => {
     <section className="relative bg-white">
       <img
         className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-        src="https://images.unsplash.com/photo-1601758003122-53c40e686a19"
-        alt="Couple on a bed with a dog"
+        src="https://i.ibb.co/6wmqcCr/prime-2.jpg"
+        alt="Banner"
       />
 
       <div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
