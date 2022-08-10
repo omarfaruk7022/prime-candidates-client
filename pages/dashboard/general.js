@@ -19,9 +19,11 @@ const General = () => {
                         <div className="lg:flex items-center lg:ml-12 justify-between ">
                             <div className="flex items-center ml-12 justify-between ">
                                 <div className="avatar">
-                                    <div className="w-16 rounded-xl">
-                                        <img src={user?.photoURL} alt="" />
-                                    </div>
+                                    {
+                                        user?.photoURL && <div className="w-16 rounded-xl">
+                                            <img src={user?.photoURL} alt="" />
+                                        </div>
+                                    }
                                 </div>
                                 <div className="ml-4">
                                     <h2 className="text-xl">{user?.displayName}</h2>

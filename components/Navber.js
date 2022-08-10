@@ -155,7 +155,7 @@ const Navber = ({ children }) => {
                 </Link>
               </div>
               <div>
-                {user && (
+                {user?.photoURL && (
                   <div className="avatar online">
                     <div className="w-12  rounded-full">
                       <img src={user?.photoURL} />
