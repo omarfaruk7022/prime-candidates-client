@@ -101,7 +101,7 @@ const FeaturedJob = () => {
                       </div>
                       <button
                         onClick={() => handleBrowseJob(job._id)}
-                        className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-transparent hover:text-secondary hover:border-secondary"
+                        className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
                       >
                         Browse Job
                       </button>
