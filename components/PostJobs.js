@@ -30,7 +30,7 @@ const PostJobs = () => {
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
-    fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
+    fetch("http://localhost:5000/jobs", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -176,7 +176,6 @@ const PostJobs = () => {
                 />
               </div>
             </fieldset>
-
           </div>
         </div>
         <div className="mt-4 px-3 md:px-0">

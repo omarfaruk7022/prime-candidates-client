@@ -3,13 +3,13 @@ import Image from "next/image";
 import manIcon from "../images/Img-icon.png";
 import { FaToolbox } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
-import Router from 'next/router';
+import Router from "next/router";
 
 const FeaturedJob = () => {
   const [fJob, setFJob] = useState([]);
 
   useEffect(() => {
-    fetch("https://stormy-beach-33232.herokuapp.com/jobs")
+    fetch("http://localhost:5000/jobs")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -19,8 +19,8 @@ const FeaturedJob = () => {
   }, []);
 
   const handleBrowseJob = (id) => {
-    Router.push(`/job/${id}`)
-  }
+    Router.push(`/job/${id}`);
+  };
 
   return (
     <div className="pt-6 pb-12">
@@ -99,7 +99,10 @@ const FeaturedJob = () => {
                           {job.jobType}
                         </h1>
                       </div>
-                      <button onClick={() => handleBrowseJob(job._id)} className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-transparent hover:text-secondary hover:border-secondary">
+                      <button
+                        onClick={() => handleBrowseJob(job._id)}
+                        className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-transparent hover:text-secondary hover:border-secondary"
+                      >
                         Browse Job
                       </button>
                     </div>
