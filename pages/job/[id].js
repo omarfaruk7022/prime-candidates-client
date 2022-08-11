@@ -37,15 +37,15 @@ const JobDetails = () => {
       </div>
 
       <div className="my-5 container max-w-[1080px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-5 justify-center mx-5">
-          <div className="flex flex-col gap-5">
+        <div className="flex flex-col  sm:flex-row gap-5 justify-center mx-5">
+          <div className="flex flex-col gap-5 max-w-[600px]">
             <div className="flex  justify-between items-center p-3 rounded-tl-3xl rounded-br-3xl  bg-white shadow-lg  shadow-blue-50">
               <div className="flex gap-2 ">
                 <div className="bg-base-100 rounded-tl-2xl rounded-br-2xl h-full flex items-center  shadow-lg  shadow-blue-50">
                   <Image src={manIcon} alt="" />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h1 className="text-xs sm:text-xl">Finance & Accounts</h1>
+                  <h1 className="text-xs sm:text-xl">{jobDetails.jobTitle}</h1>
                   <p className="text-[8px] sm:text-xs">
                     Finix loans & funding agency
                   </p>
@@ -54,7 +54,7 @@ const JobDetails = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <button className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white">
-                  Browse Job
+                  Apply
                 </button>
                 <h1 className="text-[8px] sm:text-xs">
                   Deadline: Dec 30, 2020
@@ -143,85 +143,77 @@ const JobDetails = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      Published On
-                    </h1>
+                    <h1 className="text-[9px] text-xs font-light">Vacancy</h1>
                   </div>
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
+                      <span className="mr-5">:</span> 01
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">Job Type</h1>
+                  </div>
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">
+                      <span className="mr-5">:</span> Part Time
                     </h1>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      Published On
+                      Experience
                     </h1>
                   </div>
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
-                    </h1>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      Published On
-                    </h1>
-                  </div>
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
+                      <span className="mr-5">:</span> 3 Years
                     </h1>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      Published On
+                      Job Location
                     </h1>
                   </div>
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
+                      <span className="mr-5">:</span> {jobDetails.jobLocation}
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">Category</h1>
+                  </div>
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">
+                      <span className="mr-5">:</span> {jobDetails.jobCategory}
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">Salary</h1>
+                  </div>
+                  <div className="w-[100px]">
+                    <h1 className="text-[9px] text-xs font-light">
+                      <span className="mr-5">:</span> {jobDetails.salaryRange}
                     </h1>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      Published On
+                      Application Deu
                     </h1>
                   </div>
                   <div className="w-[100px]">
                     <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
-                    </h1>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      Published On
-                    </h1>
-                  </div>
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
-                    </h1>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      Published On
-                    </h1>
-                  </div>
-                  <div className="w-[100px]">
-                    <h1 className="text-[9px] text-xs font-light">
-                      <span className="mr-5">:</span> Oct 01, 2020
+                      <span className="mr-5">:</span> Dec 30, 2020
                     </h1>
                   </div>
                 </div>
