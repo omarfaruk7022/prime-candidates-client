@@ -3,8 +3,8 @@ import { FiEdit, FiPlus } from "react-icons/fi";
 import { TiPointOfInterest } from "react-icons/ti";
 import { MdDelete } from "react-icons/md";
 
-const Index = () => (
-    <DashboardLayout>
+const Index = () => {
+    return <DashboardLayout>
         <div className='flex justify-between items-center mx-12 mt-8 mb-4'>
             <h3 className="uppercase font-semibold">SKILLS</h3>
             <div>
@@ -99,6 +99,6 @@ const Index = () => (
             </div>
         </div>
     </DashboardLayout>
-)
+}
 
 export default Index

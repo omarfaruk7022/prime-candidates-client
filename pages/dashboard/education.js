@@ -1,7 +1,7 @@
 import DashboardLayout from '../../components/DashboardLayout'
 
-const Index = () => (
-    <DashboardLayout>
+const Index = () => {
+    return <DashboardLayout>
         <div className='flex justify-between mx-12 mt-8 mb-4'>
             <h2>Education</h2>
             <button className='flex items-center'>
@@ -95,6 +95,6 @@ const Index = () => (
             </div>
         </div>
     </DashboardLayout>
-)
+}
 
 export default Index
