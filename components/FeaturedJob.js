@@ -9,7 +9,7 @@ const FeaturedJob = () => {
   const [fJob, setFJob] = useState([]);
 
   useEffect(() => {
-    fetch("https://stormy-beach-33232.herokuapp.com/jobs")
+    fetch("http://localhost:5000/jobs")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

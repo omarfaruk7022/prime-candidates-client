@@ -1,8 +1,12 @@
+// import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 const Features = () => {
   return (
     <div>
+
+
       <section className="text-white bg-gray-900">
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
           <div className="max-w-lg mx-auto text-center">
@@ -236,6 +240,7 @@ const Features = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

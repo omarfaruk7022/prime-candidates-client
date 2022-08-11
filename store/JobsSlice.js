@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchJobs = createAsyncThunk("jobs/fetchJobs", async () => {
-  const res = await axios.get("https://stormy-beach-33232.herokuapp.com/jobs");
+  const res = await axios.get("http://localhost:5000/jobs");
   return res.data;
 });
 

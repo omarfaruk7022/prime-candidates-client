@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+
+import Footer from "../../components/Footer";
+
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
 import Navber from "../../components/Navber";
-import Footer from "../../components/Footer";
+
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
 
@@ -13,6 +16,8 @@ const JobDetails = () => {
   const [jobDetails, setJobDetails] = useState({});
   useEffect(() => {
     if (router.isReady) {
+      fetch(`http://localhost:5000/jobdetails/${id}`);
+
       fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`)
         .then((res) => res.json())
         .then((data) => setJobDetails(data));
@@ -20,6 +25,7 @@ const JobDetails = () => {
   }, [id, router.isReady]);
   return (
     <Navber>
+   
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>
@@ -35,7 +41,6 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-
       <div className="my-5 container max-w-[1080px] mx-auto">
         <div className="flex flex-col  sm:flex-row gap-5 justify-center mx-5">
           <div className="flex flex-col gap-5 max-w-[600px]">
@@ -222,7 +227,6 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-
       <Footer></Footer>
     </Navber>
   );

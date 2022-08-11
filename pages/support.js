@@ -14,7 +14,7 @@ const support = () => {
   //     text,
   //   };
 
-  //   fetch("https://stormy-beach-33232.herokuapp.com/support", {
+  //   fetch("http://localhost:5000/support", {
   //     method: "POST",
   //     headers: {
   //       "content-type": "application/json",
@@ -32,7 +32,7 @@ const support = () => {
   // };
 
   // useEffect(() => {
-  //   fetch("https://stormy-beach-33232.herokuapp.com/support")
+  //   fetch("http://localhost:5000/support")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setReasons(data);
@@ -47,7 +47,10 @@ const support = () => {
             Please join our support session
           </h1>
 
-          <Link href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3" target="_blank" >
+          <Link
+            href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3"
+            target="_blank"
+          >
             <button className="btn ml-[260px] btn-outline w-20 btn-secondary">
               Join
             </button>
