@@ -19,7 +19,7 @@ export default function ShowJob({ jobs }) {
 }
 
 export const getStaticProps = async () => {
-  // const res = await fetch("http://localhost:5000/jobs");
+  // const res = await fetch("https://stormy-beach-33232.herokuapp.com/jobs");
 
   const res = await fetch("https://stormy-beach-33232.herokuapp.com/jobs");
 
