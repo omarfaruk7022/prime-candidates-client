@@ -61,11 +61,6 @@ const DashboardLayout = ({ children }) => {
                                 </ActiveLink>
                             </li>
                             <li>
-                                <ActiveLink href="/dashboard/social-profile" className="ml-10">
-                                    Social Profile
-                                </ActiveLink>
-                            </li>
-                            <li>
                                 <ActiveLink href="/dashboard/skillset" className="ml-10">
                                     Skill Set
                                 </ActiveLink>
