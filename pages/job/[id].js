@@ -25,7 +25,7 @@ const JobDetails = () => {
   }, [id, router.isReady]);
   return (
     <Navber>
-   
+      
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>
