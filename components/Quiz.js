@@ -44,11 +44,11 @@ const Quiz = () => {
     setShowAnswers(false);
   };
   return currentIndex >= questions?.length ? (
-    <h1 className="text-4xl mt-20 text-purple-500 font-bold">
+    <h1 className="text-4xl mt-20 text-center text-purple-500 font-bold">
       YOO ! Your Score is {score} / {currentIndex}
     </h1>
   ) : questions.length > 0 ? (
-    <div className="bg-blue-400 p-10">
+    <div className="p-10">
       <Question
         data={questions[currentIndex]}
         handleAnswer={handleAnswer}
