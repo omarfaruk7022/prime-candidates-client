@@ -16,7 +16,7 @@ const JobDetails = () => {
   const [jobDetails, setJobDetails] = useState({});
   useEffect(() => {
     if (router.isReady) {
-      fetch(`http://localhost:5000/jobdetails/${id}`);
+      fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`);
 
       fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`)
         .then((res) => res.json())
@@ -25,7 +25,6 @@ const JobDetails = () => {
   }, [id, router.isReady]);
   return (
     <Navber>
-   
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>

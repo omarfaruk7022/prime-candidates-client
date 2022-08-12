@@ -30,7 +30,7 @@ const PostJobs = () => {
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
-    fetch("http://localhost:5000/jobs", {
+    fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
 import auth from "../components/firebase.init";
 import { signOut } from "firebase/auth";
+import {BsChatDots} from 'react-icons/bs';
 
 const Navber = ({ children }) => {
   const [user] = useAuthState(auth);
@@ -154,6 +155,9 @@ const Navber = ({ children }) => {
                   </button>
                 </Link>
               </div>
+              <a href="https://pcchat.pages.dev/">
+                <BsChatDots className="cursor-pointer text-3xl" />
+              </a>
               <div>
                 {user?.photoURL && (
                   <div className="avatar online">
