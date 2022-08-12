@@ -11,7 +11,6 @@ import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Course from "../components/Course";
 
-
 export default function Home({ comments }) {
   return (
     <>
@@ -24,9 +23,6 @@ export default function Home({ comments }) {
         <Asking />
         <Service />
         <Card />
-
-
-        
 
         <Subscribe></Subscribe>
 

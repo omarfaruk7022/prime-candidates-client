@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -18,6 +19,9 @@ const CourseDetails = () => {
     <Navber>
       <div>
         <h1>{courseDetails.courseTitle}</h1>
+        <Link href="/quizes">
+          <button className="btn btn-primary">Exam Test</button>
+        </Link>
       </div>
     </Navber>
   );

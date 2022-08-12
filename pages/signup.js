@@ -1,6 +1,6 @@
 import swal from "sweetalert";
-import vector from "../images//Group 31.png"
-import icon from "..//images//Google_Icons-09-512.webp"
+import vector from "../images//Group 31.png";
+import icon from "..//images//Google_Icons-09-512.webp";
 import {
   useSignInWithGoogle,
   useCreateUserWithEmailAndPassword,
@@ -12,7 +12,6 @@ import Navber from "../components/Navber";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import auth from "../components/firebase.init";
-
 
 const SignUp = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -45,10 +44,14 @@ const SignUp = () => {
     <div>
       <Navber>
         <div className="flex justify-center items-center h-screen my-28">
-          <div className="mr-28 hidden lg:block"><Image src={vector} alt="" /></div>
+          <div className="mr-28 hidden lg:block">
+            <Image src={vector} alt="" />
+          </div>
           <div className="card w-96 bg-base-100 shadow-xl mx-3 lg:mx-0">
             <div className="card-body">
-              <h2 className="text-center text-2xl font-bold text-secondary">Sign Up</h2>
+              <h2 className="text-center text-2xl font-bold text-secondary">
+                Sign Up
+              </h2>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full max-w-xs">
                   <label className="label">
@@ -159,14 +162,11 @@ const SignUp = () => {
               </p>
               <div className="divider">OR</div>
               <div className="flex">
-                <a
-                  onClick={() => signInWithGoogle()}
-
-                >
-                  <div className="h-[40px] w-[60px] cursor-pointer"><Image src={icon} alt="" /></div>
-
+                <a onClick={() => signInWithGoogle()}>
+                  <div className="h-[40px] w-[60px] cursor-pointer">
+                    <Image src={icon} alt="" />
+                  </div>
                 </a>
-
               </div>
             </div>
           </div>
