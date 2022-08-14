@@ -91,7 +91,7 @@ const Premium = () => {
                 </li>
               </ul>
               <a
-                class="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl active:text-indigo-500 focus:outline-none focus:ring hover:bg-secondary"
+                className="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl active:text-indigo-500 focus:outline-none focus:ring hover:bg-secondary"
                 href="/download"
               >
                 Subscribe
@@ -179,7 +179,7 @@ const Premium = () => {
                 </li>
               </ul>
               <a
-                class="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl hover:bg-secondary active:text-indigo-500 focus:outline-none focus:ring"
+                className="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl hover:bg-secondary active:text-indigo-500 focus:outline-none focus:ring"
                 href="/download"
               >
                 Subscribe
@@ -267,7 +267,7 @@ const Premium = () => {
                 </li>
               </ul>
               <a
-                class="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl active:text-indigo-500 focus:outline-none focus:ring hover:bg-secondary"
+                className="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl active:text-indigo-500 focus:outline-none focus:ring hover:bg-secondary"
                 href="/download"
               >
                 Subscribe
