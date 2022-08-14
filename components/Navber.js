@@ -86,10 +86,10 @@ const Navber = ({ children }) => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="/candidate">
-                    <a className="rounded-[5px]">Candidates</a>
-                  </Link>
-                </li>
+            <Link href="/courses">
+              <a className="rounded-[5px]">Courses</a>
+            </Link>
+          </li>
                 <li>
                   {/* {
                     user &&
@@ -211,8 +211,8 @@ const Navber = ({ children }) => {
             </ul>
           </li>
           <li>
-            <Link href="/candidate">
-              <a className="rounded-[5px]">Candidates</a>
+            <Link href="/courses">
+              <a className="rounded-[5px]">Courses</a>
             </Link>
           </li>
           <li>
