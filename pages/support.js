@@ -4,8 +4,24 @@ import Footer from "../components/Footer";
 import Navber from "../components/Navber";
 import SupportsData from "../components/SupportsData";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../components/firebase.init";
 
 const support = () => {
+  const router = useRouter()
+  const [user] = useAuthState(auth) 
+    
+  useEffect(() => {
+    
+
+    // if there is no authenticated user, redirect to login page_
+
+    if (!user) {
+      router.push("/login")
+    }
+  }, [user]);
+ 
   // const [reasons, setReasons] = useState([]);
   // const handleSubmit = (e) => {
   //   e.preventDefault();
