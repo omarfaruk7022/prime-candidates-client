@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiEdit, FiDownload, FiPlus } from "react-icons/fi";
 import { TiPointOfInterest } from "react-icons/ti";
 import { MdDelete } from "react-icons/md";
 import { saveAs } from "file-saver";
+import { useRouter } from "next/router";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./firebase.init";
 
 const ResumeBuilder = () => {
+  const router = useRouter()
+  const [user] = useAuthState(auth);
   const saveFile = () => {
     saveAs(
       "https://drive.google.com/uc?export=download&id=1Dcmlg0DWZcgsvy5iTulJCMLWs-G-lveA",
       "example.pdf"
     );
   };
+  useEffect(() => {
+    
+
+    // if there is no authenticated user, redirect to login page_
+
+    if (!user) {
+      router.push("/login")
+    }
+  
+  
+  }, [user])
+
   return (
     <div className="container max-w-[1080px] mx-auto my-16">
       <h1 className="uppercase text-3xl text-center text-primary font-bold mb-10">
