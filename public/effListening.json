@@ -1,0 +1,94 @@
+[
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "The letter ‘a‘ is a _________.",
+        "correct_answer": "vowel",
+        "incorrect_answers": ["consonant"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Does she _____ a brother?",
+        "correct_answer": "have",
+        "incorrect_answers": ["has"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "That car is _______.",
+        "correct_answer": "mine",
+        "incorrect_answers": ["me", "my", "I"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "I _____ a new car.",
+        "correct_answer": "bought",
+        "incorrect_answers": ["buy"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "The letter ‘d‘ is a _________.",
+        "correct_answer": "consonant",
+        "incorrect_answers": ["vowel"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "The letter ‘e‘ is a _________.",
+        "correct_answer": "vowel",
+        "incorrect_answers": ["consonant"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "They ____ _____ happy.",
+        "correct_answer": "are not",
+        "incorrect_answers": ["am not", "is not", "is not"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "She ____ a brother.",
+        "correct_answer": "has",
+        "incorrect_answers": ["have", "is", "the"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "The food is ____ the table.",
+        "correct_answer": "on",
+        "incorrect_answers": ["under", "of", "in"]
+    },
+    {
+        "category": "English",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "____ they have money?",
+        "correct_answer": "Do",
+        "incorrect_answers": ["Does", "Are", "Is"]
+    },
+    {
+        "category": "Spanish",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "¿Qué es una palabra?",
+        "correct_answer": "Una palabra es una secuencia de letras y/o símbolos que forman una palabra.",
+        "incorrect_answers": [
+            "Una palabra es una secuencia de letras y/o símbolos que forman una palabra.",
+            "Una palabra es una secuencia de letras y/o símbolos que forman una palabra.",
+            "Una palabra es una secuencia de letras y/o símbolos que forman una palabra."
+        ]
+    }
+]
