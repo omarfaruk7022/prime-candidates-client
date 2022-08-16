@@ -28,19 +28,18 @@ const Footer = () => {
             <a className="link link-hover">Cookie policy</a>
           </div>
         </footer>
-        
-      <div>
-        <Message />
+
+        <div>
+          <Message />
+        </div>
+        <div>
+          <p className="text-sm py-5 text-base-500 dark:text-white">
+            Copyright © 2022 - All right reserved by Prime Candidates
+          </p>
+        </div>
+        <Chat />
       </div>
-      <div>
-        <p className="text-sm py-5 text-base-500 dark:text-white">
-          Copyright © 2022 - All right reserved by Prime Candidates
-        </p>
-      </div>
-      <Chat />
     </div>
-    </div>
-    
   );
 };
 
