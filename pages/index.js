@@ -25,9 +25,7 @@ export default function Home({ comments }) {
         <Asking />
         <Service />
         <Card />
-
         <Subscribe></Subscribe>
-
         <Footer></Footer>
       </Navber>
     </>
