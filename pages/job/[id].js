@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
 import Footer from "../../components/Footer";
-
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
 import Navber from "../../components/Navber";
-
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
 
@@ -23,6 +20,18 @@ const JobDetails = () => {
         .then((data) => setJobDetails(data));
     }
   }, [id, router.isReady]);
+
+  const handleApply = (e) => {
+    // e.preventDefault();
+    // fetch(`https://stormy-beach-33232.herokuapp.com/apply/${id}`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify()
+
+    // })
+  }
   return (
     <Navber>
       <div className=" p-10">
@@ -57,7 +66,9 @@ const JobDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <button className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white">
+                <button 
+                onClick={handleApply}
+                className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white">
                   Apply
                 </button>
                 <h1 className="text-[8px] sm:text-xs">
