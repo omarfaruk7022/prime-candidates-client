@@ -70,9 +70,11 @@ const SignUp = () => {
               .then((res) => res.json())
               .then((data) => {
 
-      swal("Yayy", "Sign Up  Successfully Completed ", "success")
-    }
+              },)
 
+               swal("Yayy", "Sign Up  Successfully Completed ", "success");
+              
+          }
     // if (user?._tokenResponse.email) {
     //   const userData = {
     //     name: data.name,
@@ -103,7 +105,7 @@ const SignUp = () => {
     //   //   swal("Yayy", "Sign Up  Successfully Completed ", "success");
     //   // }
     // }
-              )};
+  };
 
   return (
     <div>
