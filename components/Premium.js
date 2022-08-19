@@ -10,6 +10,18 @@ const router = useRouter()
     router.push(`/premium`)
  }
 
+
+  useEffect(() => {
+    fetch("https://stormy-beach-33232.herokuapp.com/premiums")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // const name = data.map((item) => item.name);
+        // console.log(name);
+        setData(data);
+      });
+  }, []);
+
   return (
     <div>
       <section className="py-6 ">

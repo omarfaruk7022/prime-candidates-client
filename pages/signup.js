@@ -44,19 +44,19 @@ const SignUp = () => {
   // };
 
   const onSubmit = async (data) => {
-    
+
     const name = data.name;
     const email = data.email;
     const age = Number(data.age);
     const gender = data.gender.toLowerCase();
     const category = data.category.toLowerCase();
 
-    const userData = {name, email, age, gender, category};
-    
+    const userData = { name, email, age, gender, category };
 
-    if(error) {
+
+    if (error) {
       return
-      
+
     }
     else{
      await createUserWithEmailAndPassword(data.email, data.password);
@@ -70,9 +70,7 @@ const SignUp = () => {
               .then((res) => res.json())
               .then((data) => {
 
-              });
-    
-            swal("Yayy", "Sign Up  Successfully Completed ", "success");
+      swal("Yayy", "Sign Up  Successfully Completed ", "success")
     }
 
     // if (user?._tokenResponse.email) {
@@ -92,7 +90,7 @@ const SignUp = () => {
     //     userData.gender &&
     //     userData.category
     //   ) {
-    //   //   fetch("http://localhost:5000/users", {
+    //   //   fetch("https://stormy-beach-33232.herokuapp.com/users", {
     //   //     method: "POST",
     //   //     headers: {
     //   //       "content-type": "application/json",
@@ -105,7 +103,7 @@ const SignUp = () => {
     //   //   swal("Yayy", "Sign Up  Successfully Completed ", "success");
     //   // }
     // }
-  };
+              )};
 
   return (
     <div>
