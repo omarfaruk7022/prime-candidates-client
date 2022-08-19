@@ -70,6 +70,11 @@ const DashboardLayout = ({ children }) => {
                                     Education
                                 </ActiveLink>
                             </li>
+                            <li>
+                                <ActiveLink href="/dashboard/applications" className="ml-10">
+                                    Applications
+                                </ActiveLink>
+                            </li>
                         </ul>
                     </div>
                 </div>

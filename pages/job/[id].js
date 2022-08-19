@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
 import Footer from "../../components/Footer";
-
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
 import Navber from "../../components/Navber";
-
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
+import Link from "next/link";
 
 const JobDetails = () => {
   const router = useRouter();
@@ -16,16 +14,26 @@ const JobDetails = () => {
   const [jobDetails, setJobDetails] = useState({});
   useEffect(() => {
     if (router.isReady) {
-      fetch(`http://localhost:5000/jobdetails/${id}`);
+      fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`);
 
       fetch(`https://stormy-beach-33232.herokuapp.com/jobdetails/${id}`)
         .then((res) => res.json())
         .then((data) => setJobDetails(data));
     }
   }, [id, router.isReady]);
+
+  const handleApply = (e) => {
+    // e.preventDefault();
+    // fetch(`https://stormy-beach-33232.herokuapp.com/apply/${id}`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify()
+    // })
+  };
   return (
     <Navber>
-   
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>
@@ -58,9 +66,14 @@ const JobDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <button className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white">
-                  Apply
-                </button>
+                <Link href="/jobapply">
+                  <button
+                    onClick={handleApply}
+                    className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
+                  >
+                    Apply
+                  </button>
+                </Link>
                 <h1 className="text-[8px] sm:text-xs">
                   Deadline: Dec 30, 2020
                 </h1>

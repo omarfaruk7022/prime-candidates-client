@@ -11,7 +11,7 @@ const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState({});
   useEffect(() => {
     if (router.isReady) {
-      fetch(`http://localhost:5000/courseDetails/${id}`)
+      fetch(`https://stormy-beach-33232.herokuapp.com/courseDetails/${id}`)
         .then((res) => res.json())
         .then((data) => setCourseDetails(data));
     }

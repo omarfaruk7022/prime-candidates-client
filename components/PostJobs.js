@@ -1,8 +1,13 @@
-import React from "react";
-import { FiCamera } from "react-icons/fi";
+import React , { useEffect } from "react";
 import swal from "sweetalert";
+import { useRouter } from "next/router"
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./firebase.init";
+import Loader from "./Loader";
 
 const PostJobs = () => {
+  const router = useRouter()
+  const [user] = useAuthState(auth);
   const handleBack = () => {
     window.history.back();
   };
@@ -30,7 +35,7 @@ const PostJobs = () => {
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
-    fetch("http://localhost:5000/jobs", {
+    fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -47,6 +52,19 @@ const PostJobs = () => {
     e.target.reset();
   };
 
+  
+  useEffect(() => {
+    
+
+    // if there is no authenticated user, redirect to login page_
+
+    if (!user) {
+      router.push("/login")
+    }
+   
+  
+  
+  }, [user])
   return (
     <form
       onSubmit={handlePostJob}

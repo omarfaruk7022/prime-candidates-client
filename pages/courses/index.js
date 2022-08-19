@@ -23,7 +23,7 @@ export default function Courses({ courses }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/courses");
+  const res = await fetch("https://stormy-beach-33232.herokuapp.com/courses");
   const courses = await res.json();
 
   return {

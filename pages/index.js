@@ -10,6 +10,7 @@ import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Course from "../components/Course";
+import Premium from "../components/Premium";
 
 export default function Home({ comments }) {
   return (
@@ -19,13 +20,12 @@ export default function Home({ comments }) {
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
+        <Premium/>
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
         <Card />
-
         <Subscribe></Subscribe>
-
         <Footer></Footer>
       </Navber>
     </>
