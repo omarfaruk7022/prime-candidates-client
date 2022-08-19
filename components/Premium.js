@@ -4,18 +4,11 @@ import React, { useEffect, useState } from "react";
 
 const Premium = () => {
   const [data, setData] = useState([]);
-
- 
-  useEffect(() => {
-    fetch("http://localhost:5000/premiums")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        // const name = data.map((item) => item.name);
-        // console.log(name);
-        setData(data);
-      });
-  }, []);
+const router = useRouter()
+ const handlePayment = (e) => {
+    e.preventDefault();
+    router.push(`/premium`)
+ }
 
   return (
     <div>
@@ -31,57 +24,9 @@ const Premium = () => {
             </h1>
           </div>
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:max-w-full lg:gap-2 xl:gap-6 lg:grid-cols-3">
-            {data.map((item) => {
-              return (
-                <>
-                  <div>
-                    <div className="relative z-0 flex flex-col items-center p-8 border rounded-md h-[500px]">
-                      <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg bg-secondary ">
-                        {item.name}
-                      </span>
-                      <span className="my-6 text-4xl font-bold text-secondary">{item?.value2}</span>
-                      <h1 className="text-4xl font-bold ">
-                       <span className="text-lg line-through dark:text-gray-300">{item.value}</span> {item.discounted}
-                      </h1>
-                      <ul className="flex-1 space-y-2">
-                        {item.content.map((point) => {
-                          return(<>
-                          <li className="flex items-center space-x-2">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              className="w-6 h-6 text-secondary"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                              ></path>
-                            </svg>
-                            <span>{point.points}</span>
-                          </li>
-                          </>)
-                        })}
-                      </ul>
-                      <button
-                    //  onClick={() => {
-                    //     window.location.href = `/premium/${item?._id}`
-                        
-                       
-                    //  }}
-                        className="inline-block px-8 py-3 text-sm font-medium  transition border border-secondary rounded hover:scale-110 hover:shadow-xl active:text-indigo-500 focus:outline-none focus:ring hover:bg-secondary"
-                        href="/Subscribe"
-                      >
-                        Subscribe
-                      </button>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
+            <button
+            onClick={handlePayment}
+            >Pay for premiums</button>
            
           </div>
         </div>
