@@ -1,5 +1,7 @@
 import React from "react";
 import Navber from "../components/Navber";
+import swal from "sweetalert";
+import Footer from "../components/Footer";
 
 const jobapply = () => {
   const handleApplyJob = (e) => {
@@ -30,7 +32,7 @@ const jobapply = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          console.log("Job applied successfully!");
+          swal("Job applied successfully!");
         }
       });
 
@@ -102,6 +104,7 @@ const jobapply = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </Navber>
   );
 };
