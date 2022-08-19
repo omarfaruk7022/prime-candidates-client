@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
 import auth from "../components/firebase.init";
@@ -9,8 +9,14 @@ import {BsChatDots} from 'react-icons/bs';
 
 const Navber = ({ children }) => {
   const [user] = useAuthState(auth);
-  console.log(user?.photoURL);
+  const [userData, setUserData] = useState();
 
+  useEffect(() => {
+fetch("http://localhost:5000/users")
+  .then((res) => res.json())
+  .then((data) => setUserData(data));
+  },[])
+console.log(userData?.category);
   const handleSignOut = () => {
     signOut(auth);
   };
