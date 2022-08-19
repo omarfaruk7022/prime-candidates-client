@@ -58,21 +58,19 @@ const SignUp = () => {
       return
 
     }
-    else {
-      await createUserWithEmailAndPassword(data.email, data.password);
-      fetch("https://stormy-beach-33232.herokuapp.com/users", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      })
-        .then((res) => res.json())
-        .then((data) => {
+    else{
+     await createUserWithEmailAndPassword(data.email, data.password);
+      fetch("http://localhost:5000/userprofile", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(userData),
+            })
+              .then((res) => res.json())
+              .then((data) => {
 
-        });
-
-      swal("Yayy", "Sign Up  Successfully Completed ", "success");
+      swal("Yayy", "Sign Up  Successfully Completed ", "success")
     }
 
     // if (user?._tokenResponse.email) {
@@ -105,7 +103,7 @@ const SignUp = () => {
     //   //   swal("Yayy", "Sign Up  Successfully Completed ", "success");
     //   // }
     // }
-  };
+              )};
 
   return (
     <div>
