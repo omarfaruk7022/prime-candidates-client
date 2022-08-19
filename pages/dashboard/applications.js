@@ -2,6 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 
 const applications = () => {
+   
     return (
         <div>
             <DashboardLayout>
