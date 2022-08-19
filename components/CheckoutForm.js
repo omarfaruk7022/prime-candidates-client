@@ -13,7 +13,7 @@
 //   const { value } = premium;
 
 //   useEffect(() => {
-//     fetch("http://localhost:5000/create-payment-intent", {
+//     fetch("https://stormy-beach-33232.herokuapp.com/create-payment-intent", {
 //       method: "POST",
 //       headers: {
 //         "content-type": "application/json",
