@@ -22,7 +22,7 @@ const jobapply = () => {
 
     console.log(jobApply);
 
-    fetch("http://localhost:5000/apply", {
+    fetch("https://stormy-beach-33232.herokuapp.com/apply", {
       method: "POST",
       headers: {
         "content-type": "application/json",

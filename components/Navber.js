@@ -5,18 +5,18 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
 import auth from "../components/firebase.init";
 import { signOut } from "firebase/auth";
-import {BsChatDots} from 'react-icons/bs';
+import { BsChatDots } from 'react-icons/bs';
 
 const Navber = ({ children }) => {
   const [user] = useAuthState(auth);
   const [userData, setUserData] = useState();
 
   useEffect(() => {
-fetch("http://localhost:5000/users")
-  .then((res) => res.json())
-  .then((data) => setUserData(data));
-  },[])
-console.log(userData?.category);
+    fetch("https://stormy-beach-33232.herokuapp.com/users")
+      .then((res) => res.json())
+      .then((data) => setUserData(data));
+  }, [])
+  console.log(userData?.category);
   const handleSignOut = () => {
     signOut(auth);
   };
@@ -92,10 +92,10 @@ console.log(userData?.category);
                   </ul>
                 </li>
                 <li>
-            <Link href="/courses">
-              <a className="rounded-[5px]">Courses</a>
-            </Link>
-          </li>
+                  <Link href="/courses">
+                    <a className="rounded-[5px]">Courses</a>
+                  </Link>
+                </li>
                 <li>
                   {/* {
                     user &&

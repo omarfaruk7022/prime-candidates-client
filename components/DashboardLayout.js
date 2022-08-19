@@ -10,11 +10,10 @@ const ActiveLink = ({ children, href, className }) => {
   return (
     <Link href={href} scroll={false}>
       <a
-        className={`${
-          router.pathname === href
+        className={`${router.pathname === href
             ? "text-primary border-secondary"
             : "text-gray-600 hover:text-gray-700 border-transparent"
-        } ${className} block pb-4 font-semibold text-sm sm:text-base border-b-2 focus:outline-none focus:text-gray-900 whitespace-no-wrap`}
+          } ${className} block pb-4 font-semibold text-sm sm:text-base border-b-2 focus:outline-none focus:text-gray-900 whitespace-no-wrap`}
       >
         {children}
       </a>
@@ -25,14 +24,14 @@ const ActiveLink = ({ children, href, className }) => {
 const DashboardLayout = ({ children }) => {
   const [user] = useAuthState(auth);
 
-//   fetch will be from userData-mongodb
+  //   fetch will be from userData-mongodb
 
-//   const [userData, setUserData] = useState();
-//   useEffect(() => {
-//     fetch("http://localhost:5000/users")
-//       .then((res) => res.json())
-//       .then((data) => setUserData(data));
-//   }, []);
+  //   const [userData, setUserData] = useState();
+  //   useEffect(() => {
+  //     fetch("https://stormy-beach-33232.herokuapp.com/users")
+  //       .then((res) => res.json())
+  //       .then((data) => setUserData(data));
+  //   }, []);
 
   return (
     <div>
