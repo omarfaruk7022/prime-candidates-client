@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-// import CheckoutForm from "../../components/CheckOutForm";
+
+import CheckoutForm from "../../components/CheckoutForm"
 
 
 const stripePromise = loadStripe(
@@ -28,7 +29,7 @@ const Index = () => {
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
               <div className="card-body">
                 <Elements stripe={stripePromise}>
-                  {/* <CheckoutForm premium={premiumDetails} /> */}
+                  <CheckoutForm premium={premiumDetails} />
                 </Elements>
               </div>
             </div>
