@@ -15,12 +15,13 @@ import Premium from "../components/Premium";
 export default function Home({ comments }) {
   return (
     <>
+    <Premium/>
       <Navber>
         <Banner></Banner>
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
-        <Premium/>
+       
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
