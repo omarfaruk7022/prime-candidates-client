@@ -21,22 +21,32 @@ const jobapply = () => {
     };
 
     console.log(jobApply);
+    if (
+      jobApply.name &&
+      jobApply.email &&
+      jobApply.number &&
+      jobApply.address &&
+      jobApply.resume
+    ) {
+      fetch("https://stormy-beach-33232.herokuapp.com/apply", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(jobApply),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.acknowledged) {
+            swal("Good job!", "Job applied successfully!", "success");
+          }
+        });
 
-    fetch("https://stormy-beach-33232.herokuapp.com/apply", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(jobApply),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.acknowledged) {
-          swal("Job applied successfully!");
-        }
-      });
-
-    e.target.reset();
+      e.target.reset();
+    }
+    else{
+      swal("Hey dear!", "Please fill-up all of these fields", "info")
+    }
   };
   return (
     <Navber>
