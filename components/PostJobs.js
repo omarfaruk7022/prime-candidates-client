@@ -1,12 +1,12 @@
-import React , { useEffect } from "react";
+import React, { useEffect } from "react";
 import swal from "sweetalert";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import Loader from "./Loader";
 
 const PostJobs = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [user] = useAuthState(auth);
   const handleBack = () => {
     window.history.back();
@@ -35,36 +35,44 @@ const PostJobs = () => {
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
-    fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(job),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.acknowledged) {
-          swal("Yayy", "Job added successfully!", "success");
-        }
-      });
+    if (
+      jobTitle &&
+      salaryRange &&
+      jobLocation &&
+      salaryType &&
+      jobCategory &&
+      jobType &&
+      jobDescription
+    ) {
+      fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(job),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.acknowledged) {
+            swal("Yayy", "Job added successfully!", "success");
+          }
+        });
 
-    e.target.reset();
+      e.target.reset();
+    }
+    else{
+      swal("Oops", "Please fill all the fields", "error");
+    }
   };
 
-  
   useEffect(() => {
-    
-
     // if there is no authenticated user, redirect to login page_
 
     if (!user) {
-      router.push("/login")
+      router.push("/login");
     }
-   
-  
-  
-  }, [user])
+  });
+
   return (
     <form
       onSubmit={handlePostJob}
