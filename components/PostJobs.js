@@ -71,7 +71,8 @@ const PostJobs = () => {
     if (!user) {
       router.push("/login");
     }
-  }, [user]);
+  });
+
   return (
     <form
       onSubmit={handlePostJob}
