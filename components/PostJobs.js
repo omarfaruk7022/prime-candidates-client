@@ -1,12 +1,12 @@
-import React , { useEffect } from "react";
+import React, { useEffect } from "react";
 import swal from "sweetalert";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import Loader from "./Loader";
 
 const PostJobs = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [user] = useAuthState(auth);
   const handleBack = () => {
     window.history.back();
@@ -52,18 +52,13 @@ const PostJobs = () => {
     e.target.reset();
   };
 
-  
   useEffect(() => {
-    
-
     // if there is no authenticated user, redirect to login page_
 
     if (!user) {
-      router.push("/login")
+      router.push("/login");
     }
-  
-  
-  }, [user])
+  }, [user]);
   return (
     <form
       onSubmit={handlePostJob}
@@ -197,23 +192,23 @@ const PostJobs = () => {
         </div>
         <div className="mt-4 px-3 md:px-0">
           {/* <div>
-            <label className="label">
-              <span className="label-text">Featured?</span>
+            <label  className="label">
+              <span  className="label-text">Featured?</span>
             </label>
-            <div className="flex items-center">
+            <div  className="flex items-center">
               <input
                 type="radio"
                 name="radio-2"
-                className="radio radio-primary"
+                 className="radio radio-primary"
                 checked
               />
-              <span className="mx-5">Featured</span>
+              <span  className="mx-5">Featured</span>
               <input
                 type="radio"
                 name="radio-2"
-                className="radio radio-primary"
+                 className="radio radio-primary"
               />
-              <span className="mx-5">Unfeatured</span>
+              <span  className="mx-5">Unfeatured</span>
             </div>
           </div> */}
 

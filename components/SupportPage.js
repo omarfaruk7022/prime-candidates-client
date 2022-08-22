@@ -1,27 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
-import Footer from './Footer';
-import Navber from './Navber';
-import Link from 'next/link';
-
+import Footer from "./Footer";
+import Navber from "./Navber";
+import Link from "next/link";
 
 const SupportPage = () => {
-    const router = useRouter()
-    const [user] = useAuthState(auth) 
-      
-    useEffect(() => {
-      
-  
-      // if there is no authenticated user, redirect to login page_
-  
-      if (!user) {
-        router.push("/login")
-      }
-    }, [user]);
+  const router = useRouter();
+  const [user] = useAuthState(auth);
 
-    // const [reasons, setReasons] = useState([]);
+  useEffect(() => {
+    // if there is no authenticated user, redirect to login page_
+
+    if (!user) {
+      router.push("/login");
+    }
+  }, [user]);
+
+  // const [reasons, setReasons] = useState([]);
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   const text = e.target.bio.value;
@@ -53,9 +50,9 @@ const SupportPage = () => {
   //       setReasons(data);
   //     });
   // }, []);
-    return (
-        <div>
-             <Navber>
+  return (
+    <div>
+      <Navber>
         <div className="m-auto">
           <h1 className=" text-5xl text-secondary">
             Please join our support session
@@ -71,18 +68,18 @@ const SupportPage = () => {
           </Link>
         </div>
 
-        {/* <label htmlFor="my-modal" className="btn modal-button">
+        {/* <label htmlFor="my-modal"  className="btn modal-button">
         open modal
       </label>
 
-      <input type="checkbox" id="my-modal" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">
+      <input type="checkbox" id="my-modal"  className="modal-toggle" />
+      <div  className="modal">
+        <div  className="modal-box">
+          <h3  className="font-bold text-lg">
             Congratulations random Internet user!
           </h3>
-          <div className="col-span-full">
-            <label htmlFor="bio" className="text-md">
+          <div  className="col-span-full">
+            <label htmlFor="bio"  className="text-md">
               Type your Problem
             </label>
             <form onSubmit={handleSubmit}>
@@ -90,7 +87,7 @@ const SupportPage = () => {
                 name="bio"
                 id="bio"
                 placeholder=""
-                className="w-full h-[200px] rounded-md bg-gray-200 "
+                 className="w-full h-[200px] rounded-md bg-gray-200 "
                 spellCheck="false"
               ></textarea>
               <button type="submit" value="Submit">
@@ -98,14 +95,14 @@ const SupportPage = () => {
               </button>
             </form>
           </div>
-          <div className="modal-action">
-            <label htmlFor="my-modal" className="btn">
+          <div  className="modal-action">
+            <label htmlFor="my-modal"  className="btn">
               Yay!
             </label>
           </div>
         </div>
       </div>
-     <div className="grid grid-cols-3 gap-5">
+     <div  className="grid grid-cols-3 gap-5">
    {
       reasons.map(reason => {
         return <SupportsData reason={reason}></SupportsData>
@@ -116,8 +113,8 @@ const SupportPage = () => {
      </div> */}
       </Navber>
       <Footer />
-        </div>
-    );
+    </div>
+  );
 };
 
 export default SupportPage;

@@ -10,10 +10,7 @@ import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Course from "../components/Course";
-<<<<<<< HEAD
-=======
 import Premium from "../components/Premium";
->>>>>>> f46e3ac5d4e4c7b69538cbc0422d752169d4a420
 
 export default function Home({ comments }) {
   return (
@@ -23,16 +20,13 @@ export default function Home({ comments }) {
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
-        <Premium/>
+        <Premium />
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
         <Card />
-<<<<<<< HEAD
-=======
-
->>>>>>> f46e3ac5d4e4c7b69538cbc0422d752169d4a420
         <Subscribe></Subscribe>
+
         <Footer></Footer>
       </Navber>
     </>

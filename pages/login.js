@@ -1,8 +1,8 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
-import googleIcon from "..//images//Google_Icons-09-512.webp"
-import githubIcon from "../images/black-github-icon.png"
-import facebookIcon from "../images/fb_icon.png"
+import googleIcon from "..//images//Google_Icons-09-512.webp";
+import githubIcon from "../images/black-github-icon.png";
+import facebookIcon from "../images/fb_icon.png";
 import {
   useSignInWithGoogle,
   useSignInWithEmailAndPassword,
@@ -18,12 +18,15 @@ import auth from "../components/firebase.init";
 import Router from "next/router";
 import Loader from "../components/Loader";
 
-
 const Login = () => {
-  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-  const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
-  const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [signInWithGithub, gitUser, gitLoading, gitError] =
+    useSignInWithGithub(auth);
+  const [signInWithFacebook, fbUser, fbLoading, fbError] =
+    useSignInWithFacebook(auth);
 
   let signInError;
 
@@ -37,7 +40,7 @@ const Login = () => {
   //   navigate(from, { replace: true });
   // }
   if (googleLoading || loading || gitLoading || fbLoading) {
-    return <Loader></Loader>
+    return <Loader></Loader>;
   }
 
   if (user || googleUser || gitUser || fbUser) {
@@ -61,7 +64,9 @@ const Login = () => {
           </div>
           <div className="card w-96 bg-base-100 shadow-xl mx-3 lg:mx-0">
             <div className="card-body">
-              <h2 className="text-center text-2xl font-bold text-secondary">Login</h2>
+              <h2 className="text-center text-2xl font-bold text-secondary">
+                Login
+              </h2>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full max-w-xs">
                   <label className="label">

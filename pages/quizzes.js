@@ -1,18 +1,19 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Navber from '../components/Navber';
-import Quiz from '../components/Quiz';
+import React from "react";
+import Footer from "../components/Footer";
+import Navber from "../components/Navber";
+import App from "../components/Quiz/App/App";
 
 const quizzes = () => {
-    return (
+  return (
+    <div>
+      <Navber>
         <div>
-            <Navber>
-
-            <Quiz/>
-            </Navber>
-            <Footer/>
+          <App />
         </div>
-    );
+      </Navber>
+      <Footer />
+    </div>
+  );
 };
 
 export default quizzes;

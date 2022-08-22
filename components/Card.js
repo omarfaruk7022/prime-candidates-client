@@ -3,7 +3,9 @@ import React from "react";
 const Card = () => {
   return (
     <div>
-      <h1 className="text-4xl text-center mt-28 mb-12">Motivational speakers</h1>
+      <h1 className="text-4xl text-center mt-28 mb-12">
+        Motivational speakers
+      </h1>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
         <a className="relative block bg-black group" href="">
           <img
