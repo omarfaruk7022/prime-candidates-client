@@ -10,10 +10,11 @@ const ActiveLink = ({ children, href, className }) => {
   return (
     <Link href={href} scroll={false}>
       <a
-        className={`${router.pathname === href
+        className={`${
+          router.pathname === href
             ? "text-primary border-secondary"
             : "text-gray-600 hover:text-gray-700 border-transparent"
-          } ${className} block pb-4 font-semibold text-sm sm:text-base border-b-2 focus:outline-none focus:text-gray-900 whitespace-no-wrap`}
+        } ${className} block pb-4 font-semibold text-sm sm:text-base border-b-2 focus:outline-none focus:text-gray-900 whitespace-no-wrap`}
       >
         {children}
       </a>
@@ -25,19 +26,14 @@ const DashboardLayout = ({ children }) => {
   const [user] = useAuthState(auth);
 
   //   fetch will be from userData-mongodb
-  const [userData,setUserData] = useState()
+  const [userData, setUserData] = useState();
   useEffect(() => {
     fetch(
       `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => setUserData(data[0]));
-      
   }, [user?.email]);
-
-
-  
-    
 
   return (
     <div>
@@ -70,34 +66,38 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
-              <li>
-                <ActiveLink
-                  href="/dashboard/professional-overview"
-                  className="ml-10"
-                >
-                  Professional Overview
-                </ActiveLink>
-              </li>
-              <li>
-                <ActiveLink href="/dashboard/skillset" className="ml-10">
-                  Skill Set
-                </ActiveLink>
-              </li>
-              <li>
-                <ActiveLink href="/dashboard/education" className="ml-10">
-                  Education
-                </ActiveLink>
-              </li>
-              {
-                userData?.category == "employee" && (
+              {userData?.category == "student" && (
+                <li>
+                  <ActiveLink
+                    href="/dashboard/professional-overview"
+                    className="ml-10"
+                  >
+                    Professional Overview
+                  </ActiveLink>
+                </li>
+              )}
 
-              <li>
-                <ActiveLink href="/dashboard/applications" className="ml-10">
-                  Applications
-                </ActiveLink>
-              </li>
-                )
-              }
+              {userData?.category == "student" && (
+                <li>
+                  <ActiveLink href="/dashboard/skillset" className="ml-10">
+                    Skill Set
+                  </ActiveLink>
+                </li>
+              )}
+              {userData?.category == "student" && (
+                <li>
+                  <ActiveLink href="/dashboard/education" className="ml-10">
+                    Education
+                  </ActiveLink>
+                </li>
+              )}
+              {userData?.category == "employee" && (
+                <li>
+                  <ActiveLink href="/dashboard/applications" className="ml-10">
+                    Applications
+                  </ActiveLink>
+                </li>
+              )}
             </ul>
           </div>
         </div>
