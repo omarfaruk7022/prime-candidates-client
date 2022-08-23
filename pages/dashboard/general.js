@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../components/firebase.init";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import swal from "sweetalert";
 
 const handleBack = () => {
   window.history.back();
@@ -20,6 +21,7 @@ const General = () => {
       .then((res) => res.json())
       .then((data) => setProfile(data));
   }, [user?.email]);
+  
 
   // console.log(profile.name);
 
@@ -63,6 +65,7 @@ const General = () => {
     //             swal("Yayy", "Job added successfully!", "success");
     //         }
     //     });
+    swal("Yayy", "Profile updated successfully!", "success");
 
     e.target.reset();
   };

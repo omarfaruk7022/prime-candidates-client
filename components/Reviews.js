@@ -2,9 +2,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image'
 import 'swiper/css';
 
+
+
 export default function Reviews({ comments }) {
+    
 
     return (
+        
         <div className='container mx-auto px-5 py-10'>
             <h1 className='text-4xl font-light text-center mb-10'>What Our Customer Says</h1>
             <Swiper

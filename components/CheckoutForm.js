@@ -1,7 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({price}) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
@@ -10,24 +10,24 @@ const CheckoutForm = () => {
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
-  const value = "120"
+  const {value} = price
 
-//   useEffect(() => {
-//     fetch("https://stormy-beach-33232.herokuapp.com/create-payment-intent", {
-//       method: "POST",
-//       headers: {
-//         "content-type": "application/json",
-//       },
-//       body: JSON.stringify({value}),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data)
-//         if (data?.clientSecret) {
-//           setClientSecret(data.clientSecret);
-//         }
-//       });
-//   }, [value]);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/create-payment-intent", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify({value}),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data)
+  //       if (data?.clientSecret) {
+  //         setClientSecret(data.clientSecret);
+  //       }
+  //     });
+  // }, [value]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

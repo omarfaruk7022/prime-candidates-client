@@ -14,7 +14,7 @@ const Index = () => {
       const router = useRouter();
       const { id } = router.query;
       const [premiumDetails, setPremiumDetails] = useState([]);
-     
+     const price = "120"
     
       return (
         <div>
@@ -29,7 +29,7 @@ const Index = () => {
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
               <div className="card-body">
                 <Elements stripe={stripePromise}>
-                  <CheckoutForm premium={premiumDetails} />
+                  <CheckoutForm price={price} />
                 </Elements>
               </div>
             </div>
