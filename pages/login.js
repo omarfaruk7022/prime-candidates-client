@@ -20,10 +20,10 @@ import Loader from "../components/Loader";
 
 
 const Login = () => {
-  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+  // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-  const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
-  const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
+  // const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
+  // const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
 
   let signInError;
 
@@ -33,19 +33,17 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  // if (user||googleUser) {
-  //   navigate(from, { replace: true });
+  
+  // if (googleLoading || loading || gitLoading || fbLoading) {
+  //   return <Loader></Loader>
   // }
-  if (googleLoading || loading || gitLoading || fbLoading) {
-    return <Loader></Loader>
-  }
 
-  if (user || googleUser || gitUser || fbUser) {
+  if (user ) {
     // Router.push('/');
     window.history.back();
     swal("Yayy", "Login Successfully Completed", "success");
   }
-  if (error || googleError || gitError || fbError) {
+  if (error ) {
     swal("Something Wrong", "Login Failed", "error");
   }
 
@@ -150,17 +148,23 @@ const Login = () => {
               <div className="divider">OR</div>
               <div className="flex">
                 <div className="mx-auto flex gap-2">
-                  <a onClick={() => signInWithGoogle()}>
+                  <a 
+                  // onClick={() => signInWithGoogle()}
+                  >
                     <div className="h-[60px] w-[60px] cursor-pointer">
                       <Image src={googleIcon} alt="" />
                     </div>
                   </a>
-                  <a onClick={() => signInWithGithub()}>
+                  <a 
+                  // onClick={() => signInWithGithub()}
+                  >
                     <div className="h-[60px] w-[60px] cursor-pointer">
                       <Image src={githubIcon} alt="" />
                     </div>
                   </a>
-                  <a onClick={() => signInWithFacebook()}>
+                  <a
+                  //  onClick={() => signInWithFacebook()}
+                  >
                     <div className="h-[60px] w-[60px] cursor-pointer">
                       <Image src={facebookIcon} alt="" />
                     </div>

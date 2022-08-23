@@ -25,13 +25,19 @@ const DashboardLayout = ({ children }) => {
   const [user] = useAuthState(auth);
 
   //   fetch will be from userData-mongodb
+  const [userData,setUserData] = useState()
+  useEffect(() => {
+    fetch(
+      `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => setUserData(data[0]));
+      
+  }, [user?.email]);
 
-  //   const [userData, setUserData] = useState();
-  //   useEffect(() => {
-  //     fetch("https://stormy-beach-33232.herokuapp.com/users")
-  //       .then((res) => res.json())
-  //       .then((data) => setUserData(data));
-  //   }, []);
+
+  
+    
 
   return (
     <div>
@@ -82,11 +88,16 @@ const DashboardLayout = ({ children }) => {
                   Education
                 </ActiveLink>
               </li>
+              {
+                userData?.category == "employee" && (
+
               <li>
                 <ActiveLink href="/dashboard/applications" className="ml-10">
                   Applications
                 </ActiveLink>
               </li>
+                )
+              }
             </ul>
           </div>
         </div>

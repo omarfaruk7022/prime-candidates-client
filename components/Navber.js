@@ -16,7 +16,7 @@ const Navber = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setUserData(data));
   }, [])
-  console.log(userData?.category);
+
   const handleSignOut = () => {
     signOut(auth);
   };

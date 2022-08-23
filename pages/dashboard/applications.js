@@ -11,7 +11,7 @@ const Applications = () => {
     fetch("http://localhost:5000/apply")
       .then((res) => res.json())
       .then((data) => setApplications(data));
-    console.log(applications);
+    
   });
   return (
     <div>
