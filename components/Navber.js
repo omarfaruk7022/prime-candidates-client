@@ -9,13 +9,13 @@ import { BsChatDots } from 'react-icons/bs';
 
 const Navber = ({ children }) => {
   const [user] = useAuthState(auth);
-  const [userData, setUserData] = useState();
+  // const [userData, setUserData] = useState();
 
-  useEffect(() => {
-    fetch("https://stormy-beach-33232.herokuapp.com/users")
-      .then((res) => res.json())
-      .then((data) => setUserData(data));
-  }, [])
+  // useEffect(() => {
+  //   fetch("https://stormy-beach-33232.herokuapp.com/users")
+  //     .then((res) => res.json())
+  //     .then((data) => setUserData(data));
+  // }, [])
 
   const handleSignOut = () => {
     signOut(auth);
