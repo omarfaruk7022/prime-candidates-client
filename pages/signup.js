@@ -16,8 +16,8 @@ import auth from "../components/firebase.init";
 import { useEffect, useState } from "react";
 
 const SignUp = () => {
-  const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
+  // const [signInWithGoogle, googleUser, googleLoading, googleError] =
+  //   useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
@@ -73,6 +73,7 @@ const SignUp = () => {
               },)
 
                swal("Yayy", "Sign Up  Successfully Completed ", "success");
+              
               
           }
     // if (user?._tokenResponse.email) {
@@ -300,7 +301,9 @@ const SignUp = () => {
               </p>
               <div className="divider">OR</div>
               <div className="flex">
-                <a onClick={() => signInWithGoogle()}>
+                <a 
+                // onClick={() => signInWithGoogle()}
+                >
                   <div className="h-[40px] w-[60px] cursor-pointer">
                     <Image src={icon} alt="" />
                   </div>
