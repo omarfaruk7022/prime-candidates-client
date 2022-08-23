@@ -34,7 +34,7 @@ export default function Home({ comments }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const res = await fetch("http://localhost:5000/review");
   const comments = await res.json();
 
   return {
