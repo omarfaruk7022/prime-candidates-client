@@ -98,6 +98,11 @@ const DashboardLayout = ({ children }) => {
                   </ActiveLink>
                 </li>
               )}
+              <li>
+                  <ActiveLink href="/dashboard/add-review" className="ml-10">
+                   Add Review
+                  </ActiveLink>
+                </li>
             </ul>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image'
 import 'swiper/css';
+import auth from './firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 
@@ -33,11 +35,11 @@ export default function Reviews({ comments }) {
                             <div className='bg-gray-100 text-black rounded-lg gap-5 flex flex-col p-5 items-center text-justify h-96 lg:text-lg'>
                                 <div className="avatar">
                                     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                        <Image src="https://placeimg.com/192/192/people" alt="Picture of the commenter" height={100} width={100} />
+                                        <img src={comment.img} alt="Picture of the commenter" height={100} width={100} />
                                     </div>
                                 </div>
                                 <p>{comment.name}</p>
-                                <p>{comment.body}</p>
+                                <p>{comment.reviews}</p>
 
                             </div>
                         </SwiperSlide>)
