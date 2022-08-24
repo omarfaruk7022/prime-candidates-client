@@ -65,7 +65,7 @@ const General = () => {
     //         }
     //     });
     swal("Yayy", "Profile updated successfully!", "success");
-
+    
     e.target.reset();
   };
 

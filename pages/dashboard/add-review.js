@@ -37,7 +37,7 @@ const AddReview = () => {
     } else {
       swal("Please fill all the fields", "", "error");
     }
-
+  
     e.target.reset();
   };
 

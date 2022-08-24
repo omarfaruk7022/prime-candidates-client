@@ -67,6 +67,7 @@ const SignUp = () => {
         .then((data) => {});
 
       swal("Yayy", "Sign Up  Successfully Completed ", "success");
+      
     }
     // if (user?._tokenResponse.email) {
     //   const userData = {

@@ -1,17 +1,60 @@
+import { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardLayout from "../../components/DashboardLayout";
+import auth from "../../components/firebase.init";
+import swal from 'sweetalert';
+import { useQuery } from "react-query";
+
+
+
 
 const Index = () => {
+  const [experienceData, setExperienceData] = useState();
+  const [user] = useAuthState(auth);
+  const email = user?.email;
+
+ 
   const handleSubmit = (e) => {
     event.preventDefault();
+
+    const jobTitle = e.target.name.value;
+    const jobType = e.target.job_type.value;
+    const jobDescription = e.target.description.value;
+    const company = e.target.company.value;
+    const jobPlace = e.target.jobPlace.value;
     const experience = {
-      title: e.target.name.value,
-      jobType: e.target.job_type.value,
-      description: e.target.description.value,
-      company: e.target.company.value,
-      jobPlace: e.target.jobPlace.value,
+      jobTitle,
+      jobType,
+      jobDescription,
+      company,
+      jobPlace,
     };
-    console.log(experience);
+    if (jobTitle && jobType && jobDescription && jobPlace && company) {
+      fetch(`http://localhost:5000/experience/${email}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(experience),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          swal("Yayy", "Experience added successfully!", "success");
+        });
+    }
+    e.target.reset();
+   
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/experience/${email}`, {})
+      .then((res) => res.json())
+      .then((data) => {
+        setExperienceData(data[0]);
+        ;
+      });
+  }, [email]);
   return (
     <DashboardLayout>
       <div className="flex justify-between mx-12 mt-8 mb-4">
@@ -33,7 +76,60 @@ const Index = () => {
         </button>
       </div>
       <hr />
+
       <div className="bg-[#F6F6F6] px-4">
+        <div className="w-50"> 
+          <a
+            className="relative block p-8 overflow-hidden border border-gray-100 rounded-lg"
+            href=""
+          >
+            <span className="absolute inset-x-0 bottom-0 h-2  bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+            <div className="justify-between sm:flex">
+              <div>
+                <h5 className="text-xl font-bold text-gray-900">
+                Job name:   {experienceData?.jobTitle}
+                </h5>
+                <p className="mt-1 text-xs font-medium text-gray-600">
+                 By john doe
+                </p>
+              </div>
+
+              <div className="flex-shrink-0 hidden ml-3 sm:block">
+                <img
+                  className="object-cover w-16 h-16 rounded-lg shadow-sm"
+                  src={user?.photoURL}
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div className="mt-4 sm:pr-8">
+              <p className="text-xl text-gray-500">
+               {experienceData?.jobDescription}
+              </p>
+            </div>
+
+            <dl className="flex mt-6">
+              <div className="flex flex-col-reverse">
+               
+                <dd className="text-sm text-gray-500">
+                  { experienceData?.jobPlace }
+                </dd>
+                <dt className="text-sm font-medium text-gray-600">
+                Job Place
+                </dt>
+              </div>
+
+              <div className="flex flex-col-reverse ml-3 sm:ml-6">
+                <dd className="text-sm text-gray-500">{experienceData?.jobType}</dd>
+                <dt className="text-sm font-medium text-gray-600">
+                  Job type 
+                </dt>
+              </div>
+            </dl>
+          </a>
+        </div>
         <div className="sm:pt-8">
           <div className="mt-2 bg-[#ffffff] p-4 mx-12">
             <form onSubmit={handleSubmit}>
