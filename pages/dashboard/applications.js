@@ -8,10 +8,9 @@ const Applications = () => {
   const [applications, setApplications] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/apply")
+    fetch("https://stormy-beach-33232.herokuapp.com/apply")
       .then((res) => res.json())
       .then((data) => setApplications(data));
-    
   });
   return (
     <div>
@@ -65,7 +64,7 @@ const Applications = () => {
                     </svg>
                   </div>
                 </th>
-                
+
                 <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
                   <div className="flex items-center">
                     Phone Number
@@ -100,7 +99,6 @@ const Applications = () => {
                     </svg>
                   </div>
                 </th>
-                
               </tr>
             </thead>
             {applications?.map((application) => (
@@ -123,7 +121,7 @@ const Applications = () => {
                     <td className="p-4 text-gray-700 whitespace-nowrap">
                       {application.email}
                     </td>
-                   
+
                     <td className="p-4 text-gray-700 whitespace-nowrap">
                       (+88) {application.number}
                     </td>

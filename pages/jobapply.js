@@ -43,9 +43,8 @@ const jobapply = () => {
         });
 
       e.target.reset();
-    }
-    else{
-      swal("Hey dear!", "Please fill-up all of these fields", "info")
+    } else {
+      swal("Hey dear!", "Please fill-up all of these fields", "info");
     }
   };
   return (

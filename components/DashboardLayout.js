@@ -66,43 +66,68 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
-              {userData?.category == "student" && (
+              {userData?.category == "student" ||
+                (userData?.role == "admin" && (
+                  <>
+                    <li>
+                      <ActiveLink
+                        href="/dashboard/professional-overview"
+                        className="ml-10"
+                      >
+                        Professional Overview
+                      </ActiveLink>
+                    </li>
+                    <li>
+                      <ActiveLink href="/dashboard/skillset" className="ml-10">
+                        Skill Set
+                      </ActiveLink>
+                    </li>
+                    <li>
+                    <ActiveLink href="/dashboard/education" className="ml-10">
+                      Education
+                    </ActiveLink>
+                  </li>
+                  </>
+                ))}
+
+             
+              
+              {userData?.category == "employee" ||
+                (userData?.role == "admin" && (
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/applications"
+                      className="ml-10"
+                    >
+                      Applications
+                    </ActiveLink>
+                  </li>
+                ))}
+              <li>
+                <ActiveLink href="/dashboard/add-review" className="ml-10">
+                  Add Review
+                </ActiveLink>
+              </li>
+              {userData?.role == "admin" && (
                 <li>
                   <ActiveLink
-                    href="/dashboard/professional-overview"
+                    href="/dashboard/manage-job-post"
                     className="ml-10"
                   >
-                    Professional Overview
+                    Manage job posts
                   </ActiveLink>
                 </li>
               )}
-
-              {userData?.category == "student" && (
+              {userData?.role == "admin" && (
                 <li>
-                  <ActiveLink href="/dashboard/skillset" className="ml-10">
-                    Skill Set
+                  <ActiveLink
+                    href="/dashboard/manage-reviews"
+                    className="ml-10"
+                  >
+                    Manage Reviews
                   </ActiveLink>
                 </li>
               )}
-              {userData?.category == "student" && (
-                <li>
-                  <ActiveLink href="/dashboard/education" className="ml-10">
-                    Education
-                  </ActiveLink>
-                </li>
-              )}
-              {userData?.category == "employee" && (
-                <li>
-                  <ActiveLink href="/dashboard/applications" className="ml-10">
-                    Applications
-                  </ActiveLink>
-                </li>
-              )}
-              <li>
-                  <ActiveLink href="/dashboard/add-review" className="ml-10">
-                   Add Review
-                  </ActiveLink>
-                </li>
             </ul>
           </div>
         </div>

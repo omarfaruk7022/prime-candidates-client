@@ -15,13 +15,13 @@ import Premium from "../components/Premium";
 export default function Home({ comments }) {
   return (
     <>
-    <Premium/>
+      <Premium />
       <Navber>
         <Banner></Banner>
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
-       
+
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
@@ -32,6 +32,8 @@ export default function Home({ comments }) {
     </>
   );
 }
+
+
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/review");
