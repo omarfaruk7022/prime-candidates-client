@@ -10,7 +10,8 @@ const Job = ({ job }) => {
         Router.push(`/job/${id}`)
     }
     return (
-        <div className="card w-2/4 mx-auto my-5 bg-base-100 shadow-xl">
+        <div className='px-3 mb-20'>
+            <div className="card w-full md:w-2/4 px-0 md:px-5 mx-auto my-5 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="card-title">{jobTitle}</h2>
                 <p className='flex items-center gap-1'><HiLocationMarker></HiLocationMarker>{jobLocation}</p>
@@ -23,6 +24,7 @@ const Job = ({ job }) => {
                     <p onClick={() => handleJobDetails(_id)} className='flex items-center gap-1 justify-end'>View Details <IoIosArrowDropright className='text-xl'></IoIosArrowDropright></p>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
