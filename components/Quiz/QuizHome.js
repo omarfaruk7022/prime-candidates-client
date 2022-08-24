@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Router } from "next/router";
+import Router  from "next/router";
 import React, { useState } from "react";
 
 
