@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image'
 import 'swiper/css';
-import auth from './firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 

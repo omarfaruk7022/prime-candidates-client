@@ -21,7 +21,6 @@ const General = () => {
       .then((res) => res.json())
       .then((data) => setProfile(data));
   }, [user?.email]);
-  
 
   // console.log(profile.name);
 
@@ -88,7 +87,7 @@ const General = () => {
                   <div className="hero my-8 ml-4">
                     <div className="hero-content">
                       <div className="max-w-md">
-                        {profile  && (
+                        {profile && (
                           <div>
                             <h1 className="text-3xl font-bold text-primary">
                               {profile[0]?.name}

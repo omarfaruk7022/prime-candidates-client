@@ -1,7 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 
-const CheckoutForm = ({price}) => {
+const CheckoutForm = ({ price }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
@@ -10,10 +10,10 @@ const CheckoutForm = ({price}) => {
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
-  const {value} = price
+  const { value } = price;
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/create-payment-intent", {
+  //   fetch("https://stormy-beach-33232.herokuapp.com/create-payment-intent", {
   //     method: "POST",
   //     headers: {
   //       "content-type": "application/json",
@@ -91,11 +91,7 @@ const CheckoutForm = ({price}) => {
             },
           }}
         />
-        <button
-          className="btn btn-success btn-sm mt-4"
-          type="submit"
-          
-        >
+        <button className="btn btn-success btn-sm mt-4" type="submit">
           Pay
         </button>
       </form>

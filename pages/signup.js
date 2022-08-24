@@ -44,7 +44,6 @@ const SignUp = () => {
   // };
 
   const onSubmit = async (data) => {
-
     const name = data.name;
     const email = data.email;
     const age = Number(data.age);
@@ -53,29 +52,22 @@ const SignUp = () => {
 
     const userData = { name, email, age, gender, category };
 
-
     if (error) {
-      return
+      return;
+    } else {
+      await createUserWithEmailAndPassword(data.email, data.password);
+      fetch("https://stormy-beach-33232.herokuapp.com/userprofile", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      })
+        .then((res) => res.json())
+        .then((data) => {});
 
+      swal("Yayy", "Sign Up  Successfully Completed ", "success");
     }
-    else{
-     await createUserWithEmailAndPassword(data.email, data.password);
-      fetch("http://localhost:5000/userprofile", {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(userData),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-
-              },)
-
-               swal("Yayy", "Sign Up  Successfully Completed ", "success");
-              
-              
-          }
     // if (user?._tokenResponse.email) {
     //   const userData = {
     //     name: data.name,
@@ -301,7 +293,7 @@ const SignUp = () => {
               </p>
               <div className="divider">OR</div>
               <div className="flex">
-                <a 
+                <a
                 // onClick={() => signInWithGoogle()}
                 >
                   <div className="h-[40px] w-[60px] cursor-pointer">
