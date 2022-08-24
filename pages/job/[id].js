@@ -22,7 +22,7 @@ const JobDetails = () => {
     }
   }, [id, router.isReady]);
 
-  const handleApply = (e) => {
+  const handleApply = (id) => {
     // e.preventDefault();
     // fetch(`https://stormy-beach-33232.herokuapp.com/apply/${id}`, {
     //   method: "POST",
@@ -31,6 +31,9 @@ const JobDetails = () => {
     //   },
     //   body: JSON.stringify()
     // })
+
+    router.push(`/jobapply/${id}` );
+
   };
   return (
     <Navber>
@@ -66,14 +69,15 @@ const JobDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <Link href="/jobapply">
+                
                   <button
-                    onClick={handleApply}
+                    onClick={() => handleApply(jobDetails._id)}
+                   
                     className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
                   >
                     Apply
                   </button>
-                </Link>
+               
                 <h1 className="text-[8px] sm:text-xs">
                   Deadline: Dec 30, 2020
                 </h1>

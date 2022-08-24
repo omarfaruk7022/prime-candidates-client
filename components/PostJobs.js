@@ -22,6 +22,7 @@ const PostJobs = () => {
     const jobType = e.target.jobType.value;
     // const companyPicture = e.target.companyPicture.value;
     const jobDescription = e.target.jobDescription.value;
+    const companyName = e.target.company.value;
 
     const job = {
       jobTitle,
@@ -32,6 +33,7 @@ const PostJobs = () => {
       jobType,
       // companyPicture,
       jobDescription,
+      companyName,
     };
     // console.log(jobTitle, salaryRange, jobLocation, salaryType, jobCategory, jobType, companyPicture, jobDescription);
 
@@ -42,7 +44,9 @@ const PostJobs = () => {
       salaryType &&
       jobCategory &&
       jobType &&
-      jobDescription
+      jobDescription && 
+      companyName
+      
     ) {
       fetch("https://stormy-beach-33232.herokuapp.com/jobs", {
         method: "POST",
@@ -186,21 +190,14 @@ const PostJobs = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Company Picture</span>
+              <span className="label-text">Company Name</span>
             </label>
-            <fieldset className="w-full space-y-1 dark:text-gray-100">
-              <label htmlFor="files" className="block text-sm font-medium">
-                Attachments
-              </label>
-              <div className="flex">
-                <input
-                  type="file"
-                  name="files"
-                  id="files"
-                  className="px-8 py-3 border-2 border-dashed rounded-md  "
-                />
-              </div>
-            </fieldset>
+            <input
+              type="text"
+              name="company"
+              placeholder="Company Name"
+              className="input input-bordered w-full"
+            />
           </div>
         </div>
         <div className="mt-4 px-3 md:px-0">

@@ -105,7 +105,7 @@ const Index = () => {
             </div>
 
             <div className="mt-4 sm:pr-8">
-              <p className="text-xl text-gray-500">
+              <p className="text-sm text-gray-500">
                {experienceData?.jobDescription}
               </p>
             </div>
