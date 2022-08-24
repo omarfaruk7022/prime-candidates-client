@@ -1,27 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
-import Footer from './Footer';
-import Navber from './Navber';
-import Link from 'next/link';
-
+import Footer from "./Footer";
+import Navber from "./Navber";
+import Link from "next/link";
 
 const SupportPage = () => {
-    const router = useRouter()
-    const [user] = useAuthState(auth) 
-      
-    useEffect(() => {
-      
-  
-      // if there is no authenticated user, redirect to login page_
-  
-      if (!user) {
-        router.push("/login")
-      }
-    }, [user]);
+  const router = useRouter();
+  const [user] = useAuthState(auth);
 
-    // const [reasons, setReasons] = useState([]);
+  useEffect(() => {
+    // if there is no authenticated user, redirect to login page_
+
+    if (!user) {
+      router.push("/login");
+    }
+  }, [user]);
+
+  // const [reasons, setReasons] = useState([]);
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   const text = e.target.bio.value;
@@ -53,9 +50,9 @@ const SupportPage = () => {
   //       setReasons(data);
   //     });
   // }, []);
-    return (
-        <div>
-             <Navber>
+  return (
+    <div>
+      <Navber>
         <div className="m-auto">
           <h1 className=" text-5xl text-secondary">
             Please join our support session
@@ -116,8 +113,8 @@ const SupportPage = () => {
      </div> */}
       </Navber>
       <Footer />
-        </div>
-    );
+    </div>
+  );
 };
 
 export default SupportPage;

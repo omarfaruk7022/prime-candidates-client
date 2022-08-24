@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
 import auth from "../components/firebase.init";
 import { signOut } from "firebase/auth";
-import { BsChatDots } from 'react-icons/bs';
+import { BsChatDots } from "react-icons/bs";
 
 const Navber = ({ children }) => {
   const [user] = useAuthState(auth);
@@ -119,13 +119,13 @@ const Navber = ({ children }) => {
                     <a className="rounded-[5px]">Contact Us</a>
                   </Link>
                 </li>
-                {
-                  user && <li>
+                {user && (
+                  <li>
                     <Link href="/dashboard/general">
                       <a className="rounded-[5px]">Dashboard</a>
                     </Link>
                   </li>
-                }
+                )}
                 <li>
                   <Link href="/quizzes">
                     <a className="rounded-[5px]">Quiz</a>
@@ -232,8 +232,8 @@ const Navber = ({ children }) => {
             </Link>
           </li>
 
-          {
-            user && <div className="dropdown my-4">
+          {user && (
+            <div className="dropdown my-4">
               <div className="flex items-center">
                 <label tabIndex="0" className="rounded-[5px] ml-4">
                   Dashboard
@@ -279,7 +279,7 @@ const Navber = ({ children }) => {
                 </li>
               </ul>
             </div>
-          }
+          )}
 
           <li>
             <Link href="/contactus">

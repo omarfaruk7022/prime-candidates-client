@@ -59,8 +59,7 @@ const PostJobs = () => {
         });
 
       e.target.reset();
-    }
-    else{
+    } else {
       swal("Oops", "Please fill all the fields", "error");
     }
   };
