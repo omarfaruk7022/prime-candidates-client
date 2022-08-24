@@ -8,7 +8,7 @@ const Applications = () => {
   const [applications, setApplications] = useState();
 
   useEffect(() => {
-    fetch("https://stormy-beach-33232.herokuapp.com/apply")
+    fetch("http://localhost:5000/apply")
       .then((res) => res.json())
       .then((data) => setApplications(data));
   });
