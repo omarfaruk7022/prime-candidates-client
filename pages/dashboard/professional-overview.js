@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-import DashboardLayout from "../../components/DashboardLayout";
-
-const Index = () => {
-=======
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardLayout from "../../components/DashboardLayout";
 import auth from "../../components/firebase.init";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import { useQuery } from "react-query";
-
-
-
 
 const Index = () => {
   const [experienceData, setExperienceData] = useState();
   const [user] = useAuthState(auth);
   const email = user?.email;
 
- 
   const handleSubmit = (e) => {
     event.preventDefault();
 
@@ -49,7 +40,6 @@ const Index = () => {
         });
     }
     e.target.reset();
-   
   };
 
   useEffect(() => {
@@ -57,10 +47,8 @@ const Index = () => {
       .then((res) => res.json())
       .then((data) => {
         setExperienceData(data[0]);
-        ;
       });
   }, [email]);
->>>>>>> 01ed36a04181fff6edab04b8b4fd1e5a476178a8
   return (
     <DashboardLayout>
       <div className="flex justify-between mx-12 mt-8 mb-4">
@@ -82,95 +70,9 @@ const Index = () => {
         </button>
       </div>
       <hr />
-<<<<<<< HEAD
-      <div className="bg-[#F6F6F6] px-4">
-        <div className="sm:pt-8">
-          <div className="mt-2 bg-[#ffffff] p-4 mx-12">
-            <div className="max-w-4xl">
-              <div className="lg:flex my-4">
-                <label className="block mt-5 w-full m-2">
-                  <span className="block font-medium text-sm text-gray-900 leading-tight">
-                    Job Title
-                  </span>
-                  <div className="mt-2">
-                    <input
-                      className="block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white"
-                      placeholder=""
-                    />
-                  </div>
-                </label>
-                <label className="block mt-5 w-full m-2">
-                  <span className="block font-medium text-sm text-gray-900 leading-tight">
-                    Company Name
-                  </span>
-                  <div className="mt-2">
-                    <input
-                      className="block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white"
-                      placeholder=""
-                    />
-                  </div>
-                </label>
-              </div>
-              <label className="flex items-center">
-                <span className="block font-medium text-sm text-gray-900 leading-tight">
-                  Related to IT
-                </span>
-                <input type="checkbox" className="ml-4 mb-[2px]" />
-              </label>
-              <label className="block my-4">
-                <span className="block font-medium text-sm text-gray-900 leading-tight">
-                  Place
-                </span>
-                <div className="mt-2">
-                  <select className="select select-primary w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white">
-                    <option selected>Remote</option>
-                    <option>Office</option>
-                  </select>
-                </div>
-              </label>
-              <label className="block my-4">
-                <span className="block font-medium text-sm text-gray-900 leading-tight">
-                  Job Type
-                </span>
-                <div className="mt-2">
-                  <select className="select select-primary w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white">
-                    <option selected>Internship</option>
-                    <option>Part-Time</option>
-                    <option>Full-Time</option>
-                  </select>
-                </div>
-              </label>
-              <label className="block my-4">
-                <span className="block font-medium text-sm text-gray-900 leading-tight">
-                  Description
-                </span>
-                <div className="mt-2">
-                  <textarea
-                    className="block w-full border border-gray-300 rounded-lg bg-gray-100 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white"
-                    placeholder="English"
-                  />
-                </div>
-              </label>
-            </div>
-            <hr className="-mx-20 mt-4" />
-            <div className="border-t-2 border-gray-200 px-0 py-5 flex justify-end">
-              <button
-                type="button"
-                className="px-4 py-3 leading-none font-semibold rounded-lg bg-gray-300 text-gray-900 hover:bg-gray-400 focus:outline-none focus:bg-gray-400"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                className="ml-4 px-6 py-3 leading-none font-semibold rounded-lg bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-900"
-              >
-                Save
-              </button>
-            </div>
-=======
 
       <div className="bg-[#F6F6F6] px-4">
-        <div className="w-50"> 
+        <div className="w-50">
           <a
             className="relative block p-8 overflow-hidden border border-gray-100 rounded-lg"
             href=""
@@ -180,10 +82,10 @@ const Index = () => {
             <div className="justify-between sm:flex">
               <div>
                 <h5 className="text-xl font-bold text-gray-900">
-                Job name:   {experienceData?.jobTitle}
+                  Job name: {experienceData?.jobTitle}
                 </h5>
                 <p className="mt-1 text-xs font-medium text-gray-600">
-                 By john doe
+                  By john doe
                 </p>
               </div>
 
@@ -198,26 +100,23 @@ const Index = () => {
 
             <div className="mt-4 sm:pr-8">
               <p className="text-sm text-gray-500">
-               {experienceData?.jobDescription}
+                {experienceData?.jobDescription}
               </p>
             </div>
 
             <dl className="flex mt-6">
               <div className="flex flex-col-reverse">
-               
                 <dd className="text-sm text-gray-500">
-                  { experienceData?.jobPlace }
+                  {experienceData?.jobPlace}
                 </dd>
-                <dt className="text-sm font-medium text-gray-600">
-                Job Place
-                </dt>
+                <dt className="text-sm font-medium text-gray-600">Job Place</dt>
               </div>
 
               <div className="flex flex-col-reverse ml-3 sm:ml-6">
-                <dd className="text-sm text-gray-500">{experienceData?.jobType}</dd>
-                <dt className="text-sm font-medium text-gray-600">
-                  Job type 
-                </dt>
+                <dd className="text-sm text-gray-500">
+                  {experienceData?.jobType}
+                </dd>
+                <dt className="text-sm font-medium text-gray-600">Job type</dt>
               </div>
             </dl>
           </a>
@@ -319,7 +218,6 @@ const Index = () => {
                 </button>
               </div>
             </form>
->>>>>>> 01ed36a04181fff6edab04b8b4fd1e5a476178a8
           </div>
         </div>
       </div>
