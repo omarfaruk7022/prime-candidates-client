@@ -7,7 +7,7 @@ const Contact = () => {
   const form = useRef();
   const handleBack = () => {
     window.history.back();
-  }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -33,9 +33,12 @@ const Contact = () => {
     <div>
       <Navber>
         <div className="my-[150px] md:px-12">
-        <button onClick={handleBack} className="text-blue-400 text-bold text-xl ml-40 ">
-        Back
-      </button>
+          <button
+            onClick={handleBack}
+            className="text-blue-400 text-bold text-xl ml-40 "
+          >
+            Back
+          </button>
           <h2 className=" text-3xl text-primary text-center md:mb-[50px]">
             Contact us
           </h2>
@@ -100,7 +103,9 @@ const Contact = () => {
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1 text-secondary ">Your Email address</span>
+                  <span className="mb-1 text-secondary ">
+                    Your Email address
+                  </span>
                   <input
                     name="email"
                     className="bg-gray-200 block w-full h-10 rounded-md shadow-sm  "

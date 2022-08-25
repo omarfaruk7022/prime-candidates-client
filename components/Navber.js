@@ -100,7 +100,7 @@ const Navber = ({ children }) => {
                   {/* {
                     user &&
                     <Link href="/resume">
-                      <a className="rounded-[5px]">Resume</a>
+                      <a  className="rounded-[5px]">Resume</a>
                     </Link>
                   } */}
 
@@ -127,7 +127,7 @@ const Navber = ({ children }) => {
                   </li>
                 )}
                 <li>
-                  <Link href="/quizzes">
+                  <Link href="/quiz">
                     <a className="rounded-[5px]">Quiz</a>
                   </Link>
                 </li>
@@ -153,7 +153,7 @@ const Navber = ({ children }) => {
                   </Link>
                 )}
                 <Link href="/postJobs">
-                  {/* <button className="btn btn-outline btn-secondary  ">
+                  {/* <button  className="btn btn-outline btn-secondary  ">
                     Job post
                   </button> */}
                   <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
@@ -287,7 +287,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/quizzes">
+            <Link href="/quiz" >
               <a className="rounded-[5px]">Quiz</a>
             </Link>
           </li>

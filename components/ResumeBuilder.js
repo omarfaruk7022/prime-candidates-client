@@ -8,7 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 
 const ResumeBuilder = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [user] = useAuthState(auth);
   const saveFile = () => {
     saveAs(
@@ -17,16 +17,12 @@ const ResumeBuilder = () => {
     );
   };
   useEffect(() => {
-    
-
     // if there is no authenticated user, redirect to login page_
 
     if (!user) {
-      router.push("/login")
+      router.push("/login");
     }
-  
-  
-  }, [user])
+  }, [user]);
 
   return (
     <div className="container max-w-[1080px] mx-auto my-16">
@@ -114,7 +110,7 @@ const ResumeBuilder = () => {
           </div>
           <div className="flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer">
             <FiDownload></FiDownload>
-           <button onClick={saveFile}>Download</button>
+            <button onClick={saveFile}>Download</button>
           </div>
         </div>
 

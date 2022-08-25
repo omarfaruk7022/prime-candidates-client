@@ -202,23 +202,23 @@ const PostJobs = () => {
         </div>
         <div className="mt-4 px-3 md:px-0">
           {/* <div>
-            <label className="label">
-              <span className="label-text">Featured?</span>
+            <label  className="label">
+              <span  className="label-text">Featured?</span>
             </label>
-            <div className="flex items-center">
+            <div  className="flex items-center">
               <input
                 type="radio"
                 name="radio-2"
-                className="radio radio-primary"
+                 className="radio radio-primary"
                 checked
               />
-              <span className="mx-5">Featured</span>
+              <span  className="mx-5">Featured</span>
               <input
                 type="radio"
                 name="radio-2"
-                className="radio radio-primary"
+                 className="radio radio-primary"
               />
-              <span className="mx-5">Unfeatured</span>
+              <span  className="mx-5">Unfeatured</span>
             </div>
           </div> */}
 

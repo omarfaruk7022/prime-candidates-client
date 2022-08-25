@@ -1,10 +1,10 @@
-import React from 'react';
-import { IoIosArrowDropright } from 'react-icons/io'
-import { HiLocationMarker } from 'react-icons/hi'
-import Router from 'next/router';
+import React from "react";
+import { IoIosArrowDropright } from "react-icons/io";
+import { HiLocationMarker } from "react-icons/hi";
+import Router from "next/router";
 
 const Job = ({ job }) => {
-    const { _id, jobTitle, jobLocation, jobCategory, salaryRange, jobType } = job;
+  const { _id, jobTitle, jobLocation, jobCategory, salaryRange, jobType } = job;
 
     const handleJobDetails = (id) => {
         Router.push(`/job/${id}`)

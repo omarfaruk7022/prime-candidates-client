@@ -2,18 +2,14 @@ import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardLayout from "../../components/DashboardLayout";
 import auth from "../../components/firebase.init";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import { useQuery } from "react-query";
-
-
-
 
 const Index = () => {
   const [experienceData, setExperienceData] = useState();
   const [user] = useAuthState(auth);
   const email = user?.email;
 
- 
   const handleSubmit = (e) => {
     event.preventDefault();
 
@@ -44,7 +40,6 @@ const Index = () => {
         });
     }
     e.target.reset();
-   
   };
 
   useEffect(() => {
@@ -52,7 +47,6 @@ const Index = () => {
       .then((res) => res.json())
       .then((data) => {
         setExperienceData(data[0]);
-        ;
       });
   }, [email]);
   return (
@@ -78,7 +72,7 @@ const Index = () => {
       <hr />
 
       <div className="bg-[#F6F6F6] px-4">
-        <div className="w-50"> 
+        <div className="w-50">
           <a
             className="relative block p-8 overflow-hidden border border-gray-100 rounded-lg"
             href=""
@@ -88,10 +82,10 @@ const Index = () => {
             <div className="justify-between sm:flex">
               <div>
                 <h5 className="text-xl font-bold text-gray-900">
-                Job name:   {experienceData?.jobTitle}
+                  Job name: {experienceData?.jobTitle}
                 </h5>
                 <p className="mt-1 text-xs font-medium text-gray-600">
-                 By john doe
+                  By john doe
                 </p>
               </div>
 
@@ -106,26 +100,23 @@ const Index = () => {
 
             <div className="mt-4 sm:pr-8">
               <p className="text-sm text-gray-500">
-               {experienceData?.jobDescription}
+                {experienceData?.jobDescription}
               </p>
             </div>
 
             <dl className="flex mt-6">
               <div className="flex flex-col-reverse">
-               
                 <dd className="text-sm text-gray-500">
-                  { experienceData?.jobPlace }
+                  {experienceData?.jobPlace}
                 </dd>
-                <dt className="text-sm font-medium text-gray-600">
-                Job Place
-                </dt>
+                <dt className="text-sm font-medium text-gray-600">Job Place</dt>
               </div>
 
               <div className="flex flex-col-reverse ml-3 sm:ml-6">
-                <dd className="text-sm text-gray-500">{experienceData?.jobType}</dd>
-                <dt className="text-sm font-medium text-gray-600">
-                  Job type 
-                </dt>
+                <dd className="text-sm text-gray-500">
+                  {experienceData?.jobType}
+                </dd>
+                <dt className="text-sm font-medium text-gray-600">Job type</dt>
               </div>
             </dl>
           </a>

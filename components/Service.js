@@ -4,7 +4,7 @@ const Service = () => {
   return (
     <div>
       <div>
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        {/* <div  className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div>
             <img src="" alt="" />
             <h1>Custom Web Design</h1>
