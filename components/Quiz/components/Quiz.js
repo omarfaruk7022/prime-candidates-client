@@ -21,17 +21,13 @@ const Quiz = ({
           <div className="col-lg-8">
             <div
               className="card p-4"
-              style={{ background: "#3d3d3d", borderColor: "#646464" }}
+              style={{ background: "#1D4ED8", borderColor: "#646464" }}
             >
               <div className="d-flex justify-content-between gap-md-3">
-                <h5 className="mb-2 fs-normal lh-base">{question?.question}</h5>
-                <h5
-                  style={{
-                    color: "#60d600",
-                    width: "100px",
-                    textAlign: "right",
-                  }}
-                >
+                <h5 className="mb-2 fs-normal text-3xl lh-base">
+                  {question?.question}
+                </h5>
+                <h5 className="text-2xl">
                   {quizs.indexOf(question) + 1} / {quizs?.length}
                 </h5>
               </div>
