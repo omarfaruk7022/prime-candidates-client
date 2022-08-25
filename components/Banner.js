@@ -270,42 +270,42 @@ const Banner = () => {
   //   });
   // });
   return (
-    // <div  className="lg:mt-12">
-    //   <div  className="container max-w-[1080px] mx-auto">
-    //     <div  className="grid grid-cols-1 sm:grid-cols-2">
-    //       <div  className="flex flex-col justify-center p-5">
-    // <div>
-    //   <h1  className="text-2xl lg:text-4xl text-center sm:text-left uppercase font-extrabold text-primary md:mb-3 mt-16 md:mt-0">
-    //     Find Your <span  className="text-secondary">Perfect</span>
-    //   </h1>
-    //   <h1  className="text-2xl lg:text-4xl text-center sm:text-left text-primary uppercase font-extrabold md:mb-3">
-    //     <span  className="text-secondary">Job</span> Match
-    //   </h1>
-    // </div>
+    // <div className="lg:mt-12">
+    //   <div className="container max-w-[1080px] mx-auto">
+    //     <div className="grid grid-cols-1 sm:grid-cols-2">
+    //       <div className="flex flex-col justify-center p-5">
     //         <div>
-    // <p  className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
-    //   Find jobs, hire employer & career opportunities
-    // </p>
+    //           <h1 className="text-2xl lg:text-4xl text-center sm:text-left uppercase font-extrabold text-primary md:mb-3 mt-16 md:mt-0">
+    //             Find Your <span className="text-secondary">Perfect</span>
+    //           </h1>
+    //           <h1 className="text-2xl lg:text-4xl text-center sm:text-left text-primary uppercase font-extrabold md:mb-3">
+    //             <span className="text-secondary">Job</span> Match
+    //           </h1>
     //         </div>
-    //         <div  className="navber bg-white rounded-lg shadow-lg shadow-blue-50 p-2">
-    //           <div  className="">
-    //             <div  className=" flex justify-between items-center">
-    // <select  className="select select-primary bg-transparent  focus:outline-none h-6 border-none rounded-none text-[8px] font-light md:text-xs">
-    //   <option  className="text-xs md:text-sm" selected>
-    //     Full-Time
-    //   </option>
-    //   <option  className="text-xs md:text-sm">Part-Time</option>
-    //   <option  className="text-xs md:text-sm">Contact</option>
-    //   <option  className="text-xs md:text-sm">Hourly</option>
-    // </select>
-    // <select  className="select select-primary bg-transparent  focus:outline-none h-8 border-none rounded-none text-[8px] font-light md:text-xs">
-    //   <option  className="text-xs md:text-sm" selected>
-    //     Dhaka
-    //   </option>
-    //   <option  className="text-xs md:text-sm">Chottogram</option>
-    //   <option  className="text-xs md:text-sm">Khulna</option>
-    //   <option  className="text-xs md:text-sm">Cumilla</option>
-    // </select>
+    //         <div>
+    //           <p className="text-sm lg:text-xl text-center sm:text-left font-thin my-3">
+    //             Find jobs, hire employer & career opportunities
+    //           </p>
+    //         </div>
+    //         <div className="navber bg-white rounded-lg shadow-lg shadow-blue-50 p-2">
+    //           <div className="">
+    //             <div className=" flex justify-between items-center">
+    //               <select className="select select-primary bg-transparent  focus:outline-none h-6 border-none rounded-none text-[8px] font-light md:text-xs">
+    //                 <option className="text-xs md:text-sm" selected>
+    //                   Full-Time
+    //                 </option>
+    //                 <option className="text-xs md:text-sm">Part-Time</option>
+    //                 <option className="text-xs md:text-sm">Contact</option>
+    //                 <option className="text-xs md:text-sm">Hourly</option>
+    //               </select>
+    //               <select className="select select-primary bg-transparent  focus:outline-none h-8 border-none rounded-none text-[8px] font-light md:text-xs">
+    //                 <option className="text-xs md:text-sm" selected>
+    //                   Dhaka
+    //                 </option>
+    //                 <option className="text-xs md:text-sm">Chottogram</option>
+    //                 <option className="text-xs md:text-sm">Khulna</option>
+    //                 <option className="text-xs md:text-sm">Cumilla</option>
+    //               </select>
 
     //               <div>
     //                 <button
@@ -376,21 +376,21 @@ const Banner = () => {
             Find job
           </button>
 
-          <div className="flex flex-wrap gap-4 mt-8 text-center">
+          {/* <div className="flex flex-wrap gap-4 mt-8 text-center">
             <a
               className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow sm:w-auto bg-primary  hover:bg-secondary focus:outline-none focus:ring "
-              href="/get-started"
+              href="/login"
             >
               Get Started
             </a>
 
             <a
-              className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-white bg-secondary sm:w-auto   focus:outline-none focus:ring hover:bg-primary"
+              className="block w-full px-12 py-3 text-sm font-medium rounded shadow text-white bg-secondary sm:w-auto   focus:outline-none focus:ring hover:bg-primary"
               href="/about"
             >
               Learn More
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

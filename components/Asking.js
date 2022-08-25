@@ -6,7 +6,7 @@ const Asking = () => {
       <h1 className="text-center text-4xl mt-28 mb-12 text-secondary">
         Ask anything
       </h1>
-      <div className="space-y-4 px-28">
+      <div className="space-y-4 px-3 md:px-28">
         <details
           className="p-6 border-l-4 border-green-500 bg-gray-50 group"
           open

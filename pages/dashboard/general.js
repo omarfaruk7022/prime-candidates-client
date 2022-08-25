@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../components/firebase.init";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import swal from "sweetalert";
 
 const handleBack = () => {
   window.history.back();
@@ -11,7 +12,7 @@ const handleBack = () => {
 const General = () => {
   const [profile, setProfile] = useState();
   const [user] = useAuthState(auth);
-  console.log(user);
+  const [userData, setUserData] = useState();
 
   useEffect(() => {
     fetch(
@@ -19,9 +20,9 @@ const General = () => {
     )
       .then((res) => res.json())
       .then((data) => setProfile(data));
-  }, []);
+  }, [user?.email]);
 
-  console.log(profile);
+  // console.log(profile.name);
 
   const handleEditInfo = (e) => {
     e.preventDefault();
@@ -40,7 +41,6 @@ const General = () => {
     };
 
     updatedInfo.email = user.email;
-    updatedInfo.name = user.displayName;
     console.log(updatedInfo);
 
     fetch("https://stormy-beach-33232.herokuapp.com/userprofile", {
@@ -64,7 +64,8 @@ const General = () => {
     //             swal("Yayy", "Job added successfully!", "success");
     //         }
     //     });
-
+    swal("Yayy", "Profile updated successfully!", "success");
+    
     e.target.reset();
   };
 
@@ -86,39 +87,33 @@ const General = () => {
                   <div className="hero my-8 ml-4">
                     <div className="hero-content">
                       <div className="max-w-md">
-                        <h1 className="text-3xl font-bold text-primary">
-                          {user?.displayName}
-                        </h1>
-                        <p className="py-2">
-                          <strong>Email :</strong> {user?.email}
-                        </p>
-                        {profile && profile[0]?.phone && (
-                          <p className="py-2">
-                            <strong>phone :</strong> {profile[0]?.phone}
-                          </p>
-                        )}
-                        {profile && profile[0]?.socialLink && (
-                          <p className="py-2">
-                            <strong>socialLink :</strong>{" "}
-                            {profile[0]?.socialLink}
-                          </p>
-                        )}
-                        {profile && profile[0]?.street && (
-                          <p className="py-2">
-                            <strong>street :</strong> {profile[0]?.street}
-                          </p>
-                        )}
-                        {profile && profile[0]?.state && (
-                          <p className="py-2">
-                            <strong>state :</strong>
-                            {profile[0]?.state}
-                          </p>
-                        )}
-                        {profile && profile[0]?.country && (
-                          <p className="py-2">
-                            <strong>country :</strong>
-                            {profile[0]?.country}
-                          </p>
+                        {profile && (
+                          <div>
+                            <h1 className="text-3xl font-bold text-primary">
+                              {profile[0]?.name}
+                            </h1>
+                            <p className="py-2">
+                              <strong>Email :</strong> {profile[0]?.email}
+                            </p>
+                            <p className="py-2">
+                              <strong>phone :</strong> {profile[0]?.phone}
+                            </p>
+                            <p className="py-2">
+                              <strong>socialLink :</strong>{" "}
+                              {profile[0]?.socialLink}
+                            </p>
+                            <p className="py-2">
+                              <strong>street :</strong> {profile[0]?.street}
+                            </p>
+                            <p className="py-2">
+                              <strong>state :</strong>
+                              {profile[0]?.state}
+                            </p>
+                            <p className="py-2">
+                              <strong>country :</strong>
+                              {profile[0]?.country}
+                            </p>
+                          </div>
                         )}
                       </div>
                     </div>

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Navber from "./Navber";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
+import { useEffect, useState } from "react";
 
 const ActiveLink = ({ children, href, className }) => {
   const router = useRouter();
@@ -23,7 +24,25 @@ const ActiveLink = ({ children, href, className }) => {
 
 const DashboardLayout = ({ children }) => {
   const [user] = useAuthState(auth);
-  console.log(user);
+
+  //   fetch will be from userData-mongodb
+  const [userData, setUserData] = useState();
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    fetch(
+      `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setUserData(data[0]);
+        if (data[0].category === "admin") {
+          setAdmin(true);
+        }
+      });
+      return;
+  }, [user]);
+
+  console.log(admin);
 
   return (
     <div>
@@ -55,24 +74,80 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
+
+              {admin && (
+                <>
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/professional-overview"
+                      className="ml-10"
+                    >
+                      Professional Overview
+                    </ActiveLink>
+                  </li>
+                  <li>
+                    <ActiveLink href="/dashboard/skillset" className="ml-10">
+                      Skill Set
+                    </ActiveLink>
+                  </li>
+                  <li>
+                    <ActiveLink href="/dashboard/education" className="ml-10">
+                      Education
+                    </ActiveLink>
+                  </li>
+                </>
+              )}
+
+              <>
+                <li>
+                  <ActiveLink href="/dashboard/applications" className="ml-10">
+                    Applications
+                  </ActiveLink>
+                </li>
+              </>
+              {/* {userData?.role == "admin" && (
+                  <>
+                    <li>
+                    <ActiveLink
+                      href="/dashboard/applications"
+                      className="ml-10"
+                    >
+                      Applications
+                    </ActiveLink>
+                  </li>
+                  </>
+                )} */}
               <li>
-                <ActiveLink
-                  href="/dashboard/professional-overview"
-                  className="ml-10"
-                >
-                  Professional Overview
+                <ActiveLink href="/dashboard/add-review" className="ml-10">
+                  Add Review
                 </ActiveLink>
               </li>
-              <li>
-                <ActiveLink href="/dashboard/skillset" className="ml-10">
-                  Skill Set
-                </ActiveLink>
-              </li>
-              <li>
-                <ActiveLink href="/dashboard/education" className="ml-10">
-                  Education
-                </ActiveLink>
-              </li>
+              <>
+                <li>
+                  <ActiveLink
+                    href="/dashboard/manage-job-post"
+                    className="ml-10"
+                  >
+                    Manage job posts
+                  </ActiveLink>
+                </li>
+                <li>
+                  <ActiveLink
+                    href="/dashboard/manage-reviews"
+                    className="ml-10"
+                  >
+                    Manage Reviews
+                  </ActiveLink>
+                </li>
+                <li>
+                  <ActiveLink
+                    href="/dashboard/my-applications"
+                    className="ml-10"
+                  >
+                    My Applications
+                  </ActiveLink>
+                </li>
+              </>
             </ul>
           </div>
         </div>

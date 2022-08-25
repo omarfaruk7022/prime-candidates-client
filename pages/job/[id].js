@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
 import Footer from "../../components/Footer";
-
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
 import Navber from "../../components/Navber";
-
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
+import Link from "next/link";
 
 const JobDetails = () => {
   const router = useRouter();
@@ -23,6 +21,20 @@ const JobDetails = () => {
         .then((data) => setJobDetails(data));
     }
   }, [id, router.isReady]);
+
+  const handleApply = (id) => {
+    // e.preventDefault();
+    // fetch(`https://stormy-beach-33232.herokuapp.com/apply/${id}`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify()
+    // })
+
+    router.push(`/jobapply/${id}` );
+
+  };
   return (
     <Navber>
       <div className=" p-10">
@@ -57,9 +69,15 @@ const JobDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <button className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white">
-                  Apply
-                </button>
+                
+                  <button
+                    onClick={() => handleApply(jobDetails._id)}
+                   
+                    className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
+                  >
+                    Apply
+                  </button>
+               
                 <h1 className="text-[8px] sm:text-xs">
                   Deadline: Dec 30, 2020
                 </h1>
