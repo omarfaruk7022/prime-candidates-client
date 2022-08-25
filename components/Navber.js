@@ -17,6 +17,17 @@ const Navber = ({ children }) => {
   //     .then((data) => setUserData(data));
   // }, [])
 
+  // const [userData, setUserData] = useState();
+  // const [admin, setAdmin] = useState(false);
+  // useEffect(() => {
+  //   fetch(
+  //     `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setUserData(data[0]);
+  //     });
+  // },[user]);
   const handleSignOut = () => {
     signOut(auth);
   };
@@ -152,14 +163,13 @@ const Navber = ({ children }) => {
                     </button>
                   </Link>
                 )}
+                
                 <Link href="/postJobs">
-                  {/* <button  className="btn btn-outline btn-secondary  ">
-                    Job post
-                  </button> */}
                   <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
                     Post Jobs
                   </button>
                 </Link>
+             
               </div>
               <a href="https://pcchat.pages.dev/">
                 <BsChatDots className="cursor-pointer text-3xl" />
@@ -287,7 +297,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/quiz" >
+            <Link href="/quiz">
               <a className="rounded-[5px]">Quiz</a>
             </Link>
           </li>
@@ -312,11 +322,13 @@ const Navber = ({ children }) => {
                   </button>
                 </Link>
               )}
-              <Link href="/postJobs">
-                <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
-                  Post Jobs
-                </button>
-              </Link>
+             
+                <Link href="/postJobs">
+                  <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
+                    Post Jobs
+                  </button>
+                </Link>
+             
             </div>
           </li>
         </ul>
