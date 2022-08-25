@@ -12,7 +12,7 @@ const FeaturedJob = () => {
     fetch("https://stormy-beach-33232.herokuapp.com/jobs")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         setFJob(data);
       });

@@ -1,9 +1,34 @@
-import React from "react";
-import Navber from "../components/Navber";
+import React, { useEffect } from "react";
+import Navber from "../../components/Navber";
 import swal from "sweetalert";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { format } from "date-fns";
 
-const jobapply = () => {
+const Jobapply = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  console.log(id);
+
+  const [state, setState] = useState();
+  const date = new Date();
+  const formattedDate = format(date, "PP");
+  const formattedDate2 = format(date, "p");
+  console.log(formattedDate2);
+  useEffect(() => {
+    fetch(`http://localhost:5000/jobs`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const job = data.filter((job) => job._id === id);
+        setState(job[0]);
+        console.log(job[0]);
+      });
+  }, []);
+
   const handleApplyJob = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -18,6 +43,13 @@ const jobapply = () => {
       number,
       address,
       resume,
+      appliedJob: state.jobTitle,
+      appliedSalary: state.jobSalary,
+      appliedDescription: state.jobDescription,
+      appliedDate: formattedDate,
+      appliedTime: formattedDate2,
+      appliedCompany: state.companyName,
+    
     };
 
     console.log(jobApply);
@@ -118,4 +150,4 @@ const jobapply = () => {
   );
 };
 
-export default jobapply;
+export default Jobapply;

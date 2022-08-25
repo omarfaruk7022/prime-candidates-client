@@ -68,18 +68,18 @@ const SupportPage = () => {
           </Link>
         </div>
 
-        {/* <label htmlFor="my-modal" className="btn modal-button">
+        {/* <label htmlFor="my-modal"  className="btn modal-button">
         open modal
       </label>
 
-      <input type="checkbox" id="my-modal" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">
+      <input type="checkbox" id="my-modal"  className="modal-toggle" />
+      <div  className="modal">
+        <div  className="modal-box">
+          <h3  className="font-bold text-lg">
             Congratulations random Internet user!
           </h3>
-          <div className="col-span-full">
-            <label htmlFor="bio" className="text-md">
+          <div  className="col-span-full">
+            <label htmlFor="bio"  className="text-md">
               Type your Problem
             </label>
             <form onSubmit={handleSubmit}>
@@ -87,7 +87,7 @@ const SupportPage = () => {
                 name="bio"
                 id="bio"
                 placeholder=""
-                className="w-full h-[200px] rounded-md bg-gray-200 "
+                 className="w-full h-[200px] rounded-md bg-gray-200 "
                 spellCheck="false"
               ></textarea>
               <button type="submit" value="Submit">
@@ -95,14 +95,14 @@ const SupportPage = () => {
               </button>
             </form>
           </div>
-          <div className="modal-action">
-            <label htmlFor="my-modal" className="btn">
+          <div  className="modal-action">
+            <label htmlFor="my-modal"  className="btn">
               Yay!
             </label>
           </div>
         </div>
       </div>
-     <div className="grid grid-cols-3 gap-5">
+     <div  className="grid grid-cols-3 gap-5">
    {
       reasons.map(reason => {
         return <SupportsData reason={reason}></SupportsData>

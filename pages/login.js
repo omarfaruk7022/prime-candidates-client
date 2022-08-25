@@ -1,8 +1,8 @@
 import swal from "sweetalert";
 import vector from "..//images//Group 31.png";
-import googleIcon from "..//images//Google_Icons-09-512.webp"
-import githubIcon from "../images/black-github-icon.png"
-import facebookIcon from "../images/fb_icon.png"
+import googleIcon from "..//images//Google_Icons-09-512.webp";
+import githubIcon from "../images/black-github-icon.png";
+import facebookIcon from "../images/fb_icon.png";
 import {
   useSignInWithGoogle,
   useSignInWithEmailAndPassword,
@@ -17,7 +17,6 @@ import Image from "next/image";
 import auth from "../components/firebase.init";
 import Router from "next/router";
 import Loader from "../components/Loader";
-
 
 const Login = () => {
   // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -59,7 +58,9 @@ const Login = () => {
           </div>
           <div className="card w-96 bg-base-100 shadow-xl mx-3 lg:mx-0">
             <div className="card-body">
-              <h2 className="text-center text-2xl font-bold text-secondary">Login</h2>
+              <h2 className="text-center text-2xl font-bold text-secondary">
+                Login
+              </h2>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full max-w-xs">
                   <label className="label">

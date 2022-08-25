@@ -27,13 +27,22 @@ const DashboardLayout = ({ children }) => {
 
   //   fetch will be from userData-mongodb
   const [userData, setUserData] = useState();
+  const [admin, setAdmin] = useState(false);
   useEffect(() => {
     fetch(
       `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
     )
       .then((res) => res.json())
-      .then((data) => setUserData(data[0]));
-  }, [user?.email]);
+      .then((data) => {
+        setUserData(data[0]);
+        if (data[0]?.category === "admin") {
+          setAdmin(true);
+        }
+      });
+      return;
+  }, [user,userData]);
+
+  console.log(admin);
 
   return (
     <div>
@@ -48,7 +57,6 @@ const DashboardLayout = ({ children }) => {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
               {/* <!-- Sidebar content here --> */}
-
               {user?.photoURL && (
                 <li>
                   <div className="avatar mx-auto flex flex-col">
@@ -66,35 +74,40 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
-              {userData?.category == "student" ||
-                (userData?.role == "admin" && (
-                  <>
-                    <li>
-                      <ActiveLink
-                        href="/dashboard/professional-overview"
-                        className="ml-10"
-                      >
-                        Professional Overview
-                      </ActiveLink>
-                    </li>
-                    <li>
-                      <ActiveLink href="/dashboard/skillset" className="ml-10">
-                        Skill Set
-                      </ActiveLink>
-                    </li>
-                    <li>
+
+             
+                <>
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/professional-overview"
+                      className="ml-10"
+                    >
+                      Professional Overview
+                    </ActiveLink>
+                  </li>
+                  <li>
+                    <ActiveLink href="/dashboard/skillset" className="ml-10">
+                      Skill Set
+                    </ActiveLink>
+                  </li>
+                  <li>
                     <ActiveLink href="/dashboard/education" className="ml-10">
                       Education
                     </ActiveLink>
                   </li>
-                  </>
-                ))}
-
-             
+                </>
               
-              {userData?.category == "employee" ||
-                (userData?.role == "admin" && (
-                  <li>
+
+              <>
+                <li>
+                  <ActiveLink href="/dashboard/applications" className="ml-10">
+                    Applications
+                  </ActiveLink>
+                </li>
+              </>
+              {/* {userData?.role == "admin" && (
+                  <>
+                    <li>
                     <ActiveLink
                       href="/dashboard/applications"
                       className="ml-10"
@@ -102,13 +115,17 @@ const DashboardLayout = ({ children }) => {
                       Applications
                     </ActiveLink>
                   </li>
-                ))}
+                  </>
+                )} */}
               <li>
                 <ActiveLink href="/dashboard/add-review" className="ml-10">
                   Add Review
                 </ActiveLink>
               </li>
-              {userData?.role == "admin" && (
+              
+            
+
+              <>
                 <li>
                   <ActiveLink
                     href="/dashboard/manage-job-post"
@@ -117,8 +134,6 @@ const DashboardLayout = ({ children }) => {
                     Manage job posts
                   </ActiveLink>
                 </li>
-              )}
-              {userData?.role == "admin" && (
                 <li>
                   <ActiveLink
                     href="/dashboard/manage-reviews"
@@ -127,7 +142,17 @@ const DashboardLayout = ({ children }) => {
                     Manage Reviews
                   </ActiveLink>
                 </li>
-              )}
+                <li>
+                  <ActiveLink
+                    href="/dashboard/my-applications"
+                    className="ml-10"
+                  >
+                    My Applications
+                  </ActiveLink>
+                </li>
+              </>
+                
+              
             </ul>
           </div>
         </div>
