@@ -26,7 +26,7 @@ export default function Home({ comments }) {
         <Service />
         <Card />
         <Subscribe></Subscribe>
-        <App />
+        
         <Footer></Footer>
       </Navber>
     </>
