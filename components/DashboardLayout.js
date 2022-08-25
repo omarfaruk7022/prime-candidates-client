@@ -35,12 +35,12 @@ const DashboardLayout = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setUserData(data[0]);
-        if (data[0].category === "admin") {
+        if (data[0]?.category === "admin") {
           setAdmin(true);
         }
       });
       return;
-  }, [user]);
+  }, [user,userData]);
 
   console.log(admin);
 
@@ -75,7 +75,7 @@ const DashboardLayout = ({ children }) => {
                 </ActiveLink>
               </li>
 
-              {admin && (
+             
                 <>
                   <li>
                     <ActiveLink
@@ -96,7 +96,7 @@ const DashboardLayout = ({ children }) => {
                     </ActiveLink>
                   </li>
                 </>
-              )}
+              
 
               <>
                 <li>
@@ -122,6 +122,9 @@ const DashboardLayout = ({ children }) => {
                   Add Review
                 </ActiveLink>
               </li>
+              
+            
+
               <>
                 <li>
                   <ActiveLink
@@ -148,6 +151,8 @@ const DashboardLayout = ({ children }) => {
                   </ActiveLink>
                 </li>
               </>
+                
+              
             </ul>
           </div>
         </div>

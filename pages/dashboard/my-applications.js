@@ -21,105 +21,137 @@ const MyApplications = () => {
   return (
     <div>
       <DashboardLayout>
-        {applicationsData &&
-          applicationsData.map((application) => {
-            return (
-              <>
-              
-                  <div className="grid grid-cols-3 gap-3 ">
-                    <article className="p-6 bg-white sm:p-8 rounded-xl ring  ring-indigo-50">
-                      <div className="flex ">
-                        <div
-                          className="hidden sm:grid sm:h-20 sm:w-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"
-                          aria-hidden="true"
-                        >
-                          <div className="flex items-center gap-1">
-                            <span className="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-                            <span className="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-                            <span className="h-4 w-0.5 rounded-full bg-indigo-500"></span>
-                            <span className="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-                            <span className="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-                          </div>
-                        </div>
-
-                        <div className="sm:ml-8">
-                          <strong className="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white"></strong>
-
-                          <h2 className="mt-4 text-lg font-medium sm:text-xl">
-                            <a href="" className="hover:underline">
-                              {" "}
-                              Some Interesting Podcast Title{" "}
-                            </a>
-                          </h2>
-
-                          <p className="mt-1 text-sm text-gray-700">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Ipsam nulla amet voluptatum sit rerum, atque,
-                            quo culpa ut necessitatibus eius suscipit eum
-                            accusamus, aperiam voluptas exercitationem facere
-                            aliquid fuga. Sint.
-                          </p>
-
-                          <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-                            <div className="flex items-center text-gray-500">
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                ></path>
-                              </svg>
-                              <p className="ml-1 text-xs font-medium">
-                                48:32 minutes
-                              </p>
-                            </div>
-
-                            <span
-                              className="hidden sm:block"
-                              aria-hidden="true"
-                            >
-                              &middot;
-                            </span>
-
-                            <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                              Featuring{" "}
-                              <a
-                                href=""
-                                className="underline hover:text-gray-700"
-                              >
-                                Barry
-                              </a>
-                              ,
-                              <a
-                                href=""
-                                className="underline hover:text-gray-700"
-                              >
-                                Sandra
-                              </a>{" "}
-                              and
-                              <a
-                                href=""
-                                className="underline hover:text-gray-700"
-                              >
-                                August
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
+        <div className="overflow-x-auto">
+          <table className="min-w-full text-sm divide-y divide-gray-200">
+            <thead>
+              <tr>
+                <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
+                  <div className="flex items-center">
+                    Applied job Name
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ml-1.5 text-gray-700"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </div>
-                
-              </>
-            );
-          })}
+                </th>
+                <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
+                  <div className="flex items-center">
+                    Applied company Name
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ml-1.5 text-gray-700"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
+                  <div className="flex items-center">
+                    Status
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ml-1.5 text-gray-700"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
+                  <div className="flex items-center">
+                    Job Description
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ml-1.5 text-gray-700"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
+                  <div className="flex items-center">
+                    Time and date
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ml-1.5 text-gray-700"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            {applicationsData &&
+              applicationsData.map((application) => {
+                return (
+                  <>
+                    <tbody className="divide-y divide-gray-100">
+                      <tr>
+                        <td className="p-4 font-medium text-gray-900 whitespace-nowrap">
+                          {application.appliedJob}
+                        </td>
+                        <td className="p-4 text-gray-700 whitespace-nowrap">
+                          {application.appliedCompany}
+                        </td>
+                        <td className="p-4 text-gray-700 whitespace-nowrap">
+                          <strong className="bg-red-100 text-red-700 px-3 py-1.5 rounded text-xs font-medium">
+                            Cancelled
+                          </strong>
+                        </td>
+                        <td className="px-4 py-2 text-gray-700 whitespace-nowrap">
+                          {/* <div className="group">
+                            <p>
+                              {application?.appliedDescription.slice(0, 50)}
+                              <span>.......</span>
+                            </p>
+                            <span className="absolute z-50 hidden px-6 py-2 -mt-16 text-center text-black  bg-base-100 border  rounded tooltip-text group-hover:block">
+                              {application?.appliedDescription.slice()}
+                            </span>
+                          </div> */}
+                        
+                        </td>
+                        <td className="p-4 text-gray-700 whitespace-nowrap">
+                          {application.appliedTime} - {application.appliedDate}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </>
+                );
+              })}
+          </table>
+        </div>
       </DashboardLayout>
     </div>
   );
