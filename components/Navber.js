@@ -121,7 +121,7 @@ const Navber = ({ children }) => {
                   </li>
                 )}
                 <li>
-                  <Link href="/quizzes">
+                  <Link href="/quiz">
                     <a className="rounded-[5px]">Quiz</a>
                   </Link>
                 </li>
@@ -281,7 +281,7 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
-            <Link href="/quizzes">
+            <Link href="/quiz" >
               <a className="rounded-[5px]">Quiz</a>
             </Link>
           </li>
