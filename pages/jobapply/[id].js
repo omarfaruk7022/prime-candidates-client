@@ -17,7 +17,7 @@ const Jobapply = () => {
   const formattedDate2 = format(date, "p");
   console.log(formattedDate2);
   useEffect(() => {
-    fetch(`http://localhost:5000/jobs`, {
+    fetch(`https://stormy-beach-33232.herokuapp.com/jobs`, {
       method: "GET",
     })
       .then((res) => res.json())

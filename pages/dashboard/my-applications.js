@@ -9,7 +9,7 @@ const MyApplications = () => {
   const [applicationsData, setApplicationsData] = useState([{}]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/apply/${email}`, {
+    fetch(`https://stormy-beach-33232.herokuapp.com/apply/${email}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -140,7 +140,6 @@ const MyApplications = () => {
                               {application?.appliedDescription.slice()}
                             </span>
                           </div> */}
-                        
                         </td>
                         <td className="p-4 text-gray-700 whitespace-nowrap">
                           {application.appliedTime} - {application.appliedDate}

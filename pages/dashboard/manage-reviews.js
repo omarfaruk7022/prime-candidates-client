@@ -7,7 +7,7 @@ const ManageReviews = () => {
   const [reviews, setReviews] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://stormy-beach-33232.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [reviews]);
@@ -23,7 +23,7 @@ const ManageReviews = () => {
     }).then((willDelete) => {
       if (willDelete) {
         swal("Poof! Your file has been deleted!", {});
-        fetch(`http://localhost:5000/review/${_id}`, {
+        fetch(`https://stormy-beach-33232.herokuapp.com/review/${_id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",

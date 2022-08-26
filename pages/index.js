@@ -21,7 +21,7 @@ function Home({ comments }) {
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
-        <About/>
+        <About />
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
@@ -35,7 +35,7 @@ function Home({ comments }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/review");
+  const res = await fetch("https://stormy-beach-33232.herokuapp.com/review");
   const comments = await res.json();
 
   return {
@@ -44,4 +44,4 @@ export const getStaticProps = async () => {
     },
   };
 };
-export default  Home;
+export default Home;
