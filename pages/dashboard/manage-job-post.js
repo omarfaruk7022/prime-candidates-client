@@ -20,27 +20,21 @@ const ManageJobPost = () => {
       icon: "warning",
       buttons: true,
       dangerMode: true,
-    })
-    .then((willDelete) => {
+    }).then((willDelete) => {
       if (willDelete) {
-        swal("Poof! Your file has been deleted!", {
-          
-        });
-        fetch(`http://localhost:5000/jobs/${_id}`, {
+        swal("Poof! Your file has been deleted!", {});
+        fetch(`https://stormy-beach-33232.herokuapp.com/jobs/${_id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",
           },
         })
           .then((res) => res.json())
-          .then((data) => {
-            
-          });
+          .then((data) => {});
       } else {
         swal("Your imaginary file is safe!");
       }
     });
-  
   };
   return (
     <div>

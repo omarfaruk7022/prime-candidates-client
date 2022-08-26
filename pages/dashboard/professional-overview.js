@@ -27,7 +27,7 @@ const Index = () => {
       email,
     };
     if (jobTitle && jobType && jobDescription && jobPlace && company) {
-      fetch(`http://localhost:5000/experience/${email}`, {
+      fetch(`https://stormy-beach-33232.herokuapp.com/experience/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -44,7 +44,7 @@ const Index = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/experience/${email}`, {})
+    fetch(`https://stormy-beach-33232.herokuapp.com/experience/${email}`, {})
       .then((res) => res.json())
       .then((data) => {
         setExperienceData(data[0]);

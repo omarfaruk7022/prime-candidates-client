@@ -1,9 +1,8 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardLayout from "../../components/DashboardLayout";
 import auth from "../../components/firebase.init";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import { useEffect, useState } from "react";
-
 
 const Index = () => {
   const [education, setEducation] = useState([{}]);
@@ -14,7 +13,7 @@ const Index = () => {
     e.preventDefault();
     const education = e.target.level.value;
     const degree = e.target.degree.value;
-    const institute= e.target.institute.value;
+    const institute = e.target.institute.value;
     const currentYear = e.target.current_year.value;
     const passingYear = e.target.passing_year.value;
     const educationData = {
@@ -24,10 +23,9 @@ const Index = () => {
       currentYear,
       passingYear,
       email,
-      
-    }
-    if(education && degree && institute && currentYear && passingYear){
-      fetch(`http://localhost:5000/education/${email}`, {
+    };
+    if (education && degree && institute && currentYear && passingYear) {
+      fetch(`https://stormy-beach-33232.herokuapp.com/education/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -38,25 +36,27 @@ const Index = () => {
         .then((data) => {
           console.log(data);
           swal("Yayy", "Education added successfully!", "success");
-        }).catch((err) => {
+        })
+        .catch((err) => {
           console.log(err);
-        }
-      );
-    }
-    else{
+        });
+    } else {
       swal("Oops", "Please fill all the fields", "error");
     }
     e.target.reset();
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/education?email=${email}`, {})
+    fetch(
+      `https://stormy-beach-33232.herokuapp.com/education?email=${email}`,
+      {}
+    )
       .then((res) => res.json())
       .then((data) => {
         setEducation(data);
       });
-    }, [email]);
-    console.log(education[0]);
-    return (
+  }, [email]);
+  console.log(education[0]);
+  return (
     <DashboardLayout>
       <div className="flex justify-between mx-12 mt-8 mb-4">
         <h2>Education</h2>
