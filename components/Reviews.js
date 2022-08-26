@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 import "swiper/css";
 
 
 
-export default function Reviews({ comments }) {
+ function Reviews({ comments }) {
     
 
     return (
@@ -46,3 +45,4 @@ export default function Reviews({ comments }) {
         </div>
     )
 }
+export default Reviews;
