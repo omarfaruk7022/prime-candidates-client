@@ -31,19 +31,6 @@ const DashboardLayout = ({ children }) => {
   const [userData, setUserData] = useState();
   const [admin] = useAdmin(user);
   const [employee] = useEmployee(user);
-  useEffect(() => {
-    fetch(
-      `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setUserData(data[0]);
-        if (data[0]?.category === "admin") {
-          setAdmin(true);
-        }
-      });
-    return;
-  }, [user, userData]);
 
   return (
     <div>
@@ -71,43 +58,14 @@ const DashboardLayout = ({ children }) => {
                 </li>
               )}
 
-              <>
-                <li>
-                  <ActiveLink href="/dashboard/general" className="ml-10">
-                    General
-                  </ActiveLink>
-                </li>
-              </>
-
-              {admin ||
-                (employee && (
-                  <>
-                    <li>
-                      <ActiveLink
-                        href="/dashboard/professional-overview"
-                        className="ml-10"
-                      >
-                        Professional Overview
-                      </ActiveLink>
-                    </li>
-
-                    <li>
-                      <ActiveLink href="/dashboard/education" className="ml-10">
-                        Education
-                      </ActiveLink>
-                    </li>
-                  </>
-                ))}
-              <>
-                <li>
-                  <ActiveLink href="/dashboard/applications" className="ml-10">
-                    Applications
-                  </ActiveLink>
-                </li>
-              </>
-              {/* {userData?.role == "admin" && (
-                  <>
-                    <li>
+              <li>
+                <ActiveLink href="/dashboard/general" className="ml-10">
+                  General
+                </ActiveLink>
+              </li>
+              {employee || admin ? (
+                <>
+                  <li>
                     <ActiveLink
                       href="/dashboard/applications"
                       className="ml-10"
@@ -115,29 +73,24 @@ const DashboardLayout = ({ children }) => {
                       Applications
                     </ActiveLink>
                   </li>
-                  </>
-                )} */}
-              <li>
-                <ActiveLink href="/dashboard/add-review" className="ml-10">
-                  Add Review
-                </ActiveLink>
-              </li>
+                </>
+              ) : (
+                ""
+              )}
 
               <>
                 <li>
                   <ActiveLink
-                    href="/dashboard/manage-job-post"
+                    href="/dashboard/professional-overview"
                     className="ml-10"
                   >
-                    Manage job posts
+                    Professional Overview
                   </ActiveLink>
                 </li>
+
                 <li>
-                  <ActiveLink
-                    href="/dashboard/manage-reviews"
-                    className="ml-10"
-                  >
-                    Manage Reviews
+                  <ActiveLink href="/dashboard/education" className="ml-10">
+                    Education
                   </ActiveLink>
                 </li>
                 <li>
@@ -149,6 +102,34 @@ const DashboardLayout = ({ children }) => {
                   </ActiveLink>
                 </li>
               </>
+
+             {
+                admin && (
+                  <>
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/manage-job-post"
+                      className="ml-10"
+                    >
+                      Manage job posts
+                    </ActiveLink>
+                  </li>
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/manage-reviews"
+                      className="ml-10"
+                    >
+                      Manage Reviews
+                    </ActiveLink>
+                  </li>
+                </>
+                )
+             }
+                <li>
+                  <ActiveLink href="/dashboard/add-review" className="ml-10">
+                    Add Review
+                  </ActiveLink>
+                </li>
             </ul>
           </div>
         </div>

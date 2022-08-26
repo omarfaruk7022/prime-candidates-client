@@ -22,7 +22,8 @@ const useEmployee = (user) => {
           setEmployeeLoading(false);
         });
     }
-  }, [user]);
+}, [user]);
+
   return [employee, employeeLoading];
 };
 
