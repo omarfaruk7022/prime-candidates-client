@@ -37,12 +37,6 @@ export default function Home({ comments }) {
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/review", {
     method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
-    },
   });
   const comments = await res.json();
 
