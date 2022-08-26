@@ -3,7 +3,7 @@ import Features from "../components/Features";
 import Footer from "../components/Footer";
 import JobCategory from "../components/JobCategory";
 import Navber from "../components/Navber";
-import Reviews from "../components/Reviews";
+import Reviews from "./Reviews";
 import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
 import FeaturedJob from "../components/FeaturedJob";
