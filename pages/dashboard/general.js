@@ -93,7 +93,7 @@ const General = () => {
                               {profile[0]?.name}
                             </h1>
                             <p className="py-2">
-                              <strong>Email :</strong> {profile[0]?.email}
+                              <strong>Email :</strong> {user?.email}
                             </p>
                             <p className="py-2">
                               <strong>phone :</strong> {profile[0]?.phone}
