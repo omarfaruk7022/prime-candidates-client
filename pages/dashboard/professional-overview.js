@@ -24,6 +24,7 @@ const Index = () => {
       jobDescription,
       company,
       jobPlace,
+      email,
     };
     if (jobTitle && jobType && jobDescription && jobPlace && company) {
       fetch(`http://localhost:5000/experience/${email}`, {
@@ -134,7 +135,7 @@ const Index = () => {
                       <input
                         name="name"
                         className="block w-full border border-gray-300 rounded-lg h-12 px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white"
-                        placeholder=""
+                        placeholder="Job title"
                       />
                     </div>
                   </label>
@@ -146,7 +147,7 @@ const Index = () => {
                       <input
                         name="company"
                         className="block h-12 w-full border border-gray-300 rounded-lg px-3 py-2 leading-tight focus:outline-none focus:border-gray-600 focus:bg-white"
-                        placeholder=""
+                        placeholder="Company Name"
                       />
                     </div>
                   </label>
