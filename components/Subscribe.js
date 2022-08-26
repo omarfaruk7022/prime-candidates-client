@@ -28,7 +28,7 @@ const Subscribe = () => {
               <div className="mt-12 lg:mt-0">
                 <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight">
                   Are you ready <br />
-                  <span className="text-blue-600">for an adventure?</span>
+                  <span className="text-primary">for an adventure?</span>
                 </h1>
                 <p className="mb-8 text-center">
                   Subscribe to the Prime Candidates mailing list to receive
@@ -37,12 +37,12 @@ const Subscribe = () => {
                 <div className="md:flex flex-row">
                   <input
                     type="text"
-                    className="shadow-lg shadow-blue-500/50 form-control block w-full px-4 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded lg:rounded-l-full  transition ease-in-out lg:m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    className=" form-control block w-full px-4 py-2 mb-2 md:mb-0 md:mr-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded lg:rounded-l-full  transition ease-in-out lg:m-0 focus:text-gray-700 focus:bg-white focus:border-blue-900 focus:outline-none"
                     placeholder="Enter your email"
                   />
                   <button
                     type="submit"
-                    className="shadow-lg shadow-blue-500/50 inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded lg:rounded-r-full  hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    className=" shadow-blue-500/50 inline-block px-7 py-3 bg-primary text-white font-medium text-sm uppercase rounded lg:rounded-r-full  hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                   >

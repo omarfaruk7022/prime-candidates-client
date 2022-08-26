@@ -23,7 +23,7 @@ const FeaturedJob = () => {
   };
 
   return (
-    <div className="pt-6 pb-12">
+    <div className="pt-6 pb-12 my-28">
       <div className="container max-w-[1080px] mx-auto">
         <div>
           <h1 className="text-center text-xl sm:text-2xl lg:text-3xl font-bold my-8">

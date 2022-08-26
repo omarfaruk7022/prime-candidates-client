@@ -42,7 +42,7 @@ const DashboardLayout = ({ children }) => {
       return;
   }, [user,userData]);
 
-  console.log(admin);
+  
 
   return (
     <div>
@@ -85,11 +85,7 @@ const DashboardLayout = ({ children }) => {
                       Professional Overview
                     </ActiveLink>
                   </li>
-                  <li>
-                    <ActiveLink href="/dashboard/skillset" className="ml-10">
-                      Skill Set
-                    </ActiveLink>
-                  </li>
+                  
                   <li>
                     <ActiveLink href="/dashboard/education" className="ml-10">
                       Education
