@@ -12,7 +12,7 @@ import Asking from "../components/Asking";
 import Premium from "../components/Premium";
 import About from "../components/About";
 
-export default function Home({ comments }) {
+function Home({ comments }) {
   return (
     <>
       <Premium />
@@ -46,3 +46,4 @@ export const getStaticProps = async () => {
     },
   };
 };
+export default  Home;
