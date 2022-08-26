@@ -8,7 +8,7 @@ const useEmployee = (user) => {
     const email = user?.email;
 
     if (email) {
-      fetch(` http://localhost:5000/employee/${email}`, {
+      fetch(` https://stormy-beach-33232.herokuapp.com/employee/${email}`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -22,7 +22,7 @@ const useEmployee = (user) => {
           setEmployeeLoading(false);
         });
     }
-}, [user]);
+  }, [user]);
 
   return [employee, employeeLoading];
 };
