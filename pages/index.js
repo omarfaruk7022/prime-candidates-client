@@ -35,9 +35,7 @@ function Home({ comments }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/review", {
-    method: "GET",
-  });
+  const res = await fetch("http://localhost:5000/review");
   const comments = await res.json();
 
   return {
