@@ -8,7 +8,7 @@ const Applications = () => {
   const [applications, setApplications] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/apply")
+    fetch("https://stormy-beach-33232.herokuapp.com/apply")
       .then((res) => res.json())
       .then((data) => setApplications(data));
   });
@@ -20,7 +20,6 @@ const Applications = () => {
           <table className="min-w-full text-sm divide-y divide-gray-200">
             <thead>
               <tr>
-                
                 <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
                   <div className="flex items-center">
                     Name
@@ -92,7 +91,7 @@ const Applications = () => {
                 </th>
                 <th className="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
                   <div className="flex items-center">
-                   Time and date
+                    Time and date
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-4 h-4 ml-1.5 text-gray-700"
@@ -113,7 +112,6 @@ const Applications = () => {
               <>
                 <tbody className="divide-y divide-gray-100">
                   <tr>
-                    
                     <td className="p-4 font-medium text-gray-900 whitespace-nowrap">
                       {application.name}
                     </td>
