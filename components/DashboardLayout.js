@@ -4,6 +4,8 @@ import Navber from "./Navber";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
 import { useEffect, useState } from "react";
+import useAdmin from "./UseAdmin";
+import useEmployee from "./UseEmployee";
 
 const ActiveLink = ({ children, href, className }) => {
   const router = useRouter();
@@ -27,7 +29,8 @@ const DashboardLayout = ({ children }) => {
 
   //   fetch will be from userData-mongodb
   const [userData, setUserData] = useState();
-  const [admin, setAdmin] = useState(false);
+  const [admin] = useAdmin(user);
+  const [employee] = useEmployee(user);
   useEffect(() => {
     fetch(
       `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
@@ -39,10 +42,8 @@ const DashboardLayout = ({ children }) => {
           setAdmin(true);
         }
       });
-      return;
-  }, [user,userData]);
-
-  
+    return;
+  }, [user, userData]);
 
   return (
     <div>
@@ -69,31 +70,34 @@ const DashboardLayout = ({ children }) => {
                   </div>
                 </li>
               )}
-              <li>
-                <ActiveLink href="/dashboard/general" className="ml-10">
-                  General
-                </ActiveLink>
-              </li>
 
-             
-                <>
-                  <li>
-                    <ActiveLink
-                      href="/dashboard/professional-overview"
-                      className="ml-10"
-                    >
-                      Professional Overview
-                    </ActiveLink>
-                  </li>
-                  
-                  <li>
-                    <ActiveLink href="/dashboard/education" className="ml-10">
-                      Education
-                    </ActiveLink>
-                  </li>
-                </>
-              
+              <>
+                <li>
+                  <ActiveLink href="/dashboard/general" className="ml-10">
+                    General
+                  </ActiveLink>
+                </li>
+              </>
 
+              {admin ||
+                (employee && (
+                  <>
+                    <li>
+                      <ActiveLink
+                        href="/dashboard/professional-overview"
+                        className="ml-10"
+                      >
+                        Professional Overview
+                      </ActiveLink>
+                    </li>
+
+                    <li>
+                      <ActiveLink href="/dashboard/education" className="ml-10">
+                        Education
+                      </ActiveLink>
+                    </li>
+                  </>
+                ))}
               <>
                 <li>
                   <ActiveLink href="/dashboard/applications" className="ml-10">
@@ -118,8 +122,6 @@ const DashboardLayout = ({ children }) => {
                   Add Review
                 </ActiveLink>
               </li>
-              
-            
 
               <>
                 <li>
@@ -147,8 +149,6 @@ const DashboardLayout = ({ children }) => {
                   </ActiveLink>
                 </li>
               </>
-                
-              
             </ul>
           </div>
         </div>
