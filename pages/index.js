@@ -10,6 +10,7 @@ import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Premium from "../components/Premium";
+import About from "../components/About";
 
 export default function Home({ comments }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ comments }) {
         <FeaturedJob />
         <Features />
         <JobCategory></JobCategory>
+        <About/>
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />

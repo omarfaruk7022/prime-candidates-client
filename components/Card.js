@@ -10,15 +10,15 @@ const Card = () => {
         <a className="relative block bg-black group" href="">
           <img
             className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75  group-hover:opacity-50"
-            src="https://i.ibb.co/G29VL5k/nihan-vai.jpg"
+            src="https://i.ibb.co/yR8n7kp/jhankar.jpg"
             alt=""
           />
           <div className="relative p-8">
             <p className="text-sm font-medium tracking-widest text-pink-500 uppercase">
-              Developer
+            Trainer,youtuber,Motivational speaker
             </p>
 
-            <p className="text-2xl font-bold text-white">Md. Harifur rashid</p>
+            <p className="text-2xl font-bold text-white">Jhankar mahbub</p>
 
             <div className="mt-64">
               <div className="transition-all transform translate-y-8 opacity-0  group-hover:opacity-100 group-hover:translate-y-0">
@@ -34,15 +34,15 @@ const Card = () => {
         <a className="relative block bg-black group" href="">
           <img
             className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75  group-hover:opacity-50"
-            src="https://i.ibb.co/kgBNv11/sami-vai.jpg"
+            src="https://i.ibb.co/1L8rSGT/Sumit-Saha.webp"
             alt=""
           />
           <div className="relative p-8">
             <p className="text-sm font-medium tracking-widest text-pink-500 uppercase">
-              Developer
+            Trainer and youtuber
             </p>
 
-            <p className="text-2xl font-bold text-white">Md. Sami al zaber</p>
+            <p className="text-2xl font-bold text-white">Sumit saha</p>
 
             <div className="mt-64">
               <div className="transition-all transform translate-y-8 opacity-0  group-hover:opacity-100 group-hover:translate-y-0">
@@ -58,15 +58,15 @@ const Card = () => {
         <a className="relative block bg-black group" href="">
           <img
             className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75  group-hover:opacity-50"
-            src="https://i.ibb.co/DpcZkB8/ahsan-vai.jpg"
+            src="https://i.ibb.co/6yYsTjy/harry.jpg"
             alt=""
           />
           <div className="relative p-8">
             <p className="text-sm font-medium tracking-widest text-pink-500 uppercase">
-              Developer
+              Trainer and youtuber
             </p>
 
-            <p className="text-2xl font-bold text-white">Md. Ahsan habib</p>
+            <p className="text-2xl font-bold text-white">Harry</p>
 
             <div className="mt-64">
               <div className="transition-all transform translate-y-8 opacity-0  group-hover:opacity-100 group-hover:translate-y-0">

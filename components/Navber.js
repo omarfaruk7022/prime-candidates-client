@@ -36,7 +36,7 @@ const Navber = ({ children }) => {
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="navbar max-w-[1200px] mx-auto">
+        <div className="navbar max-w-[1400px] mx-auto">
           <div className="flex-1">
             <Link href="/">
               <Image
@@ -147,6 +147,11 @@ const Navber = ({ children }) => {
                     <a className="rounded-[5px]">Support </a>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/team-members">
+                    <a className="rounded-[5px]">Team Members </a>
+                  </Link>
+                </li>
               </ul>
               <div className="flex gap-3">
                 {user ? (
@@ -163,13 +168,12 @@ const Navber = ({ children }) => {
                     </button>
                   </Link>
                 )}
-                
+
                 <Link href="/postJobs">
                   <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
                     Post Jobs
                   </button>
                 </Link>
-             
               </div>
               <a href="https://pcchat.pages.dev/">
                 <BsChatDots className="cursor-pointer text-3xl" />
@@ -307,6 +311,11 @@ const Navber = ({ children }) => {
             </Link>
           </li>
           <li>
+            <Link href="/team-members">
+              <a className="rounded-[5px]">Team Members </a>
+            </Link>
+          </li>
+          <li>
             <div className="flex flex-col gap-3">
               {user ? (
                 <button
@@ -322,13 +331,12 @@ const Navber = ({ children }) => {
                   </button>
                 </Link>
               )}
-             
-                <Link href="/postJobs">
-                  <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
-                    Post Jobs
-                  </button>
-                </Link>
-             
+
+              <Link href="/postJobs">
+                <button className="btn btn-outline self-center hover:bg-secondary hover:border-secondary">
+                  Post Jobs
+                </button>
+              </Link>
             </div>
           </li>
         </ul>

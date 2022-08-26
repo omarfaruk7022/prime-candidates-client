@@ -5,14 +5,14 @@ import { useRef } from "react";
 const Features = () => {
   return (
     <div>
-      <section className="text-white bg-gray-900">
+      <section className="text-white bg-primary">
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
           <div className="max-w-lg mx-auto text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
               Kickstart your marketing
             </h2>
 
-            <p className="mt-4 text-gray-300">
+            <p className="mt-4 text-white">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
               fugit consequuntur saepe laborum.
@@ -21,7 +21,7 @@ const Features = () => {
 
           <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-blue-500/10"
               href="/services/digital-campaigns"
             >
               <svg
@@ -53,7 +53,7 @@ const Features = () => {
             </a>
 
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-pink-500/10"
               href="/services/digital-campaigns"
             >
               <svg
@@ -85,7 +85,7 @@ const Features = () => {
             </a>
 
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-pink-500/10"
               href="/services/digital-campaigns"
             >
               <svg
@@ -117,7 +117,7 @@ const Features = () => {
             </a>
 
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-pink-500/10"
               href="/services/digital-campaigns"
             >
               <svg
@@ -149,7 +149,7 @@ const Features = () => {
             </a>
 
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-pink-500/10"
               href="/services/digital-campaigns"
             >
               <svg
@@ -181,7 +181,7 @@ const Features = () => {
             </a>
 
             <a
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-blue-900 shadow-xl rounded-xl hover:shadow-blue-500/10 hover:border-pink-500/10"
               href="/services/digital-campaigns"
             >
               <svg
