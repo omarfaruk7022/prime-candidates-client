@@ -31,6 +31,8 @@ const DashboardLayout = ({ children }) => {
   const [userData, setUserData] = useState();
   const [admin] = useAdmin(user);
   const [employee] = useEmployee(user);
+ 
+
 
   return (
     <div>
@@ -63,7 +65,7 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
-              {employee || admin ? (
+              {employee || admin && (
                 <>
                   <li>
                     <ActiveLink
@@ -74,11 +76,10 @@ const DashboardLayout = ({ children }) => {
                     </ActiveLink>
                   </li>
                 </>
-              ) : (
-                ""
-              )}
+              ) }
 
-              <>
+              {!employee &&(
+                <>
                 <li>
                   <ActiveLink
                     href="/dashboard/professional-overview"
@@ -102,6 +103,7 @@ const DashboardLayout = ({ children }) => {
                   </ActiveLink>
                 </li>
               </>
+              )}
 
              {
                 admin && (
