@@ -107,18 +107,13 @@ const Navber = ({ children }) => {
                     <a className="rounded-[5px]">Courses</a>
                   </Link>
                 </li>
-                <li>
-                  {/* {
-                    user &&
+                {user && (
+                  <li>
                     <Link href="/resume">
-                      <a  className="rounded-[5px]">Resume</a>
+                      <a className="rounded-[5px]">Resume</a>
                     </Link>
-                  } */}
-
-                  <Link href="/resume">
-                    <a className="rounded-[5px]">Resume</a>
-                  </Link>
-                </li>
+                  </li>
+                )}
                 <li>
                   <Link href="/blog">
                     <a className="rounded-[5px]">Blog</a>
@@ -137,16 +132,13 @@ const Navber = ({ children }) => {
                     </Link>
                   </li>
                 )}
-                <li>
-                  <Link href="/quiz">
-                    <a className="rounded-[5px]">Quiz</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/support">
-                    <a className="rounded-[5px]">Support </a>
-                  </Link>
-                </li>
+                {user && (
+                  <li>
+                    <Link href="/support">
+                      <a className="rounded-[5px]">Support </a>
+                    </Link>
+                  </li>
+                )}
                 <li>
                   <Link href="/team-members">
                     <a className="rounded-[5px]">Team Members </a>
