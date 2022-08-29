@@ -16,15 +16,16 @@ const useEmployee = (user) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          
 
           setEmployee(data.employee);
           setEmployeeLoading(false);
+          console.log(data.employee);
         });
     }
-  }, [user]);
+  }, [user?.email]);
 
-  return [employee, employeeLoading];
+  return [employee];
 };
 
 export default useEmployee;
