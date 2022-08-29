@@ -20,7 +20,7 @@ function Home({ comments }) {
         <Banner></Banner>
         <FeaturedJob />
         <Features />
-        <JobCategory></JobCategory>
+        
         <About />
         <Reviews comments={comments}></Reviews>
         <Asking />
