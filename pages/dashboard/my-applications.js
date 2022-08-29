@@ -15,9 +15,9 @@ const MyApplications = () => {
       .then((res) => res.json())
       .then((data) => {
         setApplicationsData(data);
+        console.log(data);
       });
-    console.log(applicationsData);
-  }, [email]);
+    }, [email]);
   return (
     <div>
       <DashboardLayout>

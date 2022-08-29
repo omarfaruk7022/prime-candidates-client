@@ -13,16 +13,15 @@ const General = () => {
   const [profile, setProfile] = useState();
   const [user] = useAuthState(auth);
   const [userData, setUserData] = useState();
-
+  const email = user?.email;
   useEffect(() => {
-    fetch(
-      `https://stormy-beach-33232.herokuapp.com/userprofile?email=${user?.email}`
-    )
+    fetch(`https://stormy-beach-33232.herokuapp.com/userprofile/${email}`)
       .then((res) => res.json())
-      .then((data) => setProfile(data));
-  }, [user?.email]);
-
-  // console.log(profile.name);
+      .then((data) => {
+        setProfile(data?.data);
+      });
+  }, [email]);
+  console.log(email);
 
   const handleEditInfo = (e) => {
     e.preventDefault();
@@ -65,9 +64,10 @@ const General = () => {
     //         }
     //     });
     swal("Yayy", "Profile updated successfully!", "success");
-    
+
     e.target.reset();
   };
+  console.log(profile);
 
   return (
     <>
@@ -90,28 +90,28 @@ const General = () => {
                         {profile && (
                           <div>
                             <h1 className="text-3xl font-bold text-primary">
-                              {profile[0]?.name}
+                              {profile?.name}
                             </h1>
                             <p className="py-2">
-                              <strong>Email :</strong> {user?.email}
+                              <strong>Email :</strong> {profile.email}
                             </p>
                             <p className="py-2">
-                              <strong>phone :</strong> {profile[0]?.phone}
+                              <strong>phone :</strong> {profile?.phone}
                             </p>
                             <p className="py-2">
                               <strong>socialLink :</strong>{" "}
-                              {profile[0]?.socialLink}
+                              {profile?.socialLink}
                             </p>
                             <p className="py-2">
-                              <strong>street :</strong> {profile[0]?.street}
+                              <strong>street :</strong> {profile?.street}
                             </p>
                             <p className="py-2">
                               <strong>state :</strong>
-                              {profile[0]?.state}
+                              {profile?.state}
                             </p>
                             <p className="py-2">
                               <strong>country :</strong>
-                              {profile[0]?.country}
+                              {profile?.country}
                             </p>
                           </div>
                         )}

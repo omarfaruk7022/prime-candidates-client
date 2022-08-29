@@ -44,10 +44,10 @@ const Index = () => {
   };
 
   useEffect(() => {
-    fetch(`https://stormy-beach-33232.herokuapp.com/experience/${email}`, {})
+    fetch(`https://stormy-beach-33232.herokuapp.com/experience/${email}`)
       .then((res) => res.json())
       .then((data) => {
-        setExperienceData(data[0]);
+        setExperienceData(data?.data);
       });
   }, [email]);
   return (
