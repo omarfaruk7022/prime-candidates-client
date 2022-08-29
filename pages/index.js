@@ -11,6 +11,7 @@ import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Premium from "../components/Premium";
 import About from "../components/About";
+import Animation from "../components/ResumeHome";
 
 function Home({ comments }) {
   return (
@@ -20,7 +21,7 @@ function Home({ comments }) {
         <Banner></Banner>
         <FeaturedJob />
         <Features />
-        
+        <Animation/>
         <About />
         <Reviews comments={comments}></Reviews>
         <Asking />
