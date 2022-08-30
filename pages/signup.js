@@ -14,6 +14,8 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import auth from "../components/firebase.init";
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
+import  Router  from "next/router";
 
 const SignUp = () => {
   // const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -42,7 +44,7 @@ const SignUp = () => {
   //   setGender(e.target.value);
   //   console.log(gender);
   // };
-
+  
   const onSubmit = async (data) => {
     const name = data.name;
     const email = data.email;
@@ -51,7 +53,10 @@ const SignUp = () => {
     const category = data.category.toLowerCase();
 
     const userData = { name, email, age, gender, category };
-
+    if (loading) {
+      return <Loader></Loader>;
+    }
+    
     if (error) {
       return;
     } else {
@@ -67,8 +72,9 @@ const SignUp = () => {
         .then((data) => {});
 
       swal("Yayy", "Sign Up  Successfully Completed ", "success");
+      Router.push("/");
     }
-    
+   
   };
 
   return (
@@ -253,18 +259,17 @@ const SignUp = () => {
               </div>
               <div className="divider">OR</div>
               <div className="flex">
-              <p>
-                {" "}
-                <small>
-                  Already have an account ?{" "}
-                  <Link href="/login">
-                    <span className="underline cursor-pointer text-blue-500">
-                      Please Login
-                    </span>
-                  </Link>
-                </small>
-              </p>
-               
+                <p>
+                  {" "}
+                  <small>
+                    Already have an account ?{" "}
+                    <Link href="/login">
+                      <span className="underline cursor-pointer text-blue-500">
+                        Please Login
+                      </span>
+                    </Link>
+                  </small>
+                </p>
               </div>
             </div>
           </div>
