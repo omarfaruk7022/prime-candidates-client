@@ -135,6 +135,8 @@ const Login = () => {
                   value="Login"
                 />
               </form>
+              <div className="divider">OR</div>
+              <div className="flex">
               <p>
                 {" "}
                 <small>
@@ -146,31 +148,7 @@ const Login = () => {
                   </Link>
                 </small>
               </p>
-              <div className="divider">OR</div>
-              <div className="flex">
-                <div className="mx-auto flex gap-2">
-                  <a
-                  // onClick={() => signInWithGoogle()}
-                  >
-                    <div className="h-[60px] w-[60px] cursor-pointer">
-                      <Image src={googleIcon} alt="" />
-                    </div>
-                  </a>
-                  <a
-                  // onClick={() => signInWithGithub()}
-                  >
-                    <div className="h-[60px] w-[60px] cursor-pointer">
-                      <Image src={githubIcon} alt="" />
-                    </div>
-                  </a>
-                  <a
-                  //  onClick={() => signInWithFacebook()}
-                  >
-                    <div className="h-[60px] w-[60px] cursor-pointer">
-                      <Image src={facebookIcon} alt="" />
-                    </div>
-                  </a>
-                </div>
+               
               </div>
             </div>
           </div>
