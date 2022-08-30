@@ -1,19 +1,19 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import Job from "../../components/Job";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 
 export default function ShowJob({ jobs }) {
   return (
     <>
-      <Navber>
+      <Navbar>
         <div>
           {jobs.map((job) => (
             <Job key={job._id} job={job}></Job>
           ))}
         </div>
         <Footer></Footer>
-      </Navber>
+      </Navbar>
     </>
   );
 }

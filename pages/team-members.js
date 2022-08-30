@@ -1,15 +1,13 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Navber from "../components/Navber";
+import Navbar from "../components/Navbar";
 
 const TeamMembers = () => {
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="mt-12 mb-28">
-          <h1 className="text-4xl text-center mb-12 ">
-            Meet our team members
-          </h1>
+          <h1 className="text-4xl text-center mb-12 ">Meet our team members</h1>
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
             <a className="relative block bg-black group" href="">
               <img
@@ -176,7 +174,7 @@ const TeamMembers = () => {
           </div>
         </div>
         <Footer />
-      </Navber>
+      </Navbar>
     </div>
   );
 };

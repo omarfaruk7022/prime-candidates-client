@@ -1,12 +1,12 @@
 import React from "react";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 import Course from "../../components/Course";
 import Footer from "../../components/Footer";
 
 export default function Courses({ courses }) {
   console.log(courses);
   return (
-    <Navber>
+    <Navbar>
       <div className="container max-w-[1080px] mx-auto my-5">
         <div>
           <h1 className="text-center my-5">Soft Skill Courses</h1>
@@ -18,7 +18,7 @@ export default function Courses({ courses }) {
         </div>
       </div>
       <Footer />
-    </Navber>
+    </Navbar>
   );
 }
 

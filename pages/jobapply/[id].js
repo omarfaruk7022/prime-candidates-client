@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 import swal from "sweetalert";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/router";
@@ -49,7 +49,6 @@ const Jobapply = () => {
       appliedDate: formattedDate,
       appliedTime: formattedDate2,
       appliedCompany: state.companyName,
-    
     };
 
     console.log(jobApply);
@@ -80,7 +79,7 @@ const Jobapply = () => {
     }
   };
   return (
-    <Navber>
+    <Navbar>
       <div className="container max-w-[1080px] mx-auto my-28">
         <form onSubmit={handleApplyJob} className="flex flex-col items-center">
           <div className="form-control w-full max-w-xs">
@@ -146,7 +145,7 @@ const Jobapply = () => {
         </form>
       </div>
       <Footer />
-    </Navber>
+    </Navbar>
   );
 };
 

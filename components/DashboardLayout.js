@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Navber from "./Navber";
+import Navbar from "./Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
 import { useEffect, useState } from "react";
@@ -31,12 +31,10 @@ const DashboardLayout = ({ children }) => {
   const [userData, setUserData] = useState();
   const [admin] = useAdmin(user);
   const [employee] = useEmployee(user);
- 
-
 
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="drawer drawer-mobile">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
@@ -65,49 +63,49 @@ const DashboardLayout = ({ children }) => {
                   General
                 </ActiveLink>
               </li>
-              {employee || admin && (
+              {employee ||
+                (admin && (
+                  <>
+                    <li>
+                      <ActiveLink
+                        href="/dashboard/applications"
+                        className="ml-10"
+                      >
+                        Applications
+                      </ActiveLink>
+                    </li>
+                  </>
+                ))}
+
+              {!employee && (
                 <>
                   <li>
                     <ActiveLink
-                      href="/dashboard/applications"
+                      href="/dashboard/professional-overview"
                       className="ml-10"
                     >
-                      Applications
+                      Professional Overview
+                    </ActiveLink>
+                  </li>
+
+                  <li>
+                    <ActiveLink href="/dashboard/education" className="ml-10">
+                      Education
+                    </ActiveLink>
+                  </li>
+                  <li>
+                    <ActiveLink
+                      href="/dashboard/my-applications"
+                      className="ml-10"
+                    >
+                      My Applications
                     </ActiveLink>
                   </li>
                 </>
-              ) }
-
-              {!employee &&(
-                <>
-                <li>
-                  <ActiveLink
-                    href="/dashboard/professional-overview"
-                    className="ml-10"
-                  >
-                    Professional Overview
-                  </ActiveLink>
-                </li>
-
-                <li>
-                  <ActiveLink href="/dashboard/education" className="ml-10">
-                    Education
-                  </ActiveLink>
-                </li>
-                <li>
-                  <ActiveLink
-                    href="/dashboard/my-applications"
-                    className="ml-10"
-                  >
-                    My Applications
-                  </ActiveLink>
-                </li>
-              </>
               )}
 
-             {
-                admin && (
-                  <>
+              {admin && (
+                <>
                   <li>
                     <ActiveLink
                       href="/dashboard/manage-job-post"
@@ -125,17 +123,16 @@ const DashboardLayout = ({ children }) => {
                     </ActiveLink>
                   </li>
                 </>
-                )
-             }
-                <li>
-                  <ActiveLink href="/dashboard/add-review" className="ml-10">
-                    Add Review
-                  </ActiveLink>
-                </li>
+              )}
+              <li>
+                <ActiveLink href="/dashboard/add-review" className="ml-10">
+                  Add Review
+                </ActiveLink>
+              </li>
             </ul>
           </div>
         </div>
-      </Navber>
+      </Navbar>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 
 const CourseDetails = () => {
   const router = useRouter();
@@ -17,7 +17,7 @@ const CourseDetails = () => {
     }
   }, [id, router.isReady]);
   return (
-    <Navber>
+    <Navbar>
       <div className="container max-w-[1080px] mx-auto">
         <h1 className="text-center my-5">Effective Listening</h1>
         <div className="grid grid-cols-3 gap-5">
@@ -97,7 +97,7 @@ const CourseDetails = () => {
       </div>
 
       <Footer></Footer>
-    </Navber>
+    </Navbar>
   );
 };
 

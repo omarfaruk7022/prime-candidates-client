@@ -58,6 +58,34 @@ const Index = () => {
   console.log(education[0]);
   return (
     <DashboardLayout>
+      <div>
+        <a
+          className="relative block p-8 border border-gray-100   drop-shadow-2xl rounded-xl"
+          href=""
+        >
+          <span className="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
+            Education info
+          </span>
+
+          <div className="mt-4 text-gray-500 sm:pr-8">
+           
+
+            <h5 className="mt-4 text-xl font-bold text-gray-900">
+              {education[0]?.email}
+            </h5>
+            <h5 className="mt-4 text-xl font-bold text-gray-900">
+              Education level : {education[0]?.education}
+            </h5>
+            <p className="hidden mt-2 text-sm sm:block">
+             Degree : {education[0]?.degree} From {education[0]?.institute}
+            </p>
+
+            <p className="hidden mt-2 text-sm sm:block">
+              Year : {education[0]?.currentYear} to {education[0]?.passingYear}
+            </p>
+          </div>
+        </a>
+      </div>
       <div className="flex justify-between mx-12 mt-8 mb-4">
         <h2>Education</h2>
         <button className="flex items-center">

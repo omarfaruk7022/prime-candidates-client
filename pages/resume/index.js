@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 import ResumeBuilder from "../../components/ResumeBuilder";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../components/firebase.init";
@@ -21,10 +21,10 @@ const Resume = () => {
   }
   return (
     <div className="pt-2 md:pt-4">
-      <Navber>
+      <Navbar>
         <ResumeBuilder></ResumeBuilder>
         <Footer></Footer>
-      </Navber>
+      </Navbar>
     </div>
   );
 };
