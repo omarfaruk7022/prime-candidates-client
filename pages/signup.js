@@ -68,36 +68,7 @@ const SignUp = () => {
 
       swal("Yayy", "Sign Up  Successfully Completed ", "success");
     }
-    // if (user?._tokenResponse.email) {
-    //   const userData = {
-    //     name: data.name,
-    //     email: user?._tokenResponse.email,
-    //     age: Number(data.age),
-    //     gender: data.gender.toLowerCase(),
-    //     category: data.category.toLowerCase(),
-    //   };
-    //   console.log(userData);
-
-    //   if (
-    //     userData.name &&
-    //     userData.email &&
-    //     userData.age &&
-    //     userData.gender &&
-    //     userData.category
-    //   ) {
-    //   //   fetch("https://stormy-beach-33232.herokuapp.com/users", {
-    //   //     method: "POST",
-    //   //     headers: {
-    //   //       "content-type": "application/json",
-    //   //     },
-    //   //     body: JSON.stringify(userData),
-    //   //   })
-    //   //     .then((res) => res.json())
-    //   //     .then((data) => {});
-
-    //   //   swal("Yayy", "Sign Up  Successfully Completed ", "success");
-    //   // }
-    // }
+    
   };
 
   return (
@@ -280,6 +251,8 @@ const SignUp = () => {
                   />
                 </form>
               </div>
+              <div className="divider">OR</div>
+              <div className="flex">
               <p>
                 {" "}
                 <small>
@@ -291,15 +264,7 @@ const SignUp = () => {
                   </Link>
                 </small>
               </p>
-              <div className="divider">OR</div>
-              <div className="flex">
-                <a
-                // onClick={() => signInWithGoogle()}
-                >
-                  <div className="h-[40px] w-[60px] cursor-pointer">
-                    <Image src={icon} alt="" />
-                  </div>
-                </a>
+               
               </div>
             </div>
           </div>
