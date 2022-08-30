@@ -72,7 +72,7 @@ const General = () => {
   return (
     <>
       <DashboardLayout>
-        <div className="bg-[#F6F6F6] mx-8 lg:mx-0">
+        <div className=" mx-8 lg:mx-0">
           <div className="sm:pt-8">
             <div>
               <div className="lg:flex items-center lg:ml-12 justify-between ">
@@ -84,15 +84,25 @@ const General = () => {
                       </div>
                     )}
                   </div>
-                  <div className="hero my-8 ml-4">
+                  <div className="hero  ml-4">
                     <div className="hero-content">
-                      <div className="max-w-md">
-                        {profile && (
+                      <div
+                        className="relative block p-8 border border-gray-100 shadow-xl rounded-xl"
+                        href=""
+                      >
+                        <span className="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
+                        Your info
+                        </span>
+
+                        <div className="mt-4 text-gray-500 sm:pr-8">
+                          
+
+                          {profile && (
                           <div>
-                            <h1 className="text-3xl font-bold text-primary">
+                            <h1 className="text-3xl font-bold  mt-4  text-gray-900">
                               {profile?.name}
                             </h1>
-                            <p className="py-2">
+                            <p className="py-2 text-xl">
                               <strong>Email :</strong> {profile.email}
                             </p>
                             <p className="py-2">
@@ -115,6 +125,8 @@ const General = () => {
                             </p>
                           </div>
                         )}
+                          
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,8 +1,7 @@
 import Banner from "../components/Banner";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
-import JobCategory from "../components/JobCategory";
-import Navber from "../components/Navber";
+import Navbar from "../components/Navbar";
 import Reviews from "../components/Reviews";
 import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
@@ -13,18 +12,20 @@ import Premium from "../components/Premium";
 import About from "../components/About";
 import Animation from "../components/ResumeHome";
 import Learn from "../components/Learn";
+import CompanyWithUs from "../components/CompanyWithUs";
 
 function Home({ comments }) {
   return (
     <>
       <Premium />
-      <Navber>
+      <Navbar>
         <Banner></Banner>
         <FeaturedJob />
         <Features />
-        <Learn/>
-        <Animation/>
+        <Learn />
+        <Animation />
         <About />
+        <CompanyWithUs />
         <Reviews comments={comments}></Reviews>
         <Asking />
         <Service />
@@ -32,7 +33,7 @@ function Home({ comments }) {
         <Subscribe></Subscribe>
 
         <Footer></Footer>
-      </Navber>
+      </Navbar>
     </>
   );
 }

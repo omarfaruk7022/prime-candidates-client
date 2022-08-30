@@ -1,11 +1,14 @@
 import Link from "next/link";
 import React from "react";
 
+
+
 const Learn = () => {
+ 
   return (
     <div className="px-28 my-28">
       <div className="lg:flex justify-between">
-        <div className="">
+        <div className="" >
           <img
             className=""
             src="https://i.ibb.co/DDXwWzn/Milestones-of-business-projects.gif"
@@ -38,7 +41,7 @@ const Learn = () => {
               </span>
 
               <span className="text-sm font-medium transition-all group-hover:mr-4">
-               Courses
+                Courses
               </span>
             </button>
           </Link>

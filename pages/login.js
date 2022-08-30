@@ -12,7 +12,7 @@ import {
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import Navber from "../components/Navber";
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import auth from "../components/firebase.init";
 import Router from "next/router";
@@ -20,7 +20,8 @@ import Loader from "../components/Loader";
 
 const Login = () => {
   // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   // const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
   // const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
 
@@ -32,17 +33,16 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  
   // if (googleLoading || loading || gitLoading || fbLoading) {
   //   return <Loader></Loader>
   // }
 
-  if (user ) {
+  if (user) {
     // Router.push('/');
     window.history.back();
     swal("Yayy", "Login Successfully Completed", "success");
   }
-  if (error ) {
+  if (error) {
     swal("Something Wrong", "Login Failed", "error");
   }
 
@@ -51,7 +51,7 @@ const Login = () => {
   };
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="flex justify-center items-center h-screen my-28">
           <div className="mr-28 hidden lg:block">
             <Image src={vector} alt="" />
@@ -149,14 +149,14 @@ const Login = () => {
               <div className="divider">OR</div>
               <div className="flex">
                 <div className="mx-auto flex gap-2">
-                  <a 
+                  <a
                   // onClick={() => signInWithGoogle()}
                   >
                     <div className="h-[60px] w-[60px] cursor-pointer">
                       <Image src={googleIcon} alt="" />
                     </div>
                   </a>
-                  <a 
+                  <a
                   // onClick={() => signInWithGithub()}
                   >
                     <div className="h-[60px] w-[60px] cursor-pointer">
@@ -176,7 +176,7 @@ const Login = () => {
           </div>
         </div>
         <Footer />
-      </Navber>
+      </Navbar>
     </div>
   );
 };

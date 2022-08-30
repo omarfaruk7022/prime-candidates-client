@@ -1,17 +1,17 @@
-import React from 'react';
-import Navber from '../../components/Navber'
-import Blog from '../../components/Blog'
-import Footer from '../../components/Footer'
+import React from "react";
+import Navbar from "../../components/Navbar";
+import Blog from "../../components/Blog";
+import Footer from "../../components/Footer";
 
 const BlogPage = () => {
-    return (
-        <div>
-            <Navber>
-                <Blog></Blog>
-                <Footer></Footer>
-            </Navber>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar>
+        <Blog></Blog>
+        <Footer></Footer>
+      </Navbar>
+    </div>
+  );
 };
 
 export default BlogPage;

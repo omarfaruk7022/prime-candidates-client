@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
-import Navber from "../components/Navber";
+import Navbar from "../components/Navbar";
 
 const Contact = () => {
   const form = useRef();
@@ -31,7 +31,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="my-[150px] md:px-12">
           <button
             onClick={handleBack}
@@ -131,7 +131,7 @@ const Contact = () => {
             </div>
           </section>
         </div>
-      </Navber>
+      </Navbar>
     </div>
   );
 };
