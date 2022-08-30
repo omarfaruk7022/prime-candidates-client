@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import manIcon from "../../images/Img-icon.png";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 import { GrFacebookOption } from "react-icons/gr";
 import { ImLinkedin2 } from "react-icons/im";
 import Link from "next/link";
@@ -32,11 +32,10 @@ const JobDetails = () => {
     //   body: JSON.stringify()
     // })
 
-    router.push(`/jobapply/${id}` );
-
+    router.push(`/jobapply/${id}`);
   };
   return (
-    <Navber>
+    <Navbar>
       <div className=" p-10">
         <div className="container max-w-[1080px] mx-auto">
           <h1 className="text-xl">JOB DETAILS</h1>
@@ -69,15 +68,13 @@ const JobDetails = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                
-                  <button
-                    onClick={() => handleApply(jobDetails._id)}
-                   
-                    className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
-                  >
-                    Apply
-                  </button>
-               
+                <button
+                  onClick={() => handleApply(jobDetails._id)}
+                  className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
+                >
+                  Apply
+                </button>
+
                 <h1 className="text-[8px] sm:text-xs">
                   Deadline: Dec 30, 2020
                 </h1>
@@ -245,7 +242,7 @@ const JobDetails = () => {
         </div>
       </div>
       <Footer></Footer>
-    </Navber>
+    </Navbar>
   );
 };
 

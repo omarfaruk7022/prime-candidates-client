@@ -3,11 +3,11 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Logo from "../images/prime-logo.png";
-import auth from "../components/firebase.init";
+import auth from "./firebase.init";
 import { signOut } from "firebase/auth";
 import { BsChatDots } from "react-icons/bs";
 
-const Navber = ({ children }) => {
+const Navbar = ({ children }) => {
   const [user] = useAuthState(auth);
   // const [userData, setUserData] = useState();
 
@@ -337,4 +337,4 @@ const Navber = ({ children }) => {
   );
 };
 
-export default Navber;
+export default Navbar;

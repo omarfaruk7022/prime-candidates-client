@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Navber from "./Navber";
+import Navbar from "./Navbar";
 import Image from "next/image";
 import jobHiring from "../images/job-hiring.svg";
 import { BsArrowDownShort } from "react-icons/bs";

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../components/firebase.init";
 import Footer from "./Footer";
-import Navber from "./Navber";
+import Navbar from "./Navbar";
 import Link from "next/link";
 
 const SupportPage = () => {
@@ -52,7 +52,7 @@ const SupportPage = () => {
   // }, []);
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="m-auto">
           <h1 className=" text-5xl text-secondary">
             Please join our support session
@@ -111,7 +111,7 @@ const SupportPage = () => {
       })
     }
      </div> */}
-      </Navber>
+      </Navbar>
       <Footer />
     </div>
   );

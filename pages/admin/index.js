@@ -1,9 +1,9 @@
 import React from "react";
-import Navber from "../../components/Navber";
+import Navbar from "../../components/Navbar";
 
 const index = () => {
   return (
-    <Navber>
+    <Navbar>
       <div className="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
@@ -27,7 +27,7 @@ const index = () => {
           </ul>
         </div>
       </div>
-    </Navber>
+    </Navbar>
   );
 };
 

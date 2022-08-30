@@ -9,7 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
-import Navber from "../components/Navber";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import auth from "../components/firebase.init";
@@ -67,7 +67,6 @@ const SignUp = () => {
         .then((data) => {});
 
       swal("Yayy", "Sign Up  Successfully Completed ", "success");
-      
     }
     // if (user?._tokenResponse.email) {
     //   const userData = {
@@ -103,7 +102,7 @@ const SignUp = () => {
 
   return (
     <div>
-      <Navber>
+      <Navbar>
         <div className="flex justify-center items-center h-screen my-28">
           <div className="mr-28 hidden lg:block">
             <Image src={vector} alt="" />
@@ -306,7 +305,7 @@ const SignUp = () => {
           </div>
         </div>
         <Footer />
-      </Navber>
+      </Navbar>
     </div>
   );
 };
