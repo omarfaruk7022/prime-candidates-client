@@ -1,24 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import store from "../store/store";
 import "../styles/globals.css";
-import AOS from "aos";
-
-import "aos/dist/aos.css";
-
+import Router from "next/router";
+import Loader from "../components/Loader";
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    AOS.init({
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 50,
-    });
-  }, []);
+  const [loading, setLoading] = useState(false);
+  Router.events.on("routeChangeStart", (url) => {
+    console.log(`Loading: ${url}`);
+    setLoading(true);
+  });
+  Router.events.on("routeChangeComplete", (url) => {
+    console.log(`Loaded: ${url}`);
+    setLoading(false);
+  });
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <>
+      {loading && <Loader />}
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }
 
