@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { checkout } from "../checkout";
 
 const Premium = () => {
   // const [data, setData] = useState([]);
@@ -28,12 +29,21 @@ const Premium = () => {
         <div className="relative px-4 py-3 text-white bg-secondary pr-14">
           <p className="text-sm font-medium text-left sm:text-center">
             Try your premium tour! free for 1 month---!
-            <Link href="/dashboard/premium">
-              <span className="underline cursor-pointer">
+          
+              <button onClick={(() => {
+                checkout({
+                  lineItems: [
+                    {
+                      price: "price_1LcePAGr37yKmNuB8nlXhjSU",
+                      quantity: 1,
+                    }
+                  ]
+                });
+              })} className="underline cursor-pointer">
                 {" "}
                 Learn More &rarr;{" "}
-              </span>
-            </Link>
+              </button>
+            
           </p>
 
           <button
