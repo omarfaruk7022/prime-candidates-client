@@ -13,6 +13,7 @@ import About from "../components/About";
 import Animation from "../components/ResumeHome";
 import Learn from "../components/Learn";
 import CompanyWithUs from "../components/CompanyWithUs";
+import App from "../components/Quiz/App";
 
 function Home({ comments }) {
   return (
@@ -31,7 +32,7 @@ function Home({ comments }) {
         <Service />
         <Card />
         <Subscribe></Subscribe>
-
+        <App />
         <Footer></Footer>
       </Navbar>
     </>
