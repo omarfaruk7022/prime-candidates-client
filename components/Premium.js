@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { checkout } from "../checkout";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Checkout } from "../Checkout";
+import auth from "./firebase.init";
 
 const Premium = () => {
+  const [user] = useAuthState(auth);
   // const [data, setData] = useState([]);
-  // const router = useRouter();
+  const router = useRouter();
   const handleCross = (e) => {
     e.preventDefault();
 
@@ -29,21 +32,28 @@ const Premium = () => {
         <div className="relative px-4 py-3 text-white bg-secondary pr-14">
           <p className="text-sm font-medium text-left sm:text-center">
             Try your premium tour! free for 1 month---!
-          
-              <button onClick={(() => {
-                checkout({
-                  lineItems: [
-                    {
-                      price: "price_1LcePAGr37yKmNuB8nlXhjSU",
-                      quantity: 1,
-                    }
-                  ]
-                });
-              })} className="underline cursor-pointer">
-                {" "}
-                Learn More &rarr;{" "}
-              </button>
-            
+            <button
+              onClick={() => {
+                if (user) {
+
+                  Checkout({
+                    lineItems: [
+                      {
+                        price: "price_1LcePAGr37yKmNuB8nlXhjSU",
+                        quantity: 1,
+                      },
+                    ],
+                  });
+                }
+                else{
+                  router.push("/login");
+                }
+              }}
+              className="underline cursor-pointer"
+            >
+              {" "}
+              Learn More &rarr;{" "}
+            </button>
           </p>
 
           <button
