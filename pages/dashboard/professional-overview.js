@@ -83,7 +83,7 @@ const Index = () => {
             <div className="justify-between sm:flex">
               <div>
                 <h5 className="text-xl font-bold text-gray-900">
-                  Job name: {experienceData?.jobTitle}
+                  Job name: {experienceData?.jobTitle  ?experienceData.jobTitle : "N/A"}
                 </h5>
                 <p className="mt-1 text-xs font-medium text-gray-600">
                   By john doe
@@ -101,21 +101,21 @@ const Index = () => {
 
             <div className="mt-4 sm:pr-8">
               <p className="text-sm text-gray-500">
-                {experienceData?.jobDescription}
+                {experienceData?.jobDescription ?experienceData.jobDescription : "N/A"}
               </p>
             </div>
 
             <dl className="flex mt-6">
               <div className="flex flex-col-reverse">
                 <dd className="text-sm text-gray-500">
-                  {experienceData?.jobPlace}
+                  {experienceData?.jobPlace ?experienceData.jobPlace : "N/A"}
                 </dd>
                 <dt className="text-sm font-medium text-gray-600">Job Place</dt>
               </div>
 
               <div className="flex flex-col-reverse ml-3 sm:ml-6">
                 <dd className="text-sm text-gray-500">
-                  {experienceData?.jobType}
+                  {experienceData?.jobType ?experienceData.jobType : "N/A"}
                 </dd>
                 <dt className="text-sm font-medium text-gray-600">Job type</dt>
               </div>

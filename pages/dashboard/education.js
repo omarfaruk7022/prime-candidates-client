@@ -71,17 +71,17 @@ const Index = () => {
            
 
             <h5 className="mt-4 text-xl font-bold text-gray-900">
-              {education[0]?.email}
+              {education[0]?.email ? education[0]?.email : "N/A"}
             </h5>
             <h5 className="mt-4 text-xl font-bold text-gray-900">
-              Education level : {education[0]?.education}
+              Education level : {education[0]?.education  ? education[0]?.education : "N/A"}
             </h5>
             <p className="hidden mt-2 text-sm sm:block">
-             Degree : {education[0]?.degree} From {education[0]?.institute}
+             Degree : {education[0]?.degree   ? education[0]?.degree:"N/A" } From {education[0]?.institute  ? education[0]?.institute:"N/A" }
             </p>
 
             <p className="hidden mt-2 text-sm sm:block">
-              Year : {education[0]?.currentYear} to {education[0]?.passingYear}
+              Year : {education[0]?.currentYear  ? education[0]?.currentYear :"N/A"} to {education[0]?.passingYear ? education[0]?.passingYear :"N/A"}
             </p>
           </div>
         </a>
