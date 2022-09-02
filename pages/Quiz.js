@@ -2,7 +2,7 @@ import React from "react";
 import App from "../components/Quiz/App";
 
 
-const Quiz = () => {
+const quiz = () => {
   return (
     <div>
      
@@ -11,4 +11,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default quiz;

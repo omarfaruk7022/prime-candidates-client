@@ -1,11 +1,8 @@
 import {loadStripe} from '@stripe/stripe-js';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from './components/firebase.init';
 
 
-export async function Checkout ({lineItems}){
+
+export async function checkout ({lineItems}){
    
     
     let stripePromise =null
