@@ -13,12 +13,7 @@ import About from "../components/About";
 import Animation from "../components/ResumeHome";
 import Learn from "../components/Learn";
 import CompanyWithUs from "../components/CompanyWithUs";
-<<<<<<< HEAD
-import auth from "../components/firebase.init";
-import { useAuthState } from "react-firebase-hooks/auth";
-=======
 import App from "../components/Quiz/App";
->>>>>>> 0c87e54ee1a8db344f7112ea06920aa0af40802f
 
 function Home({ comments }) {
 
