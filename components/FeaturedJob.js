@@ -5,7 +5,7 @@ import { FaToolbox } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import Router from "next/router";
 
-const FeaturedJob = () => {
+const FeaturedJob = ({ finalData }) => {
   const [fJob, setFJob] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const FeaturedJob = () => {
             Featured Job
           </h1>
         </div>
-        <div className="flex justify-between items-center mx-5 my-5">
+        {/* <div className="flex justify-between items-center mx-5 my-5">
           <select className="select select-primary   focus:outline-none rounded-none text-[8px] font-light sm:text-xs">
             <option className="text-xs md:text-sm" selected>
               All
@@ -54,64 +54,124 @@ const FeaturedJob = () => {
               </option>
             </select>
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-5">
-          {fJob &&
-            fJob.map((job) => (
-              <>
-                <div
-                  key={job._id}
-                  className="flex gap-5 items-center p-3 rounded-lg  bg-white shadow-lg  shadow-blue-50"
-                >
-                  <div className="bg-base-100 rounded-md h-full flex items-center  shadow-lg  shadow-blue-50">
-                    <Image src={manIcon} alt="" />
-                  </div>
-                  <div className="flex flex-col justify-items-start gap-2 w-full">
-                    <div className="flex gap-2 items-center">
-                      <h1 className="text-xs sm:text-sm lg:text-xl font-semibold">
-                        {job.jobTitle}
-                      </h1>
-                      <p className="text-[10px] text-success">featured</p>
+        </div> */}
+        {finalData.length === 0 &&  (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-5">
+            {fJob &&
+              fJob.map((job) => (
+                <>
+                  <div
+                    key={job._id}
+                    className="flex gap-5 items-center p-3 rounded-lg  bg-white shadow-lg  shadow-blue-50"
+                  >
+                    <div className="bg-base-100 rounded-md h-full flex items-center  shadow-lg  shadow-blue-50">
+                      <Image src={manIcon} alt="" />
                     </div>
-                    <div className="flex gap-2 justify-between items-center">
+                    <div className="flex flex-col justify-items-start gap-2 w-full">
                       <div className="flex gap-2 items-center">
-                        <FaToolbox className="text-[8px] lg:text-[10px]" />
-                        <p className="text-[8px] lg:text-[10px]">
-                          {job.jobCategory}
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-center">
-                        <HiLocationMarker className="text-[8px] lg:text-[10px]" />
-                        <p className="text-[8px] lg:text-[10px]">
-                          {job.jobLocation}
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-center">
-                        <FaToolbox className="text-[8px] lg:text-[10px]" />
-                        <p className="text-[8px] lg:text-[10px]">
-                          {job.salaryRange} /{job.salaryType}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <div className="flex gap-2 items-center">
-                        <h1 className="bg-info bg-opacity-20 px-3 py-1 text-[8px] lg:text-[10px] font-thin rounded-xl">
-                          {job.jobType}
+                        <h1 className="text-xs sm:text-sm lg:text-xl font-semibold">
+                          {job.jobTitle}
                         </h1>
+                        <p className="text-[10px] text-success">featured</p>
                       </div>
-                      <button
-                        onClick={() => handleBrowseJob(job._id)}
-                        className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
-                      >
-                        Browse Job
-                      </button>
+                      <div className="flex gap-2 justify-between items-center">
+                        <div className="flex gap-2 items-center">
+                          <FaToolbox className="text-[8px] lg:text-[10px]" />
+                          <p className="text-[8px] lg:text-[10px]">
+                            {job.jobCategory}
+                          </p>
+                        </div>
+                        <div className="flex gap-2 items-center">
+                          <HiLocationMarker className="text-[8px] lg:text-[10px]" />
+                          <p className="text-[8px] lg:text-[10px]">
+                            {job.jobLocation}
+                          </p>
+                        </div>
+                        <div className="flex gap-2 items-center">
+                          <FaToolbox className="text-[8px] lg:text-[10px]" />
+                          <p className="text-[8px] lg:text-[10px]">
+                            {job.salaryRange} /{job.salaryType}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <div className="flex gap-2 items-center">
+                          <h1 className="bg-info bg-opacity-20 px-3 py-1 text-[8px] lg:text-[10px] font-thin rounded-xl">
+                            {job.jobType}
+                          </h1>
+                        </div>
+                        <button
+                          onClick={() => handleBrowseJob(job._id)}
+                          className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
+                        >
+                          Browse Job
+                        </button>
+                      </div>
                     </div>
+                  </div>
+                </>
+              ))}
+          </div>
+        ) }
+        {
+        finalData && <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-5">
+        {finalData &&
+          finalData.map((job) => (
+            <>
+              <div
+                key={job._id}
+                className="flex gap-5 items-center p-3 rounded-lg  bg-white shadow-lg  shadow-blue-50"
+              >
+                <div className="bg-base-100 rounded-md h-full flex items-center  shadow-lg  shadow-blue-50">
+                  <Image src={manIcon} alt="" />
+                </div>
+                <div className="flex flex-col justify-items-start gap-2 w-full">
+                  <div className="flex gap-2 items-center">
+                    <h1 className="text-xs sm:text-sm lg:text-xl font-semibold">
+                      {job.jobTitle}
+                    </h1>
+                    <p className="text-[10px] text-success">featured</p>
+                  </div>
+                  <div className="flex gap-2 justify-between items-center">
+                    <div className="flex gap-2 items-center">
+                      <FaToolbox className="text-[8px] lg:text-[10px]" />
+                      <p className="text-[8px] lg:text-[10px]">
+                        {job.jobCategory}
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <HiLocationMarker className="text-[8px] lg:text-[10px]" />
+                      <p className="text-[8px] lg:text-[10px]">
+                        {job.jobLocation}
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <FaToolbox className="text-[8px] lg:text-[10px]" />
+                      <p className="text-[8px] lg:text-[10px]">
+                        {job.salaryRange} /{job.salaryType}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-2 items-center">
+                      <h1 className="bg-info bg-opacity-20 px-3 py-1 text-[8px] lg:text-[10px] font-thin rounded-xl">
+                        {job.jobType}
+                      </h1>
+                    </div>
+                    <button
+                      onClick={() => handleBrowseJob(job._id)}
+                      className="btn btn-xs rounded-none btn-primary pt-[3px] text-[8px] lg:text-[10px] text-white font-normal hover:bg-black hover:text-white"
+                    >
+                      Browse Job
+                    </button>
                   </div>
                 </div>
-              </>
-            ))}
-        </div>
-        <div className="flex mx-5 my-5 gap-5 rounded-none">
+              </div>
+            </>
+          ))}
+      </div>
+       }
+        {/* <div className="flex mx-5 my-5 gap-5 rounded-none">
           <button className="btn btn-sm btn-primary btn-outline rounded-sm">
             1
           </button>
@@ -124,7 +184,7 @@ const FeaturedJob = () => {
           <button className="btn btn-sm btn-primary btn-outline rounded-sm">
             4
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

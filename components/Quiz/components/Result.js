@@ -1,16 +1,21 @@
 import React from "react";
 
+
+  const handleBack = () => {
+    window.history.back();
+  };
+
 const Result = ({ showResult, quizs, marks, startOver }) => {
   return (
     <section
-      className="bg-blue-500 w-1/2 mx-auto rounded-md  text-white"
+      className="bg-base-200 w-1/2 mx-auto rounded-md  text-white"
       style={{ display: `${showResult ? "block" : "none"}` }}
     >
       <div>
-        <div className="row vh-100 align-items-center justify-content-center">
+        <div className=" text-black row vh-100 align-items-center justify-content-center">
           <div className="col-lg-6">
             <div
-              className={`text-light text-center p-5 rounded ${
+              className={`text-center p-5 rounded ${
                 marks > (quizs.length * 5) / 2 ? "bg-success" : "bg-danger"
               }`}
             >
@@ -21,9 +26,12 @@ const Result = ({ showResult, quizs, marks, startOver }) => {
                 Your score is {marks} out of {quizs.length * 5}
               </h3>
 
+              <button 
+              onClick={handleBack}
+              >Back</button>
               <button
                 onClick={startOver}
-                className="btn py-2 px-4 btn-light fw-bold d-inline"
+                className="btn text-white btn-outline bg-primary hover:bg-secondary border-0"
               >
                 Start Over
               </button>
