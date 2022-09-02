@@ -90,7 +90,7 @@ const CourseDetails = () => {
         </div>
 
         <div className="text-center my-5">
-          <Link href="/quiz">
+          <Link href="/quizTest">
             <button className="btn btn-primary">Exam Test</button>
           </Link>
         </div>
