@@ -1,9 +1,10 @@
 import Link from "next/link";
+import bg from "../images//network-mesh-wire-digital-technology-background_1017-27428.webp"
 
 const About = () => {
   return (
-    <section className="px-28">
-      <div className="px-4 py-16 mx-auto  sm:px-6 lg:px-8">
+    <section className="px-28"  >
+      <div className="px-4 py-16 mx-auto  sm:px-6 lg:px-8" >
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen ">
           <div className="relative z-10 lg:py-16">
             <div className="relative h-64 sm:h-80 lg:h-full">
