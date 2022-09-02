@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Features from "../components/Features";
+// import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Reviews from "../components/Reviews";
@@ -24,7 +24,7 @@ function Home({ comments }) {
       <Navbar>
         <Banner></Banner>
         {/* <FeaturedJob /> */}
-        <Features />
+        {/* <Features /> */}
         <Learn />
         <Animation />
         <About />

@@ -3,7 +3,7 @@ import React from 'react';
 const CompanyWithUs = () => {
     return (
         <div>
-            <section className="p-6  my-28">
+            <section className="p-6  my-12">
 	<div className="container p-4 mx-auto text-center">
 		<h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>
 	</div>
