@@ -13,7 +13,7 @@ const Asking = () => {
         >
           <summary className="flex items-center justify-between cursor-pointer">
             <h5 className="text-lg font-medium text-gray-900">
-              Lorem ipsum dolor sit amet consectetur adipisicing?
+             What is the main target of your web site (Prime candidates) ?
             </h5>
 
             <span className="flex-shrink-0 ml-1.5 p-1.5 text-gray-900 bg-white rounded-full sm:p-3">
@@ -33,17 +33,14 @@ const Asking = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-            veritatis molestias culpa in, recusandae laboriosam neque aliquid
-            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-            distinctio corporis earum similique!
+          Basically we want candidates who are looking for jobs or internships in mind, we want to help them on this platform.
           </p>
         </details>
 
         <details className="p-6 border-l-4 border-green-500 bg-gray-50 group">
           <summary className="flex items-center justify-between cursor-pointer">
             <h5 className="text-lg font-medium text-gray-900">
-              Lorem ipsum dolor sit amet consectetur adipisicing?
+              How to connect with the Prime candidates team ?
             </h5>
 
             <span className="flex-shrink-0 ml-1.5 p-1.5 text-gray-900 bg-white rounded-full sm:p-3">
@@ -63,10 +60,7 @@ const Asking = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-            veritatis molestias culpa in, recusandae laboriosam neque aliquid
-            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-            distinctio corporis earum similique!
+          Dear ... we are availabe in Facebook,Instagram,Twitter,Linkedin,Github,Medium,Stackoverflow,Reddit,Slack,Telegram,Discord,Whatsapp,Skype,Email,Phone,etc.
           </p>
         </details>
       </div>

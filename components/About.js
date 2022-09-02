@@ -25,13 +25,10 @@ const About = () => {
               </h2>
 
               <p className="mt-4 text-gray-600 border-t-[2px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquid, molestiae! Quidem est esse numquam odio deleniti,
-                beatae, magni dolores provident quaerat totam eos, aperiam
-                architecto eius quis quibusdam fugiat dicta.
+              Basically we want candidates who are looking for jobs or internships in mind, we want to help them on this platform.
               </p>
 
-              <Link href="/about-us-detail">
+              <Link href="/team-members">
             <button className="relative inline-flex items-center px-8 py-3 overflow-hidden text-primary border border-current rounded group active:text-indigo-500 focus:outline-none focus:ring">
               <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                 <svg
