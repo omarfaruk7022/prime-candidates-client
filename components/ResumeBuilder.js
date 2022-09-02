@@ -47,7 +47,7 @@ const ResumeBuilder = () => {
       description: descriptionRef.current.value,
       email: email,
     };
-    fetch(`http://localhost:5000/projects/${email}`, {
+    fetch(`https://stormy-beach-33232.herokuapp.com/projects/${email}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const ResumeBuilder = () => {
     }).then((willDelete) => {
       if (willDelete) {
         swal("Poof! Your file has been deleted!", {});
-        fetch(`http://localhost:5000/projects/${email}`, {
+        fetch(`https://stormy-beach-33232.herokuapp.com/projects/${email}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const ResumeBuilder = () => {
     console.log("clicked");
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/projects/${email}`)
+    fetch(`https://stormy-beach-33232.herokuapp.com/projects/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setProject(data?.data);
@@ -97,7 +97,7 @@ const ResumeBuilder = () => {
         console.log(err);
       });
   }, [email]);
- 
+
   // --------------------- Course works section ---------------------
   const handleCoursePut = () => {
     const courseData = {
@@ -106,8 +106,8 @@ const ResumeBuilder = () => {
       endDate: endDateCourseRef.current.value,
       instituteName: CourseInstituteNameRef.current.value,
       email: email,
-    }
-    fetch(`http://localhost:5000/course/${email}`, {
+    };
+    fetch(`https://stormy-beach-33232.herokuapp.com/course/${email}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -117,18 +117,17 @@ const ResumeBuilder = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        
-      })
+      });
     console.log(courseData);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/course/${email}`)
+    fetch(`https://stormy-beach-33232.herokuapp.com/course/${email}`)
       .then((res) => res.json())
       .then((data) => {
         setCourse(data?.data);
         console.log(data?.data);
-      })
-  },[email])
+      });
+  }, [email]);
   const handleCourseDelete = () => {
     swal({
       title: "Are you sure?",
@@ -139,7 +138,7 @@ const ResumeBuilder = () => {
     }).then((willDelete) => {
       if (willDelete) {
         swal("Poof! Your file has been deleted!", {});
-        fetch(`http://localhost:5000/course/${email}`, {
+        fetch(`https://stormy-beach-33232.herokuapp.com/course/${email}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -148,16 +147,16 @@ const ResumeBuilder = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-          }).catch((err) => {
+          })
+          .catch((err) => {
             console.log(err);
-          }
-        );
+          });
       } else {
         swal("Your imaginary file is safe!");
       }
     });
     console.log("clicked");
-  }
+  };
 
   // ------------------ Career objective works section ---------------
   const handleCareerObjective = () => {
@@ -166,7 +165,7 @@ const ResumeBuilder = () => {
       email: email,
       body: careerObjective,
     };
-    fetch(`http://localhost:5000/career/${email}`, {
+    fetch(`https://stormy-beach-33232.herokuapp.com/career/${email}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -188,7 +187,7 @@ const ResumeBuilder = () => {
   //     description: descriptionPostRef.current.value,
   //     email: email,
   //   };
-  //   fetch(`http://localhost:5000/projects`, {
+  //   fetch(`https://stormy-beach-33232.herokuapp.com/projects`, {
   //     method: "POST",
   //     headers: {
   //       "Content-Type": "application/json",
@@ -203,7 +202,7 @@ const ResumeBuilder = () => {
   //     })
   // }
   useEffect(() => {
-    fetch(`http://localhost:5000/career/${email}`)
+    fetch(`https://stormy-beach-33232.herokuapp.com/career/${email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data?.data);
@@ -467,7 +466,8 @@ const ResumeBuilder = () => {
               <h3>{project?.title ? project?.title : "N/A"}</h3>
               <br />
               <p>
-                {project?.startDate ? project?.startDate:"N/A"} - {project?.endDate ? project?.endDate:"N/A"}
+                {project?.startDate ? project?.startDate : "N/A"} -{" "}
+                {project?.endDate ? project?.endDate : "N/A"}
               </p>
               <br />
               <a href="#" className="text-secondary cursor-pointer">
@@ -679,11 +679,14 @@ const ResumeBuilder = () => {
                 <TiPointOfInterest></TiPointOfInterest>
               </div>
               <div>
-                <h3>{course?.courseName ? course?.courseName: "N/A" }</h3>
+                <h3>{course?.courseName ? course?.courseName : "N/A"}</h3>
                 <br />
-                <p>{course?.instituteName ? course?.instituteName: "N/A"}</p>
+                <p>{course?.instituteName ? course?.instituteName : "N/A"}</p>
                 <br />
-                <p>{course?.startDate ? course?.startDate: "N/A"} - {course?.endDate ? course?.endDate: "N/A"}</p>
+                <p>
+                  {course?.startDate ? course?.startDate : "N/A"} -{" "}
+                  {course?.endDate ? course?.endDate : "N/A"}
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -769,9 +772,9 @@ const ResumeBuilder = () => {
                   </div>
                 </div>
               </div>
-             <button onClick={handleCourseDelete}>
-             <MdDelete className="cursor-pointer lg:mb-[280px] text-red-500"></MdDelete>
-             </button>
+              <button onClick={handleCourseDelete}>
+                <MdDelete className="cursor-pointer lg:mb-[280px] text-red-500"></MdDelete>
+              </button>
             </div>
           </div>
           {/* <label
