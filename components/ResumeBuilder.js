@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiEdit, FiDownload, FiPlus } from "react-icons/fi";
 import { TiPointOfInterest } from "react-icons/ti";
 import { MdDelete } from "react-icons/md";
@@ -6,16 +6,211 @@ import { saveAs } from "file-saver";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
+import swal from "sweetalert";
 
 const ResumeBuilder = () => {
   const router = useRouter();
   const [user] = useAuthState(auth);
-  const saveFile = () => {
-    saveAs(
-      "https://drive.google.com/uc?export=download&id=1Dcmlg0DWZcgsvy5iTulJCMLWs-G-lveA",
-      "example.pdf"
-    );
+  const careerObjectiveRef = useRef(null);
+  const titleRef = useRef(null);
+  const startDateRef = useRef(null);
+  const endDateRef = useRef(null);
+  const urlRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const courseNameRef = useRef(null);
+  const startDateCourseRef = useRef(null);
+  const endDateCourseRef = useRef(null);
+  const CourseInstituteNameRef = useRef(null);
+  // const titlePostRef = useRef(null);
+  // const startDatePostRef = useRef(null);
+  // const endDatePostRef = useRef(null);
+  // const urlPostRef = useRef(null);
+  // const descriptionPostRef = useRef(null);
+  const [career, setCareer] = useState();
+  const [project, setProject] = useState();
+  const [course, setCourse] = useState();
+  const email = user?.email;
+  // const saveFile = () => {
+  //   saveAs(
+  //     "https://drive.google.com/uc?export=download&id=1Dcmlg0DWZcgsvy5iTulJCMLWs-G-lveA",
+  //     "example.pdf"
+  //   );
+  // };
+
+  // -----------------------Project section works---------------------
+  const handleSubmitForProjectPut = () => {
+    const projectData = {
+      title: titleRef.current.value,
+      startDate: startDateRef.current.value,
+      endDate: endDateRef.current.value,
+      url: urlRef.current.value,
+      description: descriptionRef.current.value,
+      email: email,
+    };
+    fetch(`http://localhost:5000/projects/${email}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(projectData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+    console.log(projectData);
   };
+  const handleProjectDelete = () => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this  file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Poof! Your file has been deleted!", {});
+        fetch(`http://localhost:5000/projects/${email}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
+    console.log("clicked");
+  };
+  useEffect(() => {
+    fetch(`http://localhost:5000/projects/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProject(data?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [email]);
+ 
+  // --------------------- Course works section ---------------------
+  const handleCoursePut = () => {
+    const courseData = {
+      courseName: courseNameRef.current.value,
+      startDate: startDateCourseRef.current.value,
+      endDate: endDateCourseRef.current.value,
+      instituteName: CourseInstituteNameRef.current.value,
+      email: email,
+    }
+    fetch(`http://localhost:5000/course/${email}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(courseData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        
+      })
+    console.log(courseData);
+  };
+  useEffect(() => {
+    fetch(`http://localhost:5000/course/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCourse(data?.data);
+        console.log(data?.data);
+      })
+  },[email])
+  const handleCourseDelete = () => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this  file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("Poof! Your file has been deleted!", {});
+        fetch(`http://localhost:5000/course/${email}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          }).catch((err) => {
+            console.log(err);
+          }
+        );
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
+    console.log("clicked");
+  }
+
+  // ------------------ Career objective works section ---------------
+  const handleCareerObjective = () => {
+    const careerObjective = careerObjectiveRef.current.value;
+    const careerObjectiveData = {
+      email: email,
+      body: careerObjective,
+    };
+    fetch(`http://localhost:5000/career/${email}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(careerObjectiveData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        swal("Good job!", "You clicked the button!", "success");
+      });
+  };
+  // const handleSubmitForProjectPost = () => {
+  //   const projectDataForPost = {
+  //     title: titlePostRef.current.value,
+  //     startDate: startDatePostRef.current.value,
+  //     endDate: endDatePostRef.current.value,
+  //     url: urlPostRef.current.value,
+  //     description: descriptionPostRef.current.value,
+  //     email: email,
+  //   };
+  //   fetch(`http://localhost:5000/projects`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(projectDataForPost),
+
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       swal("Good job!", "Your project is added successfully", "success");
+  //     })
+  // }
+  useEffect(() => {
+    fetch(`http://localhost:5000/career/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data?.data);
+        setCareer(data?.data?.body);
+      });
+  }, [user?.email]);
+
   useEffect(() => {
     // if there is no authenticated user, redirect to login page_
 
@@ -104,13 +299,17 @@ const ResumeBuilder = () => {
                 </div>
               </div>
             </div>
-            <p>harifur.rashid1@gmail.com</p>
+            <p>{email}</p>
             <p>+880 1888295295</p>
             <p>Chittagong</p>
           </div>
           <div className="flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer">
             <FiDownload></FiDownload>
-            <button onClick={saveFile}>Download</button>
+            <button
+            // onClick={saveFile}
+            >
+              Download
+            </button>
           </div>
         </div>
 
@@ -130,12 +329,13 @@ const ResumeBuilder = () => {
             <input type="checkbox" id="my-modal-7" className="modal-toggle" />
             <div className="modal modal-middle">
               <div className="modal-box">
-                <form action="">
+                <form>
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">CAREER OBJECTIVE</span>
                     </label>
                     <textarea
+                      ref={careerObjectiveRef}
                       type="text"
                       name="description"
                       className="input input-bordered w-full h-24 focus:outline-none rounded-none"
@@ -151,18 +351,13 @@ const ResumeBuilder = () => {
                     htmlFor="my-modal-7"
                     className="btn btn-success"
                   >
-                    Done
+                    <button onClick={handleCareerObjective}>Done</button>
                   </label>
                 </div>
               </div>
             </div>
           </div>
-          <p className="mt-5">
-            Building Front-end is my passion. I am a React JS enthusiast. I have
-            been experienced in react JS for 1 year. I am constantly
-            strengthening my skills. Seeking opportunities to become a full-time
-            front-end developer for a long time.
-          </p>
+          <p className="mt-5">{career ? career : "N/A"}</p>
         </div>
         {/* CAREER OBJECTIVE part End */}
 
@@ -269,20 +464,17 @@ const ResumeBuilder = () => {
               <TiPointOfInterest></TiPointOfInterest>
             </div>
             <div>
-              <h3>SOFA-MART (Warehouse Management System)</h3>
-              <br />
-              <p>May 2022 - May 2022</p>
-              <br />
-              <p className="text-secondary">https://sofa-mart.web.app/</p>
+              <h3>{project?.title ? project?.title : "N/A"}</h3>
               <br />
               <p>
-                Technology use: Javascript(ES6), ReactJS, Vanila CSS, Git,
-                Firebase Authentication, React hook form, ExpressJS, NodeJS,
-                MongoDB, Heroku etc.
-                <br />
-                Implemented a beautyfull React warehouse website.User can add
-                product, remove product and update product.
+                {project?.startDate ? project?.startDate:"N/A"} - {project?.endDate ? project?.endDate:"N/A"}
               </p>
+              <br />
+              <a href="#" className="text-secondary cursor-pointer">
+                {project?.url ? project?.url : "N/A"}
+              </a>
+              <br />
+              <p>{project?.description ? project?.description : "N/A"}</p>
             </div>
             <div className="flex gap-4">
               <label
@@ -295,12 +487,13 @@ const ResumeBuilder = () => {
               <div className="modal modal-middle">
                 <div className="modal-box">
                   <h1 className="text-center">Edit Project</h1>
-                  <form action="">
+                  <form>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Project Title</span>
                       </label>
                       <input
+                        ref={titleRef}
                         type="text"
                         placeholder="Type your project name"
                         name="description"
@@ -313,6 +506,7 @@ const ResumeBuilder = () => {
                           <span className="label-text">Start Date</span>
                         </label>
                         <input
+                          ref={startDateRef}
                           type="date"
                           placeholder="Type your project name"
                           name="description"
@@ -324,6 +518,7 @@ const ResumeBuilder = () => {
                           <span className="label-text">End Date</span>
                         </label>
                         <input
+                          ref={endDateRef}
                           type="date"
                           placeholder="Type your project name"
                           name="description"
@@ -336,6 +531,7 @@ const ResumeBuilder = () => {
                         <span className="label-text">Project Url</span>
                       </label>
                       <input
+                        ref={urlRef}
                         type="url"
                         placeholder="Type your project link"
                         name="description"
@@ -347,6 +543,7 @@ const ResumeBuilder = () => {
                         <span className="label-text">Description</span>
                       </label>
                       <textarea
+                        ref={descriptionRef}
                         type="text"
                         placeholder="Project description"
                         name="description"
@@ -363,12 +560,14 @@ const ResumeBuilder = () => {
                       htmlFor="my-modal-9"
                       className="btn btn-success"
                     >
-                      Done
+                      <button onClick={handleSubmitForProjectPut}>Done</button>
                     </label>
                   </div>
                 </div>
               </div>
-              <MdDelete className="cursor-pointer text-red-500"></MdDelete>
+              <button onClick={handleProjectDelete}>
+                <MdDelete className="cursor-pointer lg:mb-[280px] text-red-500"></MdDelete>
+              </button>
             </div>
           </div>
           <label
@@ -380,16 +579,17 @@ const ResumeBuilder = () => {
               <p>Personal Project</p>
             </div>
           </label>
-          <input type="checkbox" id="my-modal-10" className="modal-toggle" />
-          <div className="modal modal-middle">
+          {/* <input type="checkbox" id="my-modal-10" className="modal-toggle" /> */}
+          {/* <div className="modal modal-middle">
             <div className="modal-box">
               <h1 className="text-center">Add Project</h1>
-              <form action="">
+              <form>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Project Title</span>
                   </label>
                   <input
+                    // ref={titlePostRef}
                     type="text"
                     placeholder="Type your project name"
                     name="description"
@@ -402,6 +602,7 @@ const ResumeBuilder = () => {
                       <span className="label-text">Start Date</span>
                     </label>
                     <input
+                      // ref={startDatePostRef}
                       type="date"
                       placeholder="Type your project name"
                       name="description"
@@ -413,6 +614,7 @@ const ResumeBuilder = () => {
                       <span className="label-text">End Date</span>
                     </label>
                     <input
+                      // ref={endDatePostRef}
                       type="date"
                       placeholder="Type your project name"
                       name="description"
@@ -425,6 +627,7 @@ const ResumeBuilder = () => {
                     <span className="label-text">Project Url</span>
                   </label>
                   <input
+                    // ref={urlPostRef}
                     type="url"
                     placeholder="Type your project link"
                     name="description"
@@ -436,6 +639,7 @@ const ResumeBuilder = () => {
                     <span className="label-text">Description</span>
                   </label>
                   <textarea
+                    // ref={descriptionPostRef}
                     type="text"
                     placeholder="Project description"
                     name="description"
@@ -452,11 +656,15 @@ const ResumeBuilder = () => {
                   htmlFor="my-modal-10"
                   className="btn btn-success"
                 >
-                  Done
+                  <button
+                  // onClick={handleSubmitForProjectPost}
+                  >
+                    Done
+                  </button>
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* PERSONAL PROJECTS part ends here */}
 
@@ -471,11 +679,11 @@ const ResumeBuilder = () => {
                 <TiPointOfInterest></TiPointOfInterest>
               </div>
               <div>
-                <h3>MERN-stack Development</h3>
+                <h3>{course?.courseName ? course?.courseName: "N/A" }</h3>
                 <br />
-                <p>Programming Hero, Online</p>
+                <p>{course?.instituteName ? course?.instituteName: "N/A"}</p>
                 <br />
-                <p>May 2022 - May 2022</p>
+                <p>{course?.startDate ? course?.startDate: "N/A"} - {course?.endDate ? course?.endDate: "N/A"}</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -499,6 +707,7 @@ const ResumeBuilder = () => {
                         <span className="label-text">Course Name</span>
                       </label>
                       <input
+                        ref={courseNameRef}
                         type="text"
                         placeholder="Type your course name"
                         name="description"
@@ -510,6 +719,7 @@ const ResumeBuilder = () => {
                         <span className="label-text">Institude Name</span>
                       </label>
                       <input
+                        ref={CourseInstituteNameRef}
                         type="text"
                         placeholder="Type your institude name"
                         name="description"
@@ -522,6 +732,7 @@ const ResumeBuilder = () => {
                           <span className="label-text">Start Date</span>
                         </label>
                         <input
+                          ref={startDateCourseRef}
                           type="date"
                           placeholder="Type your project name"
                           name="description"
@@ -533,6 +744,7 @@ const ResumeBuilder = () => {
                           <span className="label-text">End Date</span>
                         </label>
                         <input
+                          ref={endDateCourseRef}
                           type="date"
                           placeholder="Type your project name"
                           name="description"
@@ -545,20 +757,24 @@ const ResumeBuilder = () => {
                     <label htmlFor="my-modal-11" className="btn btn-error">
                       Cancel
                     </label>
-                    <label
-                      type="submit"
-                      htmlFor="my-modal-11"
-                      className="btn btn-success"
-                    >
-                      Done
-                    </label>
+                    <button onClick={handleCoursePut}>
+                      <label
+                        type="submit"
+                        htmlFor="my-modal-12"
+                        className="btn btn-success"
+                      >
+                        Done
+                      </label>
+                    </button>
                   </div>
                 </div>
               </div>
-              <MdDelete className="cursor-pointer text-red-500"></MdDelete>
+             <button onClick={handleCourseDelete}>
+             <MdDelete className="cursor-pointer lg:mb-[280px] text-red-500"></MdDelete>
+             </button>
             </div>
           </div>
-          <label
+          {/* <label
             htmlFor="my-modal-12"
             className="btn modal-button border-0 bg-transparent hover:bg-transparent"
           >
@@ -623,16 +839,18 @@ const ResumeBuilder = () => {
                 <label htmlFor="my-modal-12" className="btn btn-error">
                   Cancel
                 </label>
-                <label
-                  type="submit"
-                  htmlFor="my-modal-12"
-                  className="btn btn-success"
-                >
-                  Done
-                </label>
+                <button>
+                  <label
+                    type="submit"
+                    htmlFor="my-modal-12"
+                    className="btn btn-success"
+                  >
+                    Done
+                  </label>
+                </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* TRAINING/COURSES part ends here */}
       </div>
