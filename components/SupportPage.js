@@ -54,32 +54,32 @@ const SupportPage = () => {
     <div>
       <Navbar>
         <section>
-          <div class="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
-              <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+          <div className="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
+              <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
                 <img
-                  class="absolute inset-0 object-cover w-full h-full"
+                  className="absolute inset-0 object-cover w-full h-full"
                   src="https://i.ibb.co/ZTCs5Nd/Screenshot-2022-09-02-170805.png"
                   alt="Man using a computer"
                 />
               </div>
 
-              <div class="lg:py-24">
-                <h2 class="text-3xl font-bold sm:text-4xl">
+              <div className="lg:py-24">
+                <h2 className="text-3xl font-bold sm:text-4xl">
                   Our Session in 24/7
                 </h2>
 
-                <p class="mt-4 text-gray-600">
+                <p className="mt-4 text-gray-600">
                   Please join our support session
                 </p>
-            <Link
-              href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3"
-              target="_blank"
-            >
-              <button className="btn my-4 text-white btn-outline bg-primary hover:bg-secondary border-0">
-                Join
-              </button>
-            </Link>
+                <Link
+                  href="https://pcc.pages.dev/2af4c1c5-976c-479c-b555-0e0a64b031b3"
+                  target="_blank"
+                >
+                  <button className="btn my-4 text-white btn-outline bg-primary hover:bg-secondary border-0">
+                    Join
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
