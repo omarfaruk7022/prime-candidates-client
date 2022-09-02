@@ -3,6 +3,7 @@ import { Router, useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { checkout } from "../checkout";
+
 import auth from "./firebase.init";
 
 const Premium = () => {
@@ -36,7 +37,7 @@ const Premium = () => {
               onClick={() => {
                 if (user) {
 
-                checkout({
+               checkout({
                     lineItems: [
                       {
                         price: "price_1LcePAGr37yKmNuB8nlXhjSU",
