@@ -100,28 +100,28 @@ const General = () => {
                           {profile && (
                           <div>
                             <h1 className="text-3xl font-bold  mt-4  text-gray-900">
-                              {profile?.name}
+                              {profile?.name ? profile?.name : "N/A"}
                             </h1>
                             <p className="py-2 text-xl">
-                              <strong>Email :</strong> {profile.email}
+                              <strong>Email :</strong> {profile.email ? profile?.email : "N/A"}
                             </p>
                             <p className="py-2">
-                              <strong>phone :</strong> {profile?.phone}
+                              <strong>phone :</strong> {profile?.phone ? profile?.phone : "N/A"}
                             </p>
                             <p className="py-2">
                               <strong>socialLink :</strong>{" "}
-                              {profile?.socialLink}
+                              {profile?.socialLink ? profile?.socialLink : "N/A"}
                             </p>
                             <p className="py-2">
-                              <strong>street :</strong> {profile?.street}
+                              <strong>street :</strong> {profile?.street ? profile?.street : "N/A"}
                             </p>
                             <p className="py-2">
                               <strong>state :</strong>
-                              {profile?.state}
+                              {profile?.state ? profile?.state : "N/A"}
                             </p>
                             <p className="py-2">
                               <strong>country :</strong>
-                              {profile?.country}
+                              {profile?.country ? profile?.country : "N/A"}
                             </p>
                           </div>
                         )}

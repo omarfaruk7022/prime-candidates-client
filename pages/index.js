@@ -13,10 +13,14 @@ import About from "../components/About";
 import Animation from "../components/ResumeHome";
 import Learn from "../components/Learn";
 import CompanyWithUs from "../components/CompanyWithUs";
+import auth from "../components/firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function Home({ comments }) {
+
   return (
     <>
+    
       <Premium />
       <Navbar>
         <Banner></Banner>
