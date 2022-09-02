@@ -182,9 +182,10 @@ const PostJobs = () => {
                 <option disabled selected>
                   Select Type
                 </option>
-                <option>On-site</option>
+                <option>Full time </option>
+                <option>part time</option>
                 <option>Remote</option>
-                <option>Hybrid</option>
+                <option>Internship</option>
               </select>
             </div>
           </div>

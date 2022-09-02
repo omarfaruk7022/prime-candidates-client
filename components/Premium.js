@@ -32,7 +32,7 @@ const Premium = () => {
       <section id="cross" className=" sticky ">
         <div className="relative px-4 py-3 text-white bg-secondary pr-14">
           <p className="text-sm font-medium text-left sm:text-center">
-            Try your premium tour! free for 1 month---!
+            Try your premium tour free for 1 month - 
             <button
               onClick={() => {
                 if (user) {

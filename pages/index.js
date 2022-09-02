@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Reviews from "../components/Reviews";
 import Card from "../components/Card";
 import Subscribe from "../components/Subscribe";
-import FeaturedJob from "../components/FeaturedJob";
+// import FeaturedJob from "../components/FeaturedJob";
 import Service from "../components/Service";
 import Asking from "../components/Asking";
 import Premium from "../components/Premium";
@@ -13,7 +13,7 @@ import About from "../components/About";
 import Animation from "../components/ResumeHome";
 import Learn from "../components/Learn";
 import CompanyWithUs from "../components/CompanyWithUs";
-import App from "../components/Quiz/App";
+
 
 function Home({ comments }) {
 
@@ -23,7 +23,7 @@ function Home({ comments }) {
       <Premium />
       <Navbar>
         <Banner></Banner>
-        <FeaturedJob />
+        {/* <FeaturedJob /> */}
         <Features />
         <Learn />
         <Animation />
@@ -34,7 +34,6 @@ function Home({ comments }) {
         <Service />
         <Card />
         <Subscribe></Subscribe>
-        <App />
         <Footer></Footer>
       </Navbar>
     </>

@@ -91,7 +91,7 @@ const CourseDetails = () => {
 
         <div className="text-center my-5">
           <Link href="/quizTest">
-            <button className="btn btn-primary">Exam Test</button>
+            <button  className="btn text-white btn-outline bg-primary hover:bg-secondary border-0">Exam Test</button>
           </Link>
         </div>
       </div>
