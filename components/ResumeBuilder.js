@@ -228,12 +228,12 @@ const ResumeBuilder = () => {
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-semibold">Your Name Here</h3>
-              <label
+              {/* <label
                 htmlFor="my-modal-6"
                 className="btn modal-button border-0 bg-transparent hover:bg-transparent"
               >
                 <FiEdit className="cursor-pointer text-secondary"></FiEdit>
-              </label>
+              </label> */}
               <input type="checkbox" id="my-modal-6" className="modal-toggle" />
               <div className="modal modal-middle">
                 <div className="modal-box">
@@ -299,17 +299,15 @@ const ResumeBuilder = () => {
               </div>
             </div>
             <p>{email}</p>
-            <p>+880 1888295295</p>
-            <p>Chittagong</p>
           </div>
-          <div className="flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer">
+          {/* <div className="flex items-center justify-center gap-1 text-xl text-secondary cursor-pointer">
             <FiDownload></FiDownload>
             <button
             // onClick={saveFile}
             >
               Download
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="border border-base-200 my-10 bg-base-200"></div>
@@ -360,13 +358,13 @@ const ResumeBuilder = () => {
         </div>
         {/* CAREER OBJECTIVE part End */}
 
-        <div className="border border-base-200 my-10 bg-base-200"></div>
+        {/* <div className="border border-base-200 my-10 bg-base-200"></div> */}
 
         {/* SKILLS part start */}
         <div>
-          <h3 className="uppercase font-semibold">SKILLS</h3>
+          {/* <h3 className="uppercase font-semibold">SKILLS</h3> */}
 
-          <div className="grid grid-cols-4">
+          {/* <div className="grid grid-cols-4">
             <div className="flex items-center gap-2 mt-5">
               <TiPointOfInterest></TiPointOfInterest>
               <p>HTML5</p>
@@ -409,9 +407,9 @@ const ResumeBuilder = () => {
               <FiEdit className="cursor-pointer text-secondary"></FiEdit>
               <MdDelete className="cursor-pointer text-red-500"></MdDelete>
             </div>
-          </div>
+          </div> */}
 
-          <label
+          {/* <label
             htmlFor="my-modal-8"
             className="btn modal-button border-0 bg-transparent hover:bg-transparent"
           >
@@ -420,8 +418,8 @@ const ResumeBuilder = () => {
               <p>Add Skill</p>
             </div>
           </label>
-          <input type="checkbox" id="my-modal-8" className="modal-toggle" />
-          <div className="modal modal-middle">
+          <input type="checkbox" id="my-modal-8" className="modal-toggle" /> */}
+          {/* <div className="modal modal-middle">
             <div className="modal-box">
               <form action="">
                 <div className="form-control">
@@ -449,7 +447,7 @@ const ResumeBuilder = () => {
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* SKILLS part end */}
 
@@ -570,15 +568,7 @@ const ResumeBuilder = () => {
               </button>
             </div>
           </div>
-          <label
-            htmlFor="my-modal-10"
-            className="btn modal-button border-0 bg-transparent hover:bg-transparent"
-          >
-            <div className="flex items-center gap-2 text-secondary mt-7 cursor-pointer">
-              <FiPlus></FiPlus>
-              <p>Personal Project</p>
-            </div>
-          </label>
+
           {/* <input type="checkbox" id="my-modal-10" className="modal-toggle" /> */}
           {/* <div className="modal modal-middle">
             <div className="modal-box">
